@@ -1,0 +1,39 @@
+id: gazettes-uk-gov-in
+url: https://gazettes.uk.gov.in/
+jurisdiction: IN-UK
+domain: legal
+governance_level: state
+authority:
+  name: Uttarakhand Gazette
+  type: department
+coverage:
+  instrument_types: [Gazette, Notification, Act, Rule, Order]
+  topics: [e-gazette, official-publication]
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      home: /
+    format: html-table
+    columns: [s_no, go_no, go_date, week_date, department, subject, gazette_type, page_no, pdf]
+    pdf_path_pattern: /GazetteFile/PDF/{id}-{timestamp}.pdf
+    tls_note: Server requires OpenSSL legacy renegotiation — the project fetcher injects an Undici Agent with SSL_OP_LEGACY_SERVER_CONNECT to handle this.
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: verified
+  update_surface: Uttarakhand eGazette homepage lists the latest 10 gazettes in a server-rendered HTML table (S.No., GO No, GO Date, Week Date, Department, Subject, Gazette Type, Page No, PDF). PDFs hosted on same domain at /GazetteFile/PDF/.
+  approach: Recipe `gazettes-uk-gov-in` (src/recipes/uk-egazette.ts) extracts the 10 most recent entries; title = "{Department} — {Subject} (GO {goNo})".
+  next_step: Add pagination + historical-archive surface (current recipe only sees the homepage's 10 latest entries; full backfill requires the search form).
+notes: |
+  Uttarakhand Gazette is identified in search results as gazettes.uk.gov.in /
+  www.gazettes.uk.gov.in, but curl to gazettes.uk.gov.in returned HTTP 404 on
+  2026-06-05. Indexed as blocked until exact access path is confirmed.
+  
+  2026-06-07: UK Gazettes returns 200 to vanilla Chrome UA — was UA-discrimination only.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

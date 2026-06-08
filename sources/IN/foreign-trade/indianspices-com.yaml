@@ -1,0 +1,37 @@
+id: indianspices-com
+url: https://www.indianspices.com/
+jurisdiction: IN
+governance_level: central
+domain: foreign-trade
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Spices Board India
+  type: statutory-regulator
+  parent: Ministry of Commerce and Industry
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Guideline
+  topics:
+    - spices-industry
+    - exports
+    - quality-standards
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Spices Board notifications, certification rules, exporter advisories.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Spices Board India — statutory body under the Spices Board Act,
+  1986 regulating spices production, quality, and export. URL was
+  verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

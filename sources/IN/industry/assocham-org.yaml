@@ -1,0 +1,38 @@
+id: assocham-org
+url: https://www.assocham.org/
+jurisdiction: IN
+governance_level: central
+domain: industry
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Associated Chambers of Commerce and Industry of India
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Article
+    - Update
+    - Policy Brief
+    - Report
+  topics:
+    - industry-policy
+    - regulatory-updates
+    - sectoral-commentary
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: ASSOCHAM position papers, sectoral commentary, advocacy briefs.
+  approach: Probe the publications surface for recipe-readiness.
+  next_step: Identify the publications index endpoint and confirm format.
+notes: |
+  Associated Chambers of Commerce and Industry of India (ASSOCHAM)
+  — apex industry chamber. Secondary trust tier; commits must anchor
+  to the original government source. URL was verified reachable via
+  HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

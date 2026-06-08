@@ -1,0 +1,24 @@
+id: prsindia-billtrack
+url: https://prsindia.org/billtrack
+jurisdiction: IN
+governance_level: central
+domain: legal
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+access:
+  status: browser-required
+  update_surface: PRS Legislative Research BillTrack — pending bills + amendments before gazette.
+  approach: Use the D49 browser-acquire path; the static HTML returns 1059 anchors but no PDF children (D45 empirical finding).
+  next_step: Recipe for the post-load DOM; remember secondary trust tier — commits must anchor to the official gazette.
+notes: |
+  PRS Legislative Research — independent tracker for central
+  legislation. Useful for detecting pending bills and amendments
+  before they hit the official gazette. Per D45, static HTML
+  returns 1059 anchors but no PDF children — the bill PDFs are
+  fetched via JavaScript. Browser path required. Note trust_tier
+  is `secondary` (not a government source) — useful for early
+  detection, but commits should anchor to the official gazette.
+maintainer: akshay93aditya
+added: 2026-06-05

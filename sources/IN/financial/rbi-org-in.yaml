@@ -1,0 +1,47 @@
+id: rbi-org-in
+url: https://www.rbi.org.in
+jurisdiction: IN
+domain: financial
+governance_level: central
+authority:
+  name: Reserve Bank of India
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Notification
+    - Direction
+    - Circular
+  topics:
+    - banking
+    - payments
+    - foreign-exchange
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      notifications: /Scripts/NotificationUser.aspx
+      master_directions: /Scripts/BS_NotificationSearch.aspx
+      master_circulars: /Scripts/BS_ViewMasCirculardetails.aspx
+    format: date-grouped-flat-list
+    pdf_host: rbidocs.rbi.org.in
+    pdf_path_pattern: /rdocs/notification/PDFs/{ID}.PDF
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: RBI notifications surface at /Scripts/NotificationUser.aspx — server-rendered flat list grouped by date headers, each entry has a PDF link with file size annotation.
+  approach: Recipe writer scrapes the date-grouped list at NotificationUser.aspx; PDFs live on rbidocs.rbi.org.in/rdocs/notification/PDFs/{ID}.PDF (separate CDN host).
+  next_step: "Write an RBI notifications recipe — date-grouped flat list, not a table. Note: pagination via ASP.NET __doPostBack — needs form-aware iteration for older entries (>1 page deep)."
+notes: |
+  Reserve Bank of India portal. Confirmed via WebFetch 2026-06-07
+  that /Scripts/NotificationUser.aspx serves a server-rendered
+  date-grouped list of notifications with PDF child links on
+  rbidocs.rbi.org.in. Earlier Codex assessment of form-postback was
+  partially correct (older entries via __doPostBack pagination) but
+  the most recent page is statically scrapeable.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

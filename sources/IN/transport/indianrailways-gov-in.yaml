@@ -1,0 +1,39 @@
+id: indianrailways-gov-in
+url: https://indianrailways.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: transport
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Ministry of Railways (Indian Railways)
+  type: ministry
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Rule
+    - Manual
+  topics:
+    - railways
+    - rail-freight
+    - rail-tariffs
+    - vendor-registration
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Indian Railways notifications, circulars, manuals across operations + commercial.
+  approach: Probe the railway-board-circulars endpoint and vendor-rules pages before recipe work.
+  next_step: Identify Railway Board's canonical circulars endpoint and verify format.
+notes: |
+  Indian Railways / Ministry of Railways — operates the rail network
+  and issues Railway Board circulars that affect commercial users
+  (freight, vendors, contractors). URL was verified reachable via
+  HEAD on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

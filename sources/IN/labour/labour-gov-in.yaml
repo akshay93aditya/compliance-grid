@@ -1,0 +1,21 @@
+id: labour-gov-in
+url: https://labour.gov.in
+jurisdiction: IN
+governance_level: central
+domain: labour
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+access:
+  status: browser-required
+  update_surface: Central Ministry of Labour & Employment portal — codes, notifications, rules.
+  approach: Use the D49 browser-acquire path (headless Chromium) to render the listing pages.
+  next_step: Write a listing recipe that targets the post-load DOM for labour codes and notifications.
+notes: |
+  Central Ministry of Labour & Employment. SPA-rendered (D45):
+  the static HTML is a shell. Requires the browser-acquire path
+  (D49) for listing enumeration. Recipe TODO; covers central
+  labour notifications, codes, and rules.
+maintainer: akshay93aditya
+added: 2026-06-05

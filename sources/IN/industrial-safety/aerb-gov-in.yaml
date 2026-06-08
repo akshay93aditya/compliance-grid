@@ -1,0 +1,34 @@
+id: aerb-gov-in
+url: https://www.aerb.gov.in
+jurisdiction: IN
+domain: industrial-safety
+governance_level: central
+authority:
+  name: Atomic Energy Regulatory Board
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Regulation
+    - Code
+    - Guide
+  topics:
+    - radiation-safety
+    - nuclear-safety
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until codes, guides, and notification pages are inspected.
+  approach: Probe public document pages and PDF links.
+  next_step: Identify AERB safety codes, guides, and regulatory document listings.
+notes: |
+  Central atomic and radiation safety regulator. Verified reachable with HTTP
+  200 on 2026-06-05 after redirect to `/hindi/`.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

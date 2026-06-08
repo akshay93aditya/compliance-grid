@@ -1,0 +1,40 @@
+id: pib-gov-in
+url: https://www.pib.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: media
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Press Information Bureau
+  type: department
+  parent: Ministry of Information and Broadcasting
+coverage:
+  instrument_types:
+    - Press Release
+    - Notification
+  topics:
+    - official-publication
+    - government-announcements
+    - press-releases
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: All central-government press releases and ministry announcements (cross-ministry aggregator).
+  approach: Returns HTTP 403 to unknown crawlers on probe (2026-06-05). Direct extraction is not currently viable.
+  next_step: Investigate respectful crawl negotiation, partnership with PIB's RSS/feed surfaces (if any), or accept-only-RSS-subscription pattern.
+notes: |
+  Press Information Bureau — central press-release aggregator across
+  all union ministries. Extremely high-value source for regulatory
+  detection, but currently blocks unknown crawlers with HTTP 403
+  (verified via probe 2026-06-05). Will need alternative access
+  approach before extraction.
+  
+  2026-06-07: PIB indexd.aspx returns 200 to vanilla Chrome UA — was UA-discrimination only.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,42 @@
+id: enviscecb-org
+url: https://enviscecb.org/
+jurisdiction: IN-CT
+domain: environment
+governance_level: state
+authority:
+  name: Chhattisgarh Environment Conservation Board
+  type: board
+  parent: Government of Chhattisgarh
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Notification
+    - Public Consultation Notice
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+    - public-consultation
+    - industry-categorisation
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: CECB public resources, notification/activity links, EODB services, consent register, and public consultation pages.
+  approach: Crawl public-resource and quick-link sections, then follow downloadable documents and consent/public-consultation listings.
+  next_step: Write recipes for notifications, public consultation, industry categorisation, and consent register links.
+notes: |
+  Chhattisgarh Environment Conservation Board portal. Verified reachable with
+  HTTP 200 on 2026-06-05. Search snippets show public resources, EODB services,
+  online consent, public consultation, notifications/activities, and industry
+  categorisation.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

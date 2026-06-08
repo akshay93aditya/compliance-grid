@@ -1,0 +1,39 @@
+id: drt-gov-in
+url: https://drt.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: financial
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Debt Recovery Tribunal
+  type: tribunal
+  parent: Department of Financial Services, Ministry of Finance
+coverage:
+  instrument_types:
+    - Order
+    - Judgment
+    - Notification
+  topics:
+    - debt-recovery
+    - banking
+    - secured-loans
+    - tribunals
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: DRT orders, cause lists, regional benches.
+  approach: Probe the orders/cause-list endpoints across the regional DRT benches before recipe work.
+  next_step: Identify the public-orders endpoint and confirm format.
+notes: |
+  Debt Recovery Tribunal — banking-debt-recovery appellate body
+  established under the Recovery of Debts Due to Banks and Financial
+  Institutions Act, 1993. URL was verified reachable via HEAD on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,39 @@
+id: cdsco-gov-in
+url: https://cdsco.gov.in
+jurisdiction: IN
+domain: pharma
+governance_level: central
+authority:
+  name: Central Drugs Standard Control Organisation
+  type: statutory-regulator
+  parent: Ministry of Health and Family Welfare
+coverage:
+  instrument_types:
+    - Rule
+    - Notification
+    - Circular
+  topics:
+    - drugs
+    - cosmetics
+    - medical-devices
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: CDSCO portal is important, but plain curl receives HTTP 403.
+  approach: Try browser-acquire and identify public notices, circulars, and guidance pages.
+  next_step: Browser-smoke CDSCO public document listings.
+notes: |
+  Central drugs, cosmetics, and medical-device regulator. Verified host
+  existence on 2026-06-05 via HTTP 403 to plain curl. Automated access is not
+  yet verified.
+  
+  2026-06-07: CDSCO /opencms/en/Home/ returns 200 to vanilla Chrome UA — was UA-discrimination only.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

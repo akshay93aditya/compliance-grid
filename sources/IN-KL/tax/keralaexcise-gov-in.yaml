@@ -1,0 +1,38 @@
+id: keralaexcise-gov-in
+url: https://keralaexcise.gov.in/
+jurisdiction: IN-KL
+governance_level: state
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Excise Department, Kerala
+  type: department
+  parent: Government of Kerala
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - License
+  topics:
+    - state-excise
+    - liquor-licensing
+    - narcotics-control
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Kerala Excise notifications on liquor licensing, excise duties, and narcotics enforcement (the department combines excise + NDPS state policing) under the Kerala Abkari Act.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Excise Department, Government of Kerala — administers state
+  excise plus state-level NDPS enforcement (unusual combined
+  function). URL was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

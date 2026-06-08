@@ -1,0 +1,23 @@
+id: karmika-spandana-ka
+url: https://karmikaspandana.karnataka.gov.in/16/new-labour-rules-and-bills/en
+jurisdiction: IN-KA
+governance_level: state
+domain: labour
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+access:
+  status: verified
+  update_surface: Karmika Spandana labour acts/rules listing (table of PDFs).
+  approach: Crawl via the karmika listing recipe; child PDFs fetched directly.
+  next_step: Already in active use as the pilot source of the seed CKG (12 instruments / 163 obligations).
+notes: |
+  Karnataka Department of Labour documents portal. Static-HTML listing
+  with tabular rows of labour acts, rules, and bills. Each row links to
+  a PDF child. The karmika recipe (src/recipes/karmika.ts) handles
+  enumeration. This is the source of the 19 instruments + 163 obligations
+  in the seed CKG for IN-KA labour.
+maintainer: akshay93aditya
+added: 2026-05-28
+last_verified: 2026-06-04

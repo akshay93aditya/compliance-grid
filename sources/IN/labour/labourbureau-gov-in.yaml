@@ -1,0 +1,40 @@
+id: labourbureau-gov-in
+url: https://www.labourbureau.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: labour
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Labour Bureau
+  type: department
+  parent: Ministry of Labour and Employment
+coverage:
+  instrument_types:
+    - Report
+    - Index
+    - Notification
+  topics:
+    - cpi
+    - cpi-iw
+    - wage-rate-index
+    - labour-statistics
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Labour Bureau monthly CPI-IW index notifications (directly drive minimum-wage revision and dearness-allowance calculation).
+  approach: Probe the CPI-IW / WRI surfaces for recipe-readiness. The CPI-IW notification is one of the highest-frequency periodic releases affecting compliance.
+  next_step: Identify the canonical CPI-IW release endpoint and confirm format.
+notes: |
+  Labour Bureau — statistical wing of the Ministry of Labour and
+  Employment. Issues monthly Consumer Price Index for Industrial
+  Workers (CPI-IW) numbers that drive minimum-wage revision in
+  several states and dearness-allowance updates for organised-sector
+  employees. URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

@@ -1,0 +1,43 @@
+id: gujrera-gujarat-gov-in
+url: https://gujrera.gujarat.gov.in/
+jurisdiction: IN-GJ
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+  config:
+    note: WebFetch 2026-06-07 returned essentially only the page title — homepage navigation is hidden behind client-side rendering or aggressive WAF. Curl HEAD succeeds but no useful payload. Treat as browser-required.
+authority:
+  name: Gujarat Real Estate Regulatory Authority
+  type: statutory-regulator
+  parent: Government of Gujarat
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Regulation
+    - Project Registration
+  topics:
+    - real-estate
+    - project-registration
+    - agent-registration
+    - consumer-complaints
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: browser-required
+  update_surface: GujRERA — server returns only a page-title shell; nav is fully JS-populated. Post-JS DOM exposes ~220 anchors and 30 PDFs including Annual Reports (2021-22 through 2024-25) at /resources/staticpage/Annual_Report_*/, regulations, and presentations.
+  approach: Use the D49 browser-acquire path (Playwright/Chromium); networkidle wait is sufficient. Recipe writer scrapes the post-render DOM for /resources/staticpage/*.pdf links + the hash-routed nav (#/home, #/faq/..., etc.) to enumerate further listings.
+  next_step: Write a GujRERA recipe (requires_browser=true) targeting the Annual Reports + Regulations PDF endpoints under /resources/staticpage/.
+notes: |
+  Gujarat Real Estate Regulatory Authority (GujRERA) — state RERA
+  authority under the Real Estate (Regulation and Development) Act,
+  2016. **Browser-acquire smoke 2026-06-07 confirmed:** 9.5s to first
+  render (5s steady-state), 220 anchors + 30 PDFs in the post-JS DOM.
+  Playwright path works end-to-end.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

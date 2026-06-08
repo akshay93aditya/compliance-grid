@@ -1,0 +1,38 @@
+id: emerginghimachal-hp-gov-in
+url: https://app.emerginghimachal.hp.gov.in/frontend/web/index.php
+jurisdiction: IN-HP
+domain: industry
+governance_level: state
+authority:
+  name: Emerging Himachal Single Window Portal
+  type: department
+  parent: Department of Industries, Government of Himachal Pradesh
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - NOC
+    - Incentive
+  topics:
+    - single-window
+    - industrial-clearances
+    - investor-services
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Emerging Himachal app frontend and investor workflows.
+  approach: Map public service catalogues and guidance; keep application flows as session/form metadata.
+  next_step: Inspect frontend routes and public download links.
+notes: |
+  Himachal Pradesh single-window/investor portal. The root redirected to the app
+  frontend and returned HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

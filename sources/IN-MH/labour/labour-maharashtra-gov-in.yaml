@@ -1,0 +1,39 @@
+id: labour-maharashtra-gov-in
+url: https://labour.maharashtra.gov.in/en
+jurisdiction: IN-MH
+domain: labour
+governance_level: state
+authority:
+  name: Labour Department, Government of Maharashtra
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - RTS Service
+    - Guideline
+  topics:
+    - labour-services
+    - shops-and-establishments
+    - commissioner-of-labour
+    - rts-services
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Maharashtra Labour Department portal, allied office pages, RTS services, and Mahakamgar links.
+  approach: Crawl department pages, RTS services, allied offices, and Mahakamgar service links.
+  next_step: Add focused recipes for labour RTS services and Commissioner of Labour service pages.
+notes: |
+  Current official Maharashtra Labour Department portal. Verified reachable with
+  HTTP 200 on 2026-06-05. Search results also show Mahakamgar service pages
+  linked from this portal.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

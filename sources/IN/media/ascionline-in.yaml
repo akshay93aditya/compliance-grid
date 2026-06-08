@@ -1,0 +1,39 @@
+id: ascionline-in
+url: https://www.ascionline.in/
+jurisdiction: IN
+governance_level: central
+domain: media
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Advertising Standards Council of India
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Code
+    - Guideline
+    - Decision
+    - Advisory
+  topics:
+    - advertising-standards
+    - misleading-advertising
+    - self-regulation
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: ASCI code, complaints decisions (CCC), influencer-advertising guidelines, sectoral advisories.
+  approach: Probe the decisions / guidelines surface for recipe-readiness.
+  next_step: Identify the CCC decisions index endpoint and confirm format.
+notes: |
+  Advertising Standards Council of India — self-regulatory body for
+  advertising; its complaints decisions inform MIB and Department of
+  Consumer Affairs enforcement. Secondary trust tier; commits must
+  anchor to the original advertising code or government notification.
+  URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

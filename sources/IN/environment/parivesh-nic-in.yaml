@@ -1,0 +1,37 @@
+id: parivesh-nic-in
+url: https://parivesh.nic.in
+jurisdiction: IN
+domain: environment
+governance_level: central
+authority:
+  name: PARIVESH
+  type: transactional-portal
+  parent: Ministry of Environment, Forest and Climate Change
+coverage:
+  instrument_types:
+    - Clearance
+    - Guideline
+    - Workflow
+  topics:
+    - environmental-clearance
+    - forest-clearance
+    - wildlife-clearance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: browser-required
+  update_surface: Portal landing page is a small HTML application shell.
+  approach: Use browser-acquire to inspect public guidance, forms, and workflow pages.
+  next_step: Browser-smoke public PARIVESH guidance and clearance workflow surfaces.
+notes: |
+  Central environmental clearance portal. Verified reachable with HTTP 200 on
+  2026-06-05. This is a transactional source, so public manuals and guidance
+  should be indexed before any authenticated workflow work.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

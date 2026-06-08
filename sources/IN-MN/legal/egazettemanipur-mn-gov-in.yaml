@@ -1,0 +1,38 @@
+id: egazettemanipur-mn-gov-in
+url: https://egazettemanipur.mn.gov.in/
+jurisdiction: IN-MN
+domain: legal
+governance_level: state
+authority:
+  name: Manipur e-Gazette
+  type: department
+  parent: Directorate of Printing and Stationery, Government of Manipur
+coverage:
+  instrument_types:
+    - Gazette
+    - Notification
+    - Act
+    - Rule
+    - Order
+  topics:
+    - e-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Manipur e-Gazette ASP.NET portal.
+  approach: Model session/search behavior and follow gazette document links.
+  next_step: Capture department/date filters and document download URLs.
+notes: |
+  Official Manipur e-Gazette portal. Verified reachable with HTTP 200 on
+  2026-06-05. The shorter `egazette.mn.gov.in` root returned HTTP 404, so this
+  verified host is indexed.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

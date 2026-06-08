@@ -1,0 +1,38 @@
+id: lesde-mizoram-gov-in
+url: https://lesde.mizoram.gov.in/
+jurisdiction: IN-MZ
+domain: labour
+governance_level: state
+authority:
+  name: Labour, Employment, Skill Development and Entrepreneurship Department, Government of Mizoram
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - Service
+    - Guideline
+  topics:
+    - labour-services
+    - employment
+    - skills
+    - entrepreneurship
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Mizoram labour/employment department public portal.
+  approach: Crawl notices, services, forms, and downloadable documents.
+  next_step: Identify labour law, registration, licensing, and EODB service pages.
+notes: |
+  Mizoram Labour, Employment, Skill Development and Entrepreneurship Department
+  portal. Verified reachable with HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

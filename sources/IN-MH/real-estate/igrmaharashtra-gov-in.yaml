@@ -1,0 +1,39 @@
+id: igrmaharashtra-gov-in
+url: https://igrmaharashtra.gov.in/
+jurisdiction: IN-MH
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Department of Registration and Stamps, Maharashtra
+  type: department
+  parent: Government of Maharashtra
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - stamps-duty
+    - property-registration
+    - marriage-registration
+    - firms-registration
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: IGR Maharashtra notifications under the Maharashtra Stamp Act and Indian Registration Act covering stamp-duty rates, e-stamp procedures.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Department of Registration and Stamps (IGR), Government of
+  Maharashtra — administers stamps and property + firm + marriage
+  registration. URL was verified reachable via GET on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

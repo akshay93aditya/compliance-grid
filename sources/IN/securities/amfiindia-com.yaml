@@ -1,0 +1,39 @@
+id: amfiindia-com
+url: https://www.amfiindia.com/
+jurisdiction: IN
+governance_level: central
+domain: securities
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Association of Mutual Funds in India
+  type: statutory-professional-body
+coverage:
+  instrument_types:
+    - Circular
+    - Notification
+    - Guideline
+    - Best Practice
+  topics:
+    - mutual-funds
+    - asset-management
+    - distributor-registration
+    - investor-protection
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: AMFI circulars to AMCs, distributor guidelines, best practices, scheme classification updates.
+  approach: Probe the circulars / guidelines surface for recipe-readiness.
+  next_step: Identify the circulars index endpoint and confirm format.
+notes: |
+  Association of Mutual Funds in India (AMFI) — SEBI-recognised SRO
+  for the Indian mutual funds industry. Issues binding circulars
+  affecting AMCs and distributors. URL was verified reachable via
+  HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

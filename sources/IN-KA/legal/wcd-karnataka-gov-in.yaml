@@ -1,0 +1,39 @@
+id: wcd-karnataka-gov-in
+url: https://wcd.karnataka.gov.in/
+jurisdiction: IN-KA
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Department of Women and Child Development, Karnataka
+  type: department
+  parent: Government of Karnataka
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Policy
+  topics:
+    - women-welfare
+    - child-protection
+    - posh-act
+    - anti-trafficking
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: KA Women & Child Development notifications under the Karnataka WCD-administered statutes — POSH Act implementation, maternity benefit, ICDS scheme directives, anti-trafficking advisories.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Department of Women and Child Development, Government of Karnataka.
+  State nodal for POSH Act, 2013 implementation. URL was verified
+  reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

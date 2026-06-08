@@ -1,0 +1,47 @@
+id: maharera-maharashtra-gov-in
+url: https://maharera.maharashtra.gov.in/
+jurisdiction: IN-MH
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      orders_judgements: /orders-judgements
+    format: filter-form-required
+    form_constraints:
+      date_range_max_days: 365
+    columns: [complaint_id, project, heard_by, complainant, respondent, uploaded_datetime, view_link]
+authority:
+  name: Maharashtra Real Estate Regulatory Authority
+  type: statutory-regulator
+  parent: Government of Maharashtra
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Regulation
+    - Project Registration
+  topics:
+    - real-estate
+    - project-registration
+    - agent-registration
+    - consumer-complaints
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: MahaRERA orders and judgements at /orders-judgements; one of the highest-volume state RERAs.
+  approach: Recipe writer must POST to the filter form (Complaint Type, Order/Judgement Type, Coram, State/District, Date Range) with a date-range slice ≤ 365 days at a time. Server returns paginated results with View Judgement PDF links.
+  next_step: Write a MahaRERA form-postback recipe that iterates date-range windows and follows View Judgement to PDFs.
+notes: |
+  Maharashtra Real Estate Regulatory Authority (MahaRERA) — state
+  RERA authority under the Real Estate (Regulation and Development)
+  Act, 2016. Among the most active state RERAs by case volume. URL
+  was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

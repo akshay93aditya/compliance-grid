@@ -1,0 +1,40 @@
+id: anieseva-andamannicobar-gov-in
+url: https://anieseva.andamannicobar.gov.in/
+jurisdiction: IN-AN
+domain: industry
+governance_level: state
+authority:
+  name: ANI e-Seva Portal
+  type: department
+  parent: Andaman and Nicobar Administration
+coverage:
+  instrument_types:
+    - Service
+    - Registration
+    - Licence
+    - Certificate
+  topics:
+    - single-window
+    - business-services
+    - labour-services
+    - citizen-services
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: ANI e-Seva service categories and department service listings.
+  approach: Enumerate public service catalogue links and route business/labour/environment services to domain-specific entries.
+  next_step: Inspect service catalogue pages for stable service IDs, eligibility text, forms, and official linked instructions.
+notes: |
+  Official e-service portal of the Andaman and Nicobar Administration. HEAD
+  returned HTTP 404, but GET returned HTTP 200 on 2026-06-05. Useful for finding
+  operational compliance workflows, especially where services moved between
+  local portals and NSWS.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

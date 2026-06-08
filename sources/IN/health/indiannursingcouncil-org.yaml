@@ -1,0 +1,37 @@
+id: indiannursingcouncil-org
+url: https://www.indiannursingcouncil.org/
+jurisdiction: IN
+governance_level: central
+domain: health
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Indian Nursing Council
+  type: statutory-regulator
+  parent: Ministry of Health and Family Welfare
+coverage:
+  instrument_types:
+    - Notification
+    - Regulation
+    - Guideline
+  topics:
+    - nursing
+    - nurse-registration
+    - nursing-education
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: INC regulations under the Indian Nursing Council Act, 1947 covering nurse registration and nursing education.
+  approach: Probe the regulations surface for recipe-readiness.
+  next_step: Identify the regulations index endpoint and confirm format.
+notes: |
+  Indian Nursing Council — statutory body under the Indian Nursing
+  Council Act, 1947 regulating nurse registration and nursing
+  education. URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

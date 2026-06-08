@@ -1,0 +1,37 @@
+id: karnataka-gov-in
+url: https://karnataka.gov.in/
+jurisdiction: IN-KA
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: General Administration Department, Karnataka
+  type: department
+  parent: Government of Karnataka
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+  topics:
+    - state-administration
+    - inter-departmental-coordination
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Apex Karnataka state-government portal hosting General Administration Department notifications. Parallel to Codex's IN-KA/legal entries which target deeper subpaths (erajyapatra, dpal acts).
+  approach: Probe the notifications surface for recipe-readiness. Use the apex domain without www (the www variant returns 000 on probe).
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Apex state-government portal of Karnataka. Note: the www. variant
+  returns 000 on probe; the canonical entry is the apex domain
+  (karnataka.gov.in without www). URL was verified reachable via
+  HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

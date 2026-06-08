@@ -1,0 +1,38 @@
+id: dpns-assam-gazettes
+url: https://dpns.assam.gov.in/portlets/publication-of-assam-gazettes
+jurisdiction: IN-AS
+domain: legal
+governance_level: state
+authority:
+  name: Directorate of Printing and Stationery, Government of Assam
+  type: department
+coverage:
+  instrument_types:
+    - Gazette
+    - Act
+    - Rule
+    - Notification
+    - Order
+  topics:
+    - state-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Publication of Assam Gazettes page.
+  approach: Crawl gazette publication page and follow linked gazette documents.
+  next_step: Inspect page structure and document links for weekly, extraordinary, and supplement gazettes.
+notes: |
+  Official Assam gazette publication page under the Directorate of Printing and
+  Stationery. Verified reachable with HTTP 200 on 2026-06-05. Use this as the
+  primary state source for Assam Acts, rules, notifications, and orders where
+  published in the Assam Gazette.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

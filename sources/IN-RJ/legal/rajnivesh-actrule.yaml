@@ -1,0 +1,38 @@
+id: rajnivesh-actrule
+url: https://rajnivesh.rajasthan.gov.in/Home/ActRule
+jurisdiction: IN-RJ
+domain: legal
+governance_level: state
+authority:
+  name: Rajnivesh, Government of Rajasthan
+  type: department
+coverage:
+  instrument_types:
+    - Act
+    - Rule
+    - Policy
+    - Notification
+    - Circular
+  topics:
+    - statutory-updates
+    - business-regulation
+    - official-notifications
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Rajnivesh Acts, Rules, Policies, Notifications, and Circulars page.
+  approach: Crawl public legal/update listing and linked PDFs.
+  next_step: Write listing recipe and separately verify any Rajasthan e-gazette/Rajpatra endpoint.
+notes: |
+  Rajnivesh Acts/Rules/Policies/Notifications/Circulars page. GET verified
+  reachable with HTTP 200 on 2026-06-05. Used as the current Rajasthan legal
+  source because a direct e-gazette endpoint was not verified in this batch.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

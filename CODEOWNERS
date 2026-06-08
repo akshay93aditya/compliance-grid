@@ -1,0 +1,19 @@
+# Code owners — who gets auto-tagged as reviewer on a PR.
+#
+# Wildcard owner is the original maintainer. Specific paths can be
+# delegated as the community grows.
+#
+# Per https://docs.github.com/en/repositories/managing-your-repositories-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything.
+* @akshay93aditya
+
+# Source Index entries can be self-merged by long-standing contributors
+# once that role exists; for now, all yaml additions go through the
+# main maintainer.
+/sources/      @akshay93aditya
+
+# Federation + publish/pull primitives are load-bearing; keep tight.
+/scripts/publish.ts  @akshay93aditya
+/scripts/pull.ts     @akshay93aditya
+/migrations/         @akshay93aditya

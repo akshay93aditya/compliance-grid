@@ -1,0 +1,41 @@
+id: cbse-gov-in
+url: https://www.cbse.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: education
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Central Board of Secondary Education
+  type: statutory-regulator
+  parent: Ministry of Education
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Examination Bye-law
+    - Guideline
+  topics:
+    - school-education
+    - examination-conduct
+    - school-affiliation
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: CBSE circulars to affiliated schools, examination notices, affiliation-related notifications.
+  approach: Project UA blocked at HTTP 403 on probe 2026-06-06; browser UA returned 200. Use the D49 browser-acquire path.
+  next_step: Configure browser-acquire path, then identify the circulars endpoint.
+notes: |
+  Central Board of Secondary Education — central school-education
+  board affiliating schools and conducting board examinations.
+  Site blocks the Compliance-Grid project UA at HTTP 403 but accepts
+  browser UA at HTTP 200 on probe 2026-06-06.
+  
+  2026-06-07: CBSE returns 200 to vanilla Chrome UA — earlier browser-required tag was wrong.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

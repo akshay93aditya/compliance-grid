@@ -1,0 +1,28 @@
+id: epfindia-gov-in
+url: https://www.epfindia.gov.in
+jurisdiction: IN
+governance_level: central
+domain: labour
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      whats_new: /site_en/index.php
+      downloads: /site_en/Downloads.php
+    format: whats-new-feed
+    note: EPFO does not expose a dedicated /Notifications.php — the "What's New" feed on the homepage is the primary live surface.
+access:
+  status: static-html-needs-recipe
+  update_surface: EPFO "What's New" homepage feed (PDF links posted chronologically) + Downloads menu. The /site_en/Notifications.php URL returns an access-denied error page; the real surface is the homepage feed.
+  approach: Recipe writer scrapes the "What's New" section on the /site_en/index.php homepage; child documents are PDFs posted as OMs, empanelment notices, circulars.
+  next_step: Write an EPFO whats-new-feed recipe. Note that Notifications.php is a dead URL — do NOT route patrols there.
+notes: |
+  Employees' Provident Fund Organisation. Source for EPF registration,
+  monthly contribution returns, UAN portal rules. Confirmed via
+  WebFetch 2026-06-07 that there's no top-level Notifications link —
+  the "What's New" feed on the homepage is the live surface (Codex's
+  first-pass assumption that Notifications.php would work was wrong).
+maintainer: akshay93aditya
+added: 2026-06-05

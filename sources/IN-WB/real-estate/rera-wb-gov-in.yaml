@@ -1,0 +1,43 @@
+id: rera-wb-gov-in
+url: https://rera.wb.gov.in/
+jurisdiction: IN-WB
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: West Bengal Real Estate Regulatory Authority
+  type: statutory-regulator
+  parent: Government of West Bengal
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Regulation
+    - Project Registration
+  topics:
+    - real-estate
+    - project-registration
+    - agent-registration
+    - consumer-complaints
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: West Bengal RERA project + agent registrations, orders, and complaint dispositions under the Real Estate (Regulation and Development) Act, 2016. Operative regime after the Supreme Court (Forum for People's Collective Efforts v. State of West Bengal, 2021) struck down the West Bengal HIRA Act for unconstitutional repugnance to central RERA.
+  approach: Probe the orders / project-registration surface for recipe-readiness.
+  next_step: Identify the orders index endpoint and confirm format.
+notes: |
+  West Bengal Real Estate Regulatory Authority. After the SC's 2021
+  ruling striking down the WB HIRA Act, the state was directed to
+  enforce the central RERA, 2016. rera.wb.gov.in is the current
+  canonical RERA portal. The legacy hira.wb.gov.in domain still
+  resolves but represents the defunct statutory regime; indexed
+  here is the post-2021 RERA authority. URL was verified reachable
+  via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

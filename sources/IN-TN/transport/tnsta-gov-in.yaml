@@ -1,0 +1,40 @@
+id: tnsta-gov-in
+url: https://www.tnsta.gov.in/
+jurisdiction: IN-TN
+governance_level: state
+domain: transport
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: State Transport Authority, Tamil Nadu
+  type: department
+  parent: Government of Tamil Nadu
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - motor-vehicles
+    - permits
+    - road-tax
+    - fitness-certificates
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Tamil Nadu State Transport Authority notifications under the Motor Vehicles Act and Tamil Nadu Motor Vehicles Taxation Act.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  State Transport Authority, Government of Tamil Nadu — administers
+  motor-vehicle registration, permits, and state road tax. Canonical
+  URL uses www prefix. URL was verified reachable via HEAD on
+  2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

@@ -1,0 +1,25 @@
+id: dpal-karnataka-acts
+url: https://dpal.karnataka.gov.in/14/karnataka-acts
+jurisdiction: IN-KA
+governance_level: state
+domain: labour
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+access:
+  status: browser-required
+  update_surface: Karnataka DPAL Acts listing (JS-rendered).
+  approach: Fetch via the D49 browser-acquire path (headless Chromium); parse the rendered DOM for Act links.
+  next_step: Write a listing recipe targeting the rendered DOM after pageload.
+notes: |
+  Karnataka Department of Parliamentary Affairs & Legislation — Acts
+  page. SPA-rendered (D45): the static HTML returns a shell and the
+  listing content is fetched via JavaScript after page load. Verified
+  empirically via the Phase 1.5.3b browser-acquire smoke test
+  (RUN_BROWSER_TESTS=1) — returned a 200 page through headless
+  Chromium. A listing recipe targeting the rendered DOM is the next
+  phase's work; this entry registers the URL so contributors can
+  pick it up.
+maintainer: akshay93aditya
+added: 2026-06-05

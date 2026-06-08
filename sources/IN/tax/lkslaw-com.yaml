@@ -1,0 +1,41 @@
+id: lkslaw-com
+url: https://www.lkslaw.com/
+jurisdiction: IN
+governance_level: central
+domain: tax
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Lakshmikumaran and Sridharan
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Article
+    - Update
+    - Newsletter
+    - Order
+  topics:
+    - tax-news
+    - indirect-tax
+    - direct-tax
+    - international-tax
+    - regulatory-updates
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: LKS publications, tax alerts, customs/GST updates, case digests.
+  approach: Probe the publications / alerts surface for recipe-readiness.
+  next_step: Identify the publications index endpoint and confirm format.
+notes: |
+  Lakshmikumaran and Sridharan (LKS) — tax-specialist Indian law
+  firm. Publishes detailed indirect/direct/international tax alerts
+  and case digests. Secondary trust tier; commits must anchor to
+  the original government source. URL was reached via lakshmisri.com
+  redirect to lkslaw.com on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

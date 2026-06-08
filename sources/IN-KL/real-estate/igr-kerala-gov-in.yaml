@@ -1,0 +1,40 @@
+id: igr-kerala-gov-in
+url: https://igr.kerala.gov.in/
+jurisdiction: IN-KL
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Inspector General of Registration, Kerala
+  type: department
+  parent: Government of Kerala
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - stamps
+    - registration
+    - property-conveyance
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Kerala IGR notifications on stamp duty, registration fees, and conveyance under the Indian Stamp Act (Kerala amendments) and Registration Act.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Inspector General of Registration, Government of Kerala —
+  administers stamps and registration. First-pass batch-4 probes of
+  igrkerala.gov.in returned 000; the actual canonical is
+  igr.kerala.gov.in (state-subdomain). URL was verified reachable
+  via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

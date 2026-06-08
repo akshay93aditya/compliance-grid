@@ -1,0 +1,38 @@
+id: mospi-gov-in
+url: https://www.mospi.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: governance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Ministry of Statistics and Programme Implementation
+  type: ministry
+coverage:
+  instrument_types:
+    - Notification
+    - Standard
+    - Report
+    - Methodology Document
+  topics:
+    - statistics
+    - national-accounts
+    - survey-methodology
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: MoSPI notifications under the Collection of Statistics Act, statistical standards, NSSO survey reports.
+  approach: Probe the notifications / standards surface for recipe-readiness.
+  next_step: Identify the canonical notifications endpoint and confirm format.
+notes: |
+  Ministry of Statistics and Programme Implementation — central
+  ministry for the statistical system; issues notifications under
+  the Collection of Statistics Act, 2008 affecting entities required
+  to furnish data. URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

@@ -1,0 +1,41 @@
+id: taxmann-com
+url: https://www.taxmann.com/
+jurisdiction: IN
+governance_level: central
+domain: tax
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+authority:
+  name: Taxmann Publications
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Circular
+    - Notification
+    - Order
+    - Article
+    - Update
+  topics:
+    - income-tax
+    - gst
+    - corporate-law
+    - tax-news
+    - regulatory-updates
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Taxmann daily news + curated CBDT/CBIC circular and notification listings.
+  approach: Probe the daily-news and circular pages; much of the content is paywalled but headlines and synopsis pages are typically open. Secondary trust tier — commits should anchor to the official CBDT/CBIC source.
+  next_step: Identify the open headlines/digest endpoint and confirm whether it is server-rendered or JS-rendered.
+notes: |
+  Taxmann — long-standing private tax publisher in India. Useful for
+  daily aggregation of CBDT/CBIC notifications and case-law digests.
+  Secondary trust tier; commits must anchor to the original government
+  source. URL was verified reachable via HEAD on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

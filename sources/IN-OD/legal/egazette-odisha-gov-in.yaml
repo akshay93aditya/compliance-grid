@@ -1,0 +1,46 @@
+id: egazette-odisha-gov-in
+url: https://egazette.odisha.gov.in/
+jurisdiction: IN-OD
+domain: legal
+governance_level: state
+authority:
+  name: Odisha Gazette
+  type: department
+  parent: Government of Odisha
+coverage:
+  instrument_types:
+    - Gazette
+    - Notification
+    - Act
+    - Rule
+    - Order
+  topics:
+    - e-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      home: /
+    format: html-table
+    columns: [department, subject, issue_date, download]
+    pdf_path_pattern: /uploads/{category}/press_signed_pdf/{uuid}.pdf
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: verified
+  update_surface: Odisha eGazette homepage lists ~7 recent entries in a 4-column server-rendered HTML table (Department, Subject, Issue Date, Download). Subject categories include "Change of Name/Surname", "Change of Partnership", etc. PDFs at /uploads/{category}/press_signed_pdf/{uuid}.pdf.
+  approach: "Recipe `egazette-odisha-gov-in` (src/recipes/od-egazette.ts) extracts the recent entries; title format — {Subject}: {Department} [{date}]."
+  next_step: Add historical-archive surface via /search_gazette/ — that endpoint requires a CSRF-protected POST (csrf_gazette_odisha token + gazette_no field). Form-postback recipe deferred.
+notes: |
+  Odisha e-gazette search page. Curl reached the official host but received
+  HTTP 403 on 2026-06-05, so this source is indexed as blocked rather than
+  extraction-ready.
+  
+  2026-06-07: Odisha eGazette returns 200 to vanilla Chrome UA — was UA-discrimination only.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

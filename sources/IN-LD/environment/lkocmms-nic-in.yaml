@@ -1,0 +1,38 @@
+id: lkocmms-nic-in
+url: https://lkocmms.nic.in/OCMMS/
+jurisdiction: IN-LD
+domain: environment
+governance_level: state
+authority:
+  name: Lakshadweep Pollution Control Committee OCMMS
+  type: board
+  parent: Administration of Union Territory of Lakshadweep
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Certificate
+    - Return
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - ocmms
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Lakshadweep OCMMS consent and authorisation workflow portal.
+  approach: Inspect public instructions and certificate/download pages; keep authenticated workflows as access metadata.
+  next_step: Enumerate public help/download links and document login boundaries.
+notes: |
+  OCMMS portal for Lakshadweep Pollution Control Committee. Verified reachable
+  with HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,62 @@
+name: validate
+
+# Static + unit gate that runs on every push and PR.
+#
+# - typecheck (`tsc --noEmit`)
+# - source index validation
+# - unit tests (no DB needed; integration tests skip when DATABASE_URL is unset)
+# - production build (catches Next.js / Tailwind / module-resolution regressions)
+#
+# The live patrol / extraction integration tests need an Anthropic key and
+# a Postgres instance and run on the maintainer's machine, not in CI.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Source Index validation
+        run: npm run sources:validate
+
+      - name: Unit + schema tests
+        run: npm test
+
+      - name: Production build
+        run: npm run build
+
+  audit:
+    # Non-blocking visibility into the dependency advisory state. We
+    # explicitly don't fail the build on advisories — `npm audit fix`'s
+    # auto-suggestions are sometimes worse than the advisory (e.g. it
+    # tried to downgrade Next 16 -> 9 to "fix" the PostCSS issue).
+    # See SECURITY.md for the accepted-risk register.
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm audit --omit=dev --json > audit.json || true
+      - run: |
+          echo "## npm audit (--omit=dev)" >> $GITHUB_STEP_SUMMARY
+          node -e "const a=require('./audit.json');console.log('Vulnerabilities:',JSON.stringify(a.metadata?.vulnerabilities||{},null,2));" >> $GITHUB_STEP_SUMMARY

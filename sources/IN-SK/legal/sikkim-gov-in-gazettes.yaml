@@ -1,0 +1,37 @@
+id: sikkim-gov-in-gazettes
+url: https://www.sikkim.gov.in/mygovernment/gazettes
+jurisdiction: IN-SK
+domain: legal
+governance_level: state
+authority:
+  name: Government of Sikkim
+  type: department
+coverage:
+  instrument_types:
+    - Gazette
+    - Notification
+    - Act
+    - Rule
+    - Order
+  topics:
+    - e-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Sikkim state portal gazette listing and linked PDFs.
+  approach: Crawl search/listing pages and linked Gazette PDFs under uploads/Gazette.
+  next_step: Write pagination/search recipe for Gazette date, department, classification, and tags.
+notes: |
+  Government of Sikkim gazette listing. GET with browser user agent verified
+  reachable with HTTP 200 on 2026-06-05 and lists downloadable gazette PDFs.
+  Plain HEAD returned HTTP 404, so fetchers should use GET.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

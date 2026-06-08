@@ -1,0 +1,38 @@
+id: ahmedabadcity-gov-in
+url: https://www.ahmedabadcity.gov.in/
+jurisdiction: IN-GJ
+governance_level: local
+domain: local-governance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Ahmedabad Municipal Corporation
+  type: local-body
+  parent: Government of Gujarat
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Bylaw
+  topics:
+    - property-tax
+    - building-approvals
+    - trade-licenses
+    - water-supply
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: AMC notifications on property tax, building plan approvals, trade licenses for Ahmedabad metro.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Ahmedabad Municipal Corporation — largest civic body in Gujarat.
+  URL was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

@@ -1,0 +1,29 @@
+id: gaps-tripura-gov-in
+url: https://gaps.tripura.gov.in/
+jurisdiction: IN-TR
+domain: legal
+governance_level: state
+authority:
+  name: General Administration (Printing and Stationery), Government of Tripura
+  type: department
+coverage:
+  instrument_types: [Gazette, Notification, Act, Rule, Order]
+  topics: [e-gazette, official-publication]
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Tripura GAPS gazette and printing/stationery portal.
+  approach: Crawl Tripura Gazette listings and linked PDFs.
+  next_step: Write listing recipe for gazette categories and pagination.
+notes: |
+  General Administration (Printing and Stationery), Government of Tripura portal.
+  Verified reachable with HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

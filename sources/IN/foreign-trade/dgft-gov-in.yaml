@@ -1,0 +1,45 @@
+id: dgft-gov-in
+url: https://www.dgft.gov.in
+jurisdiction: IN
+domain: foreign-trade
+governance_level: central
+authority:
+  name: Directorate General of Foreign Trade
+  type: department
+  parent: Ministry of Commerce and Industry
+coverage:
+  instrument_types:
+    - Notification
+    - Public Notice
+    - Trade Notice
+  topics:
+    - import-export
+    - foreign-trade
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      notifications: /CP/?opt=notification
+      public_notices: /CP/?opt=public-notice
+      trade_notices: /CP/?opt=trade-notice
+    format: html-table
+    columns: [sl_no, number, year, description, date, crt_dt, attachment]
+    attachment_host: content.dgft.gov.in
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: verified
+  update_surface: DGFT notifications, public notices, trade notices — all surfaced as server-rendered HTML tables.
+  approach: Recipe `dgft-gov-in` (src/recipes/dgft.ts) scrapes /CP/?opt={notification|public-notice|trade-notice} table rows, picks Description column (col 4) as title, follows the PDF anchor to content.dgft.gov.in.
+  next_step: Wire patrol routing to enumerate the three listing_paths above and feed into dgft-gov-in recipe.
+notes: |
+  Directorate General of Foreign Trade portal. Confirmed via WebFetch
+  2026-06-07 that /CP/?opt=notification serves a static HTML table
+  (Sl.No., Number, Year, Description, Date, CRT DT, Attachment) with
+  PDF links to content.dgft.gov.in. No browser required.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

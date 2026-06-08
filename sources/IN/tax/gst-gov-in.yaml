@@ -1,0 +1,20 @@
+id: gst-gov-in
+url: https://www.gst.gov.in
+jurisdiction: IN
+governance_level: central
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+access:
+  status: needs-access-probe
+  update_surface: Goods and Services Tax Network — return filings (GSTR-1/3B/9), e-invoice, e-way bill rules.
+  approach: Probe before recipe work — note that GSTN may also have separate CBIC-side circular surfaces (see cbic-gst-gov-in).
+  next_step: Identify which GSTN sub-paths surface rules/notifications vs the interactive taxpayer portal.
+notes: |
+  Goods and Services Tax Network. Source for GST registration,
+  return filings (GSTR-1/3B/9), e-invoice rules, e-way bill rules.
+  Likely requires the browser path. Recipe TODO.
+maintainer: akshay93aditya
+added: 2026-06-05

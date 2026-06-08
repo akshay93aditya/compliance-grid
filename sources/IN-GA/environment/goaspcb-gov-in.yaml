@@ -1,0 +1,38 @@
+id: goaspcb-gov-in
+url: https://goaspcb.gov.in/
+jurisdiction: IN-GA
+domain: environment
+governance_level: state
+authority:
+  name: Goa State Pollution Control Board
+  type: board
+  parent: Government of Goa
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Circular
+    - Public Notice
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: GSPCB portal pages and WordPress document links.
+  approach: Crawl public pages, notices, circulars, consent guidance, and downloadable PDFs.
+  next_step: Write a WordPress/listing recipe for notices, circulars, and consent documents.
+notes: |
+  Goa State Pollution Control Board portal. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

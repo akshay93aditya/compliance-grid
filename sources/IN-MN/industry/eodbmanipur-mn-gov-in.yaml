@@ -1,0 +1,40 @@
+id: eodbmanipur-mn-gov-in
+url: https://www.eodbmanipur.mn.gov.in/
+jurisdiction: IN-MN
+domain: industry
+governance_level: state
+authority:
+  name: EODB Manipur State Single Window System
+  type: department
+  parent: Government of Manipur
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - Act
+    - Rule
+  topics:
+    - single-window
+    - industrial-clearances
+    - investor-services
+    - act-rules
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: EODB Manipur portal, Act/Rules page, and service workflows.
+  approach: Crawl public Act/Rules and service metadata; keep application workflows session based.
+  next_step: Add focused recipe for `/ActRules` and service catalogue pages.
+notes: |
+  Official Manipur State Single Window/EODB portal. Verified reachable with HTTP
+  200 on 2026-06-05. Search snippets show Manipur Industrial Single Window
+  Clearance Act and rules on this portal.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

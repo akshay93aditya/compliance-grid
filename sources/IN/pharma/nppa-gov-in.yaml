@@ -1,0 +1,36 @@
+id: nppa-gov-in
+url: https://nppa.gov.in
+jurisdiction: IN
+domain: pharma
+governance_level: central
+authority:
+  name: National Pharmaceutical Pricing Authority
+  type: statutory-regulator
+  parent: Department of Pharmaceuticals
+coverage:
+  instrument_types:
+    - Order
+    - Notification
+    - Price List
+  topics:
+    - drug-pricing
+    - price-control
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until order, notification, and price-control listings are inspected.
+  approach: Probe public order and notification listings.
+  next_step: Identify stable NPPA document pages and price-order feeds.
+notes: |
+  Central pharmaceutical pricing authority. Verified reachable with HTTP 200
+  on 2026-06-05. The alternate `/en/` search-result URL redirected to a 404,
+  so this entry uses the verified root.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

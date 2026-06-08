@@ -1,0 +1,39 @@
+id: manipurlabour-mn-gov-in
+url: https://manipurlabour.mn.gov.in/
+jurisdiction: IN-MN
+domain: labour
+governance_level: state
+authority:
+  name: Office of Labour Commissioner, Government of Manipur
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - Service
+    - Integrated Return
+  topics:
+    - labour-services
+    - shops-and-establishments
+    - factories
+    - single-window
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Manipur Labour Commissioner portal and online services.
+  approach: Inspect public pages and service descriptions; map application workflows as form/session based.
+  next_step: Enumerate notifications, Acts/rules, service pages, and integrated return links.
+notes: |
+  Official Manipur Labour Commissioner portal. Verified reachable with HTTP 200
+  on 2026-06-05. Search snippets identify single-window and no-physical-visit
+  labour services on this site.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

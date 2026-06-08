@@ -1,0 +1,38 @@
+id: jkocmms-nic-in
+url: https://jkocmms.nic.in/
+jurisdiction: IN-JK
+domain: environment
+governance_level: state
+authority:
+  name: Jammu and Kashmir Pollution Control Committee
+  type: board
+  parent: Government of Jammu and Kashmir
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Guideline
+    - Direction
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: J&K OCMMS portal for pollution consent and authorisation workflows.
+  approach: Inspect public instructions and linked documents before any authenticated workflow mapping.
+  next_step: Enumerate public notice/guideline links and login boundaries.
+notes: |
+  Jammu and Kashmir OCMMS portal. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

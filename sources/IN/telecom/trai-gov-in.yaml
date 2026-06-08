@@ -1,0 +1,47 @@
+id: trai-gov-in
+url: https://www.trai.gov.in
+jurisdiction: IN
+domain: telecom
+governance_level: central
+authority:
+  name: Telecom Regulatory Authority of India
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Regulation
+    - Direction
+    - Order
+  topics:
+    - telecom
+    - broadcasting
+    - unsolicited-commercial-communication
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      regulations: /release-publication/regulations
+      recommendations: /release-publication/recommendation
+      consultations: /release-publication/consultation
+      directions: /release-publication/directions
+      press_releases: /notifications/press-release
+      publications: /notifications/publication
+    format: drupal-listing
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: TRAI publications (regulations, recommendations, consultation papers, directions) + notifications (press releases, publications) — all surfaced as Drupal listing pages.
+  approach: Recipe writer enumerates each /release-publication/{type} and /notifications/{type} listing; child documents are PDFs.
+  next_step: Write a TRAI Drupal-listing recipe covering the six listing paths above.
+notes: |
+  Central telecom and broadcasting regulator. Confirmed via WebFetch
+  2026-06-07: navigation exposes /release-publication/{regulations,
+  recommendation, consultation, directions} and /notifications/
+  {press-release, publication} as the stable listing paths. Drupal-
+  rendered, no browser required.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

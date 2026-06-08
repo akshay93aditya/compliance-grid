@@ -1,0 +1,39 @@
+id: transport-tripura-gov-in
+url: https://transport.tripura.gov.in/
+jurisdiction: IN-TR
+governance_level: state
+domain: transport
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Transport Department, Tripura
+  type: department
+  parent: Government of Tripura
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - motor-vehicles
+    - permits
+    - road-tax
+    - fitness-certificates
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Tripura Transport Department notifications under the Motor Vehicles Act and Tripura Motor Vehicles Taxation Act.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Transport Department, Government of Tripura — administers motor-
+  vehicle registration, permits, and state road tax. URL was verified
+  reachable via GET on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

@@ -1,0 +1,35 @@
+id: tn-gov-in
+url: https://www.tn.gov.in/
+jurisdiction: IN-TN
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: General Administration Department, Tamil Nadu
+  type: department
+  parent: Government of Tamil Nadu
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+  topics:
+    - state-administration
+    - inter-departmental-coordination
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Apex Tamil Nadu state-government portal hosting General Administration Department notifications.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Apex state-government portal of Tamil Nadu. Canonical URL uses
+  www prefix. URL was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

@@ -1,0 +1,38 @@
+id: bse-notices-circulars
+url: "https://www.bseindia.com/markets/MarketInfo/NoticesCirculars?id=0"
+jurisdiction: IN
+domain: securities
+governance_level: central
+authority:
+  name: BSE Limited
+  type: market-infrastructure
+coverage:
+  instrument_types:
+    - Notice
+    - Circular
+  topics:
+    - exchange-members
+    - listed-entities
+    - trading
+    - clearing
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Notices and Circulars search page with date, segment, category, department, subject, and text filters.
+  approach: Model the search/filter workflow and follow notice PDF/download links.
+  next_step: Build a BSE notices recipe that captures the form state and enumerates current notices.
+notes: |
+  BSE is a recognized exchange and market-infrastructure source rather than a
+  government portal. Verified reachable with HTTP 200 on 2026-06-05 after a
+  redirect from the .aspx URL. Use this as an update/discovery surface; CKG
+  obligations should still anchor to the BSE notice/circular document and, where
+  relevant, the SEBI or gazette instrument behind it.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

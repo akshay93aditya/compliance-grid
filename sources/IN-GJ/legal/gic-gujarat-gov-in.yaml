@@ -1,0 +1,36 @@
+id: gic-gujarat-gov-in
+url: https://gic.gujarat.gov.in/
+jurisdiction: IN-GJ
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Gujarat Information Commission
+  type: statutory-regulator
+  parent: Government of Gujarat
+coverage:
+  instrument_types:
+    - Order
+    - Decision
+    - Notification
+  topics:
+    - rti
+    - information-disclosure
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: GIC orders and decisions under the Right to Information Act, 2005.
+  approach: Probe the orders surface for recipe-readiness. Note 302-redirect to /default.aspx.
+  next_step: Identify the orders index endpoint and confirm format.
+notes: |
+  Gujarat Information Commission — statutory body under the Right
+  to Information Act, 2005. URL was verified reachable via HEAD on
+  2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

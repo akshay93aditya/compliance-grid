@@ -1,0 +1,38 @@
+id: iwai-nic-in
+url: https://iwai.nic.in/
+jurisdiction: IN
+governance_level: central
+domain: maritime
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Inland Waterways Authority of India
+  type: statutory-regulator
+  parent: Ministry of Ports Shipping and Waterways
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Guideline
+    - Tender
+  topics:
+    - inland-waterways
+    - waterway-navigation
+    - port-operations
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: IWAI notifications under the IWAI Act, 1985, waterway-navigation rules, tender bulletins.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Inland Waterways Authority of India — statutory body under the
+  IWAI Act, 1985 regulating national inland waterways. URL was
+  verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

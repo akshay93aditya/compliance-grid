@@ -1,0 +1,38 @@
+id: delhi-gov-in-egazette
+url: https://delhi.gov.in/taxonomy/term/261
+jurisdiction: IN-DL
+domain: legal
+governance_level: state
+authority:
+  name: Government of National Capital Territory of Delhi
+  type: department
+coverage:
+  instrument_types:
+    - Gazette
+    - Notification
+    - Order
+    - Circular
+    - Rule
+  topics:
+    - e-gazette
+    - state-portal
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Delhi state portal e-Gazette page and linked department gazette-notification pages.
+  approach: Crawl the e-Gazette page and follow department-specific gazette notification listings.
+  next_step: Determine whether a central Delhi Gazette search API/listing exists or whether department pages must be indexed separately.
+notes: |
+  Delhi state portal e-Gazette page. Verified reachable with HTTP 200 on
+  2026-06-05. The guessed `egazette.delhi.gov.in` host did not resolve, so this
+  verified state portal page is indexed instead.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

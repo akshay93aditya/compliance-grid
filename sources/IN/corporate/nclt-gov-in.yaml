@@ -1,0 +1,35 @@
+id: nclt-gov-in
+url: https://nclt.gov.in
+jurisdiction: IN
+domain: corporate
+governance_level: central
+authority:
+  name: National Company Law Tribunal
+  type: tribunal
+coverage:
+  instrument_types:
+    - Order
+    - Notice
+    - Cause List
+  topics:
+    - companies
+    - insolvency
+    - tribunal-orders
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until orders, notices, and cause-list pages are inspected.
+  approach: Probe Drupal pages and document links.
+  next_step: Identify NCLT order, notice, and cause-list surfaces relevant to company compliance.
+notes: |
+  Central company-law tribunal. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

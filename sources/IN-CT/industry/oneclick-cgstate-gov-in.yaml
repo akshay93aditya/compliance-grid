@@ -1,0 +1,42 @@
+id: oneclick-cgstate-gov-in
+url: https://oneclick.cgstate.gov.in/
+jurisdiction: IN-CT
+domain: industry
+governance_level: state
+authority:
+  name: Chhattisgarh OneClick Single Window System
+  type: department
+  parent: Government of Chhattisgarh
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - Certificate
+    - NOC
+  topics:
+    - single-window
+    - industrial-clearances
+    - boiler-registration
+    - incentives
+    - compliance-services
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: OneClick service catalogue, notice board, approval lifecycle, and industry categorisation pages.
+  approach: Crawl public service cards, notices, manuals, and approval descriptions; keep login workflows as metadata.
+  next_step: Write a service-card recipe and capture department, service, legal basis, and category fields.
+notes: |
+  Official Chhattisgarh OneClick single-window portal. Verified reachable with
+  HTTP 200 on 2026-06-05. Search snippets show services including production
+  certificates and new boiler registration, plus notice-board and approval
+  lifecycle content.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

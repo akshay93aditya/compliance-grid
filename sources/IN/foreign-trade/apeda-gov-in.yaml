@@ -1,0 +1,34 @@
+id: apeda-gov-in
+url: https://apeda.gov.in
+jurisdiction: IN
+domain: foreign-trade
+governance_level: central
+authority:
+  name: Agricultural and Processed Food Products Export Development Authority
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Regulation
+    - Notice
+    - Guideline
+  topics:
+    - agricultural-exports
+    - processed-food-exports
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until notices, registration, and export-guideline pages are inspected.
+  approach: Probe public Drupal listings and export-document links.
+  next_step: Identify APEDA notices, RCMC, and export-compliance guidance surfaces.
+notes: |
+  Central export authority for agricultural and processed food products.
+  Verified reachable with HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

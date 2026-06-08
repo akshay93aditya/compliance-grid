@@ -1,0 +1,34 @@
+id: copyright-gov-in
+url: https://copyright.gov.in
+jurisdiction: IN
+domain: intellectual-property
+governance_level: central
+authority:
+  name: Copyright Office
+  type: department
+  parent: Department for Promotion of Industry and Internal Trade
+coverage:
+  instrument_types:
+    - Rule
+    - Public Notice
+    - Guideline
+  topics:
+    - copyright
+    - intellectual-property
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: ASP.NET portal with public pages and session cookies.
+  approach: Model public form/navigation flows for rules, public notices, and guidance.
+  next_step: Identify stable Copyright Office notice and rule pages.
+notes: |
+  Central copyright office. Verified reachable with HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

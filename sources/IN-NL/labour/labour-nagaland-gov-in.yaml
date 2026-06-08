@@ -1,0 +1,38 @@
+id: labour-nagaland-gov-in
+url: https://labour.nagaland.gov.in/
+jurisdiction: IN-NL
+domain: labour
+governance_level: state
+authority:
+  name: Department of Labour, Government of Nagaland
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - Circular
+    - Guideline
+  topics:
+    - labour-services
+    - shops-establishments
+    - factories
+    - welfare
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Nagaland Labour Department website and public documents.
+  approach: Crawl notices, forms, services, circulars, and downloadable documents.
+  next_step: Identify labour registration, licensing, return, and inspection pages.
+notes: |
+  Nagaland Labour Department portal. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

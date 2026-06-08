@@ -1,0 +1,37 @@
+id: nsws-gov-in
+url: https://www.nsws.gov.in
+jurisdiction: IN
+domain: industry
+governance_level: central
+authority:
+  name: National Single Window System
+  type: transactional-portal
+  parent: Department for Promotion of Industry and Internal Trade
+coverage:
+  instrument_types:
+    - Workflow
+    - Clearance
+    - Guideline
+  topics:
+    - business-approvals
+    - licences
+    - clearances
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Public portal pages and approval workflows need inspection.
+  approach: Use browser-acquire to inspect public approval catalogues and guidance pages.
+  next_step: Browser-smoke NSWS public approval, licence, and state/central clearance catalogues.
+notes: |
+  Central single-window approvals portal. Verified reachable with HTTP 200 on
+  2026-06-05. Public catalogues should be indexed before any authenticated
+  workflow extraction.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

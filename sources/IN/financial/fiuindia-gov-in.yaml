@@ -1,0 +1,40 @@
+id: fiuindia-gov-in
+url: https://fiuindia.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: financial
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Financial Intelligence Unit - India
+  type: department
+  parent: Department of Revenue, Ministry of Finance
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Guideline
+    - Direction
+  topics:
+    - anti-money-laundering
+    - kyc
+    - suspicious-transaction-reports
+    - financial-intelligence
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: FIU-IND directions, PMLA-rule circulars, regulated-entity reporting guidance.
+  approach: Probe the notifications/circulars endpoints; FIU surfaces are typically structured static HTML with PDF children.
+  next_step: Identify the canonical AML/CFT directions endpoint and verify recipe-readiness.
+notes: |
+  Financial Intelligence Unit - India (FIU-IND) — central agency for
+  receiving, processing, analyzing, and disseminating information
+  under the Prevention of Money Laundering Act. URL was verified
+  reachable via HEAD on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

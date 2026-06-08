@@ -1,0 +1,41 @@
+id: labourcommissioner-assam-gov-in
+url: https://labourcommissioner.assam.gov.in/
+jurisdiction: IN-AS
+domain: labour
+governance_level: state
+authority:
+  name: Commissionerate of Labour, Government of Assam
+  type: department
+coverage:
+  instrument_types:
+    - Minimum Wage Notification
+    - VDA Notification
+    - Act
+    - Rule
+    - Return
+  topics:
+    - minimum-wages
+    - contract-labour
+    - shops-and-establishments
+    - trade-unions
+    - labour-codes
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Commissionerate homepage, What's New, quick-access minimum wage and VDA notification pages.
+  approach: Crawl quick-access and What's New sections, then follow PDF/document pages.
+  next_step: Write a recipe for minimum wage notifications, contract labour VDA notifications, and labour code draft rules.
+notes: |
+  Official Commissionerate of Labour portal for Assam. Verified reachable with
+  HTTP 200 on 2026-06-05. Search snippets show minimum wage notifications,
+  contract labour VDA notifications, draft labour-code rules, and Assam Shops
+  and Establishment Act updates.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

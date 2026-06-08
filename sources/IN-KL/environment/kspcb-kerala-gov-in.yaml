@@ -1,0 +1,42 @@
+id: kspcb-kerala-gov-in
+url: https://kspcb.kerala.gov.in/
+jurisdiction: IN-KL
+domain: environment
+governance_level: state
+authority:
+  name: Kerala State Pollution Control Board
+  type: board
+  parent: Government of Kerala
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Direction
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: KSPCB public portal and EODB/consent pages.
+  approach: Browser-smoke the portal and document permitted public document extraction.
+  next_step: Verify whether public notices and consent guidance can be fetched without triggering the block.
+notes: |
+  Kerala State Pollution Control Board portal. Curl reached the host on
+  2026-06-05 but received HTTP 403. Search snippets show KSPCB EODB pages and
+  K-SWIFT integration, so this important source is indexed as blocked pending
+  browser/access review.
+  
+  2026-06-07: KSPCB returns 200 to vanilla Chrome UA — was UA-discrimination only.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

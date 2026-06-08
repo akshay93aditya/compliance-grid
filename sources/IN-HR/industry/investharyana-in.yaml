@@ -1,0 +1,38 @@
+id: investharyana-in
+url: https://www.investharyana.in/
+jurisdiction: IN-HR
+domain: industry
+governance_level: state
+authority:
+  name: Invest Haryana
+  type: department
+  parent: Industries and Commerce Department, Government of Haryana
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - Incentive
+    - NOC
+  topics:
+    - single-window
+    - investor-services
+    - business-approvals
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Invest Haryana single-window portal and service catalogue.
+  approach: Inspect rendered portal and route public service metadata separately from login/application workflows.
+  next_step: Map services, department approvals, timelines, and downloadable instructions.
+notes: |
+  Haryana single-window investor portal. HEAD returned HTTP 405, but GET
+  returned HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

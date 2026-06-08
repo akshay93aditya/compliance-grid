@@ -1,0 +1,37 @@
+id: cioins-co-in
+url: https://www.cioins.co.in/
+jurisdiction: IN
+governance_level: central
+domain: financial
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Council for Insurance Ombudsmen
+  type: tribunal
+  parent: IRDAI
+coverage:
+  instrument_types:
+    - Order
+    - Award
+    - Notification
+  topics:
+    - insurance
+    - consumer-disputes
+    - redressal
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Insurance Ombudsman awards across regional offices.
+  approach: Probe the awards / offices surface for recipe-readiness.
+  next_step: Identify the awards index endpoint and confirm format.
+notes: |
+  Council for Insurance Ombudsmen — operates the Insurance Ombudsman
+  scheme under the Insurance Ombudsman Rules, 2017 (administered by
+  IRDAI). URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

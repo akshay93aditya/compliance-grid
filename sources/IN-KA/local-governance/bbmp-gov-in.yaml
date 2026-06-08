@@ -1,0 +1,38 @@
+id: bbmp-gov-in
+url: https://bbmp.gov.in
+jurisdiction: IN-KA
+domain: local-governance
+governance_level: local
+authority:
+  name: Bruhat Bengaluru Mahanagara Palike
+  type: local-body
+  parent: Government of Karnataka
+coverage:
+  instrument_types:
+    - Bye-law
+    - Circular
+    - Public Notice
+  topics:
+    - trade-license
+    - municipal-compliance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: browser-required
+  update_surface: Public portal renders through a JavaScript application shell.
+  approach: Use browser-acquire, inspect rendered routes or network calls, then write a local-body recipe.
+  next_step: Browser-smoke the rendered services, trade licence, public notice, and circular surfaces.
+notes: |
+  Bruhat Bengaluru Mahanagara Palike portal. Verified reachable with
+  HTTP 200 on 2026-06-05. HTML inspected on 2026-06-05 returns a React app
+  shell with `<div id="root"></div>`, so plain fetch is insufficient.
+  Local-body entry; parent jurisdiction remains IN-KA until city-level
+  jurisdictions are introduced.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

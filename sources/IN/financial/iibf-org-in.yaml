@@ -1,0 +1,39 @@
+id: iibf-org-in
+url: https://www.iibf.org.in/
+jurisdiction: IN
+governance_level: central
+domain: financial
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+authority:
+  name: Indian Institute of Banking and Finance
+  type: statutory-professional-body
+coverage:
+  instrument_types:
+    - Article
+    - Guideline
+    - Examination Schedule
+    - Notification
+  topics:
+    - banking-education
+    - certified-banking-professionals
+    - rbi-aligned-training
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: browser-required
+  update_surface: IIBF certification updates, RBI-aligned course advisories, banking-industry guidance for member institutions.
+  approach: Probe accepted only a browser-style User-Agent on 2026-06-06 (project UA returned 403, browser UA returned 200). Use the D49 browser-acquire path.
+  next_step: Configure browser-acquire path or UA override, then identify the publications index endpoint.
+notes: |
+  Indian Institute of Banking and Finance — RBI-recognised
+  professional body for banking education. Site blocks the
+  Compliance-Grid project UA at HTTP 403 but accepts browser UA
+  at HTTP 200 (probe 2026-06-06). Secondary trust tier; commits
+  affecting law-level claims must anchor to RBI / Ministry source.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

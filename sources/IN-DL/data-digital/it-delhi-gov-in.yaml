@@ -1,0 +1,38 @@
+id: it-delhi-gov-in
+url: https://it.delhi.gov.in/
+jurisdiction: IN-DL
+governance_level: state
+domain: data-digital
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Department of Information Technology, GNCT of Delhi
+  type: department
+  parent: Government of National Capital Territory of Delhi
+coverage:
+  instrument_types:
+    - Notification
+    - Policy
+    - Circular
+    - Guideline
+  topics:
+    - it-policy
+    - e-governance
+    - digital-services
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Delhi IT Department policy notifications, e-governance directives, and digital-services circulars.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Department of Information Technology, Government of National
+  Capital Territory of Delhi. Sets state-level digital-services
+  policy. URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

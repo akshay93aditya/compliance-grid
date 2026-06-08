@@ -1,0 +1,42 @@
+id: advantage-jharkhand-gov-in
+url: https://advantage.jharkhand.gov.in/SingleWindow/
+jurisdiction: IN-JH
+domain: industry
+governance_level: state
+authority:
+  name: Advantage Jharkhand Single Window System
+  type: department
+  parent: Department of Industries, Government of Jharkhand
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - Incentive
+    - NOC
+  topics:
+    - single-window
+    - investor-services
+    - business-approvals
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Advantage Jharkhand single-window portal.
+  approach: Browser-smoke the redirected single-window page and document whether public service metadata is extractable.
+  next_step: Verify the redirected `/SingleWindow/` page through browser access; curl timed out after the redirect.
+notes: |
+  Jharkhand single-window portal. The `www` hostname had a certificate-name
+  mismatch; the bare host redirected to `/SingleWindow/` on 2026-06-05 but the
+  follow-up curl request timed out. Indexed as a verified important surface with
+  access still needing browser review.
+  
+  2026-06-07: advantage.jharkhand returns 200 to vanilla Chrome UA on /SingleWindow/ canonical.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

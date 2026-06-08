@@ -1,0 +1,21 @@
+id: egazette-nic-in
+url: https://egazette.gov.in
+jurisdiction: IN
+governance_level: central
+domain: legal
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+access:
+  status: needs-access-probe
+  update_surface: e-Gazette of India — official electronic gazette portal, highest-trust source for central notifications.
+  approach: Probe before recipe work — verify whether gazette PDFs are listable statically, JS-rendered, or require form-based search.
+  next_step: Identify the daily-gazette listing endpoint and determine its access mode.
+notes: |
+  e-Gazette of India — the official electronic gazette portal.
+  Highest-trust source for central notifications. Recipe TODO;
+  likely requires the browser path. High value for the patrol
+  loop: most central regulatory changes appear here first.
+maintainer: akshay93aditya
+added: 2026-06-05

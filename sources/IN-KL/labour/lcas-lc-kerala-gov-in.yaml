@@ -1,0 +1,39 @@
+id: lcas-lc-kerala-gov-in
+url: https://lcas.lc.kerala.gov.in/
+jurisdiction: IN-KL
+domain: labour
+governance_level: state
+authority:
+  name: Kerala Labour Commissionerate Automation System
+  type: department
+  parent: Labour Commissionerate, Government of Kerala
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Renewal
+    - Return
+    - Certificate
+  topics:
+    - labour-services
+    - online-registration
+    - shops-and-establishments
+    - contract-labour
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: LCAS online labour service and application workflows.
+  approach: Map public service names and instructions; keep application workflows as session/login metadata.
+  next_step: Identify public service catalogue, forms, and help/download links.
+notes: |
+  Kerala Labour Commissionerate Automation System. Verified reachable with HTTP
+  200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

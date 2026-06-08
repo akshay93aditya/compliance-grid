@@ -1,0 +1,40 @@
+id: dgfasli-gov-in
+url: https://dgfasli.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: industrial-safety
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Directorate General Factory Advice Service and Labour Institutes
+  type: department
+  parent: Ministry of Labour and Employment
+coverage:
+  instrument_types:
+    - Guideline
+    - Notification
+    - Standard
+    - Manual
+  topics:
+    - factories-safety
+    - occupational-safety
+    - hazardous-processes
+    - safety-research
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: DGFASLI guidance and manuals on factory safety, occupational-health surveys, and standards adoption.
+  approach: Probe the publications / guidelines surface for recipe-readiness.
+  next_step: Identify the publications index endpoint and confirm format.
+notes: |
+  Directorate General Factory Advice Service and Labour Institutes
+  (DGFASLI) — central technical body advising on factory safety and
+  occupational health, including under the OSH&WCC Code, 2020. URL
+  was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

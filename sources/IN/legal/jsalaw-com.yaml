@@ -1,0 +1,37 @@
+id: jsalaw-com
+url: https://www.jsalaw.com/
+jurisdiction: IN
+governance_level: central
+domain: legal
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: J Sagar Associates
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Article
+    - Update
+    - Newsletter
+  topics:
+    - regulatory-updates
+    - law-firm-commentary
+    - corporate-law
+    - banking-finance
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: JSA insights, alerts, and regulatory newsletters.
+  approach: Probe the insights surface for recipe-readiness.
+  next_step: Identify the insights index endpoint and confirm format.
+notes: |
+  J Sagar Associates (JSA) — Indian full-service law firm with
+  strong banking, corporate, and energy regulatory practices.
+  Secondary trust tier. URL verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

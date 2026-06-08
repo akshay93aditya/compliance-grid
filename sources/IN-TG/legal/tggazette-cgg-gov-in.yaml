@@ -1,0 +1,37 @@
+id: tggazette-cgg-gov-in
+url: https://tggazette.cgg.gov.in/
+jurisdiction: IN-TG
+domain: legal
+governance_level: state
+authority:
+  name: Telangana e-Gazette
+  type: department
+  parent: Government of Telangana
+coverage:
+  instrument_types:
+    - Gazette
+    - Notification
+    - Act
+    - Rule
+    - Order
+  topics:
+    - e-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Telangana e-Gazette repository.
+  approach: Crawl gazette repository pages and linked PDFs by department, district, month, and year.
+  next_step: Write listing/search recipes for Gazette Repository and related reports.
+notes: |
+  Telangana e-Gazette portal. Verified reachable with HTTP 200 on 2026-06-05.
+  Telangana State Portal identifies tggazette.cgg.gov.in as the e-Gazette system.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

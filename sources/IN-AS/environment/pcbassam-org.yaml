@@ -1,0 +1,41 @@
+id: pcbassam-org
+url: https://www.pcbassam.org/
+jurisdiction: IN-AS
+domain: environment
+governance_level: state
+authority:
+  name: Pollution Control Board, Assam
+  type: board
+  parent: Department of Environment, Forest and Climate Change, Government of Assam
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Standard
+    - Public Notice
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+    - standards
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: PCB Assam website consent, waste management, standards, publications, and activity sections.
+  approach: Crawl public pages and linked documents for consent, waste, standards, and public notices.
+  next_step: Write listing recipes for consent management, standards, and waste-management document sections.
+notes: |
+  Pollution Control Board, Assam portal. Verified reachable with HTTP 200 on
+  2026-06-05. Search snippets show consent management, waste-management,
+  standards, air/water/noise monitoring, publications, and compliance monitoring
+  links.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

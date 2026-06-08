@@ -1,0 +1,37 @@
+id: punjab-gov-in-notifications
+url: https://punjab.gov.in/impnotifications/
+jurisdiction: IN-PB
+domain: legal
+governance_level: state
+authority:
+  name: Government of Punjab
+  type: department
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Act
+    - Rule
+    - Order
+  topics:
+    - official-notifications
+    - state-portal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Government of Punjab orders and notifications listing.
+  approach: Crawl public notification listings and linked PDFs while separately searching for a direct e-gazette endpoint.
+  next_step: Build listing recipe for notification pagination and PDF metadata.
+notes: |
+  Government of Punjab orders/notifications page. Verified reachable with HTTP
+  200 on 2026-06-05. Used as the current Punjab legal/update surface because a
+  direct India Punjab e-gazette endpoint was not verified in this batch.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,39 @@
+id: aerc-gov-in
+url: https://aerc.gov.in/
+jurisdiction: IN-AS
+governance_level: state
+domain: energy
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Assam Electricity Regulatory Commission
+  type: statutory-regulator
+  parent: Government of Assam
+coverage:
+  instrument_types:
+    - Order
+    - Notification
+    - Tariff Order
+    - Regulation
+  topics:
+    - state-electricity-tariff
+    - discom-licensing
+    - open-access
+    - renewable-tariff
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: AERC tariff orders, regulations under the Electricity Act 2003, open-access notifications.
+  approach: Probe the orders / regulations surface for recipe-readiness.
+  next_step: Identify the orders index endpoint and confirm format.
+notes: |
+  Assam Electricity Regulatory Commission — state-level electricity
+  regulator constituted under the Electricity Act, 2003. URL was
+  verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

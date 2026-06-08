@@ -1,0 +1,35 @@
+id: ibbi-gov-in
+url: https://ibbi.gov.in
+jurisdiction: IN
+domain: financial
+governance_level: central
+authority:
+  name: Insolvency and Bankruptcy Board of India
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Regulation
+    - Circular
+    - Order
+  topics:
+    - insolvency
+    - bankruptcy
+    - insolvency-professionals
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until circular, regulation, and order listings are inspected.
+  approach: Probe static HTML first; write a listing recipe if tables or anchors are exposed.
+  next_step: Inspect IBBI legal, circular, and order pages.
+notes: |
+  Central insolvency regulator. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,38 @@
+id: andamannicobar-gov-in
+url: https://andamannicobar.gov.in/
+jurisdiction: IN-AN
+domain: legal
+governance_level: state
+authority:
+  name: Andaman and Nicobar Administration
+  type: department
+coverage:
+  instrument_types:
+    - Gazette Notification
+    - Order
+    - Circular
+    - Rule
+  topics:
+    - administration
+    - state-gazette
+    - public-notices
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Administration homepage latest updates, orders, circulars, legislative items, and gazette notification links.
+  approach: Crawl latest-update sections and linked PDFs, then classify document type from section and title.
+  next_step: Write a listing recipe for the homepage update tabs and document download links.
+notes: |
+  Official Andaman and Nicobar Administration portal. HEAD returned HTTP 404,
+  but GET returned HTTP 200 on 2026-06-05. Search snippets showed recent AN
+  Gazette Notification links on this portal; use as a state/UT-level legal
+  update surface while anchoring obligations to the linked document.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

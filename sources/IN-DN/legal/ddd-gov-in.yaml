@@ -1,0 +1,37 @@
+id: ddd-gov-in
+url: https://ddd.gov.in/
+jurisdiction: IN-DN
+domain: legal
+governance_level: state
+authority:
+  name: Administration of Dadra and Nagar Haveli and Daman and Diu
+  type: department
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Circular
+    - Public Notice
+    - Rule
+  topics:
+    - administration
+    - public-notices
+    - state-portal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: UT administration portal notices, orders, circulars, tenders, and department pages.
+  approach: Crawl latest updates, notice pages, and department links; route domain-specific documents to narrower entries.
+  next_step: Identify stable notification/order listing URLs and linked PDFs.
+notes: |
+  Official portal for the merged Union Territory of Dadra and Nagar Haveli and
+  Daman and Diu. Verified reachable with HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

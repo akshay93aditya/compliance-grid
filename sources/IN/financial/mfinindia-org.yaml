@@ -1,0 +1,37 @@
+id: mfinindia-org
+url: https://mfinindia.org/
+jurisdiction: IN
+governance_level: central
+domain: financial
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Microfinance Industry Network
+  type: statutory-professional-body
+coverage:
+  instrument_types:
+    - Code
+    - Guideline
+    - Circular
+    - Report
+  topics:
+    - microfinance
+    - nbfc-mfi
+    - rbi-fair-practices
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: MFIN code of responsible lending, RBI-aligned advisories for NBFC-MFIs.
+  approach: Probe the publications surface for recipe-readiness.
+  next_step: Identify the publications index endpoint and confirm format.
+notes: |
+  Microfinance Industry Network (MFIN) — RBI-recognised SRO for the
+  NBFC-MFI sector. Issues binding code-of-conduct standards for
+  members. URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

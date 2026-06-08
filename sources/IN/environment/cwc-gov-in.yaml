@@ -1,0 +1,40 @@
+id: cwc-gov-in
+url: https://cwc.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: environment
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Central Water Commission
+  type: department
+  parent: Department of Water Resources, River Development and Ganga Rejuvenation
+coverage:
+  instrument_types:
+    - Notification
+    - Guideline
+    - Standard
+    - Report
+  topics:
+    - water-resources
+    - flood-management
+    - dam-safety
+    - river-basin-planning
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: CWC guidelines on dam safety, flood-forecasting bulletins, water-resources standards.
+  approach: Probe the guidelines / standards surface for recipe-readiness.
+  next_step: Identify the guidelines index endpoint and confirm format.
+notes: |
+  Central Water Commission — premier technical organization in
+  India for water-resources matters. Hosts Dam Safety Authority-
+  adjacent guidance and CWC-issued standards. URL was verified
+  reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

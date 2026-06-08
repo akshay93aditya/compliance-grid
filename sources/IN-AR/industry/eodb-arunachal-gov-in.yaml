@@ -1,0 +1,40 @@
+id: eodb-arunachal-gov-in
+url: https://eodb.arunachal.gov.in/
+jurisdiction: IN-AR
+domain: industry
+governance_level: state
+authority:
+  name: Arunachal Pradesh EODB Portal
+  type: department
+  parent: Department of Finance, Planning and Investment, Government of Arunachal Pradesh
+coverage:
+  instrument_types:
+    - Clearance
+    - Licence
+    - Permit
+    - NOC
+    - Notification
+  topics:
+    - single-window
+    - industrial-clearances
+    - trade-licence
+    - approvals
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Arunachal Pradesh investment/EODB portal latest news and single-window service workflows.
+  approach: Crawl public notices and approval lists; treat application workflows as form/session based.
+  next_step: Inspect service catalogue, login boundaries, and download links for Acts/rules/notifications.
+notes: |
+  Official Arunachal Pradesh EODB/single-window portal. Verified reachable with
+  HTTP 200 on 2026-06-05. Search snippets identify it as the state portal for
+  licences, permits, NOCs, renewals, and trade licences.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

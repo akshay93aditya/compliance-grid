@@ -1,0 +1,38 @@
+id: gpcb-gujarat-gov-in
+url: https://gpcb.gujarat.gov.in/Index
+jurisdiction: IN-GJ
+domain: environment
+governance_level: state
+authority:
+  name: Gujarat Pollution Control Board
+  type: board
+  parent: Government of Gujarat
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Circular
+    - Public Notice
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: GPCB portal pages and ASP.NET Core session-backed listings.
+  approach: Inspect public lists, notices, circulars, and consent guidance while preserving session/form requirements.
+  next_step: Write recipes for notices/circulars and consent-guideline sections.
+notes: |
+  Gujarat Pollution Control Board portal. The root redirected to `/Index` and
+  returned HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

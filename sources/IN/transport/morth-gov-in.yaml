@@ -1,0 +1,39 @@
+id: morth-gov-in
+url: https://morth.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: transport
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Ministry of Road Transport and Highways
+  type: ministry
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Rule
+    - Act
+    - Guideline
+  topics:
+    - roads
+    - motor-vehicles
+    - transport
+    - road-safety
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: MoRTH notifications under the Motor Vehicles Act, Central Motor Vehicles Rules, road-safety guidelines, fitness/permit norms.
+  approach: Probe the notifications/orders endpoint before recipe work. The previously canonical morth.nic.in now redirects to morth.gov.in.
+  next_step: Identify the canonical notifications endpoint and confirm format.
+notes: |
+  Ministry of Road Transport and Highways — primary central ministry
+  for road transport regulation. URL was verified reachable via HEAD
+  on 2026-06-05 (canonical via the morth.nic.in redirect).
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

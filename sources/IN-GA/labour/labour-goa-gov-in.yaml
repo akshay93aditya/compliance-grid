@@ -1,0 +1,39 @@
+id: labour-goa-gov-in
+url: https://labour.goa.gov.in/
+jurisdiction: IN-GA
+domain: labour
+governance_level: state
+authority:
+  name: Office of the Commissioner, Labour and Employment, Government of Goa
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - Form
+    - Online Service
+  topics:
+    - shops-and-establishments
+    - contract-labour
+    - labour-services
+    - e-district
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Labour department pages, e-services, forms, and notifications.
+  approach: Crawl WordPress pages and linked e-service/form pages.
+  next_step: Add focused recipes for e-services and forms pages.
+notes: |
+  Official Goa Labour and Employment portal. Verified reachable with HTTP 200 on
+  2026-06-05. Search snippets show online services for shops and establishments,
+  contract labour, and related labour registrations.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

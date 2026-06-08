@@ -1,0 +1,40 @@
+id: mcgm-gov-in
+url: https://www.mcgm.gov.in/
+jurisdiction: IN-MH
+governance_level: local
+domain: local-governance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Municipal Corporation of Greater Mumbai (BMC)
+  type: local-body
+  parent: Government of Maharashtra
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Bylaw
+  topics:
+    - property-tax
+    - building-approvals
+    - trade-licenses
+    - water-supply
+    - solid-waste-management
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: BMC/MCGM notifications on property tax, building plan approvals under MMC Act + DCPR, trade licenses, water connection. Highest-revenue municipal corporation in India by budget.
+  approach: Probe the notifications surface for recipe-readiness. Note canonical resolves to /irj/portal/anonymous on SAP portal.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Municipal Corporation of Greater Mumbai (Brihanmumbai Municipal
+  Corporation / BMC) — largest civic body in India by budget. URL
+  was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

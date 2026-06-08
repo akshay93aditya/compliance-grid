@@ -1,0 +1,40 @@
+id: labour-and-nic-in
+url: https://labour.and.nic.in/
+jurisdiction: IN-AN
+domain: labour
+governance_level: state
+authority:
+  name: Department of Labour, Employment and Training, Andaman and Nicobar Administration
+  type: department
+coverage:
+  instrument_types:
+    - Notification
+    - Minimum Wage Notification
+    - Registration
+    - Return
+    - Inspection
+  topics:
+    - shops-and-establishments
+    - factories
+    - minimum-wages
+    - labour-registration
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Labour department homepage and online services pages.
+  approach: Crawl notifications, minimum-wage updates, forms, service links, and inspection/return links.
+  next_step: Split static notices from login/service workflows and map renewal/Form C flows separately.
+notes: |
+  Official labour department portal for Andaman and Nicobar Islands. Verified
+  reachable with HTTP 200 on 2026-06-05. Search snippets indicate fresh
+  registration/licence applications are shifted to NSWS while renewals and Form C
+  continue on this portal; extraction must preserve that access distinction.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

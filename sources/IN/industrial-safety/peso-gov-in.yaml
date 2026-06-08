@@ -1,0 +1,36 @@
+id: peso-gov-in
+url: https://peso.gov.in/web/en/home
+jurisdiction: IN
+domain: industrial-safety
+governance_level: central
+authority:
+  name: Petroleum and Explosives Safety Organisation
+  type: department
+  parent: Department for Promotion of Industry and Internal Trade
+coverage:
+  instrument_types:
+    - Rule
+    - Notification
+    - Licence
+  topics:
+    - explosives
+    - petroleum
+    - compressed-gas
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until rules, forms, circulars, and licence pages are inspected.
+  approach: Probe Drupal-style public pages and PDF links.
+  next_step: Identify PESO rules, notification, and licence-document listings.
+notes: |
+  Central hazardous-substances safety organisation. Verified reachable with
+  HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

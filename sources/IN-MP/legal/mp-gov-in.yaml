@@ -1,0 +1,38 @@
+id: mp-gov-in
+url: https://mp.gov.in/
+jurisdiction: IN-MP
+domain: legal
+governance_level: state
+authority:
+  name: Government of Madhya Pradesh
+  type: department
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Circular
+    - Public Notice
+    - Rule
+  topics:
+    - state-portal
+    - department-pages
+    - government-services
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Madhya Pradesh state portal and linked department/service pages.
+  approach: Crawl department links, circulars, notices, and state service pages.
+  next_step: Find verified Madhya Pradesh gazette/Rajpatra source if separate from the central e-Gazette state page.
+notes: |
+  Official Madhya Pradesh state portal. Verified reachable with HTTP 200 on
+  2026-06-05. A verified dedicated MP e-gazette host was not found in this pass;
+  central e-Gazette search results list Madhya Pradesh in State Gazette.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

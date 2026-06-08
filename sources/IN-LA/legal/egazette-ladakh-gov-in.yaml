@@ -1,0 +1,37 @@
+id: egazette-ladakh-gov-in
+url: https://egazette.ladakh.gov.in/
+jurisdiction: IN-LA
+domain: legal
+governance_level: state
+authority:
+  name: Ladakh e-Gazette
+  type: department
+  parent: Administration of Union Territory of Ladakh
+coverage:
+  instrument_types:
+    - Gazette
+    - Notification
+    - Rule
+    - Order
+    - Regulation
+  topics:
+    - e-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Ladakh e-Gazette ASP.NET portal.
+  approach: Model session URL/search flow and follow gazette PDF/document links.
+  next_step: Capture search parameters, session behavior, and document metadata.
+notes: |
+  Official Ladakh e-Gazette portal. Verified reachable with HTTP 200 on
+  2026-06-05 after redirecting to a session URL.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

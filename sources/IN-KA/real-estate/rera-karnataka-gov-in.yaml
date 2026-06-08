@@ -1,0 +1,50 @@
+id: rera-karnataka-gov-in
+url: https://rera.karnataka.gov.in/
+jurisdiction: IN-KA
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      circulars: /circularPage
+      notifications: /notificationPage
+      cause_list: /dailyCauseList
+      tenders: /tenderPage
+      downloads: /downloadPage
+    format: unordered-list
+    pdf_link_patterns:
+      encoded: /reraDocument?DOC={base64_id}
+      direct: /resources/notifications/{filename}.pdf
+authority:
+  name: Karnataka Real Estate Regulatory Authority
+  type: statutory-regulator
+  parent: Government of Karnataka
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Regulation
+    - Project Registration
+  topics:
+    - real-estate
+    - project-registration
+    - agent-registration
+    - consumer-complaints
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: K-RERA circulars at /circularPage, notifications at /notificationPage — server-rendered unordered-list (not table); each item links to a PDF via one of two patterns — encoded /reraDocument?DOC={base64} or direct /resources/notifications/{filename}.pdf.
+  approach: Recipe writer enumerates <li> items on /circularPage and /notificationPage; follows either link pattern to the PDF.
+  next_step: Write a K-RERA recipe that handles both PDF link patterns. Native UI is Kannada — make sure UA accepts kn-IN or the bilingual rendering is unaffected.
+notes: |
+  Karnataka Real Estate Regulatory Authority (K-RERA) — state RERA
+  authority under the Real Estate (Regulation and Development) Act,
+  2016. URL was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

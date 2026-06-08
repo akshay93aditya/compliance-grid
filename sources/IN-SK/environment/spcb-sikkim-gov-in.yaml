@@ -1,0 +1,38 @@
+id: spcb-sikkim-gov-in
+url: https://spcb.sikkim.gov.in/
+jurisdiction: IN-SK
+domain: environment
+governance_level: state
+authority:
+  name: State Pollution Control Board, Sikkim
+  type: board
+  parent: Government of Sikkim
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Direction
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: State Pollution Control Board Sikkim website and public document pages.
+  approach: Crawl news, air/water/noise pages, notices, guidelines, annual reports, and linked PDFs.
+  next_step: Write listing recipes for document categories and OCMMS handoff links.
+notes: |
+  State Pollution Control Board Sikkim portal. Verified reachable with HTTP 200
+  on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

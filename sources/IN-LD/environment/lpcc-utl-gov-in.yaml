@@ -1,0 +1,38 @@
+id: lpcc-utl-gov-in
+url: https://lpcc.utl.gov.in/
+jurisdiction: IN-LD
+domain: environment
+governance_level: state
+authority:
+  name: Lakshadweep Pollution Control Committee
+  type: board
+  parent: Administration of Union Territory of Lakshadweep
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Guideline
+    - Direction
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: LPCC public portal and department pages.
+  approach: Crawl public pages, notices, guidelines, contact/about pages, and linked documents.
+  next_step: Write listing recipe for public notices, consent guidance, and downloadable documents.
+notes: |
+  Lakshadweep Pollution Control Committee portal. Verified reachable with HTTP
+  200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

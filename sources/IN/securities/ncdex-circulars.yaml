@@ -1,0 +1,36 @@
+id: ncdex-circulars
+url: https://ncdex.com/index.php/circulars
+jurisdiction: IN
+domain: securities
+governance_level: central
+authority:
+  name: National Commodity and Derivatives Exchange Limited
+  type: market-infrastructure
+coverage:
+  instrument_types:
+    - Circular
+  topics:
+    - commodity-derivatives
+    - exchange-members
+    - trading
+    - clearing
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: NCDEX circulars page.
+  approach: Probe whether circular rows and document links are present in server HTML or require session/form handling.
+  next_step: Inspect the page DOM and pagination before marking extraction-ready.
+notes: |
+  NCDEX is a recognized commodity derivatives exchange. Verified reachable with
+  HTTP 200 on 2026-06-05. This is a central market-infrastructure update surface
+  for exchange circulars; legal anchoring should still point to the circular
+  document and any underlying SEBI or gazette instrument.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

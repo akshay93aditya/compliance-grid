@@ -1,0 +1,40 @@
+id: comtax-up-nic-in
+url: https://comtax.up.nic.in/
+jurisdiction: IN-UP
+governance_level: state
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Commercial Tax Department, Uttar Pradesh
+  type: department
+  parent: Government of Uttar Pradesh
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - state-gst
+    - professional-tax
+    - vat
+    - entry-tax
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: UP Commercial Tax notifications under the Uttar Pradesh GST Act, Professional Tax Act, and residual VAT/entry-tax instruments.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Commercial Tax Department, Government of Uttar Pradesh — state-
+  level GST + professional-tax administration. Canonical domain is
+  .nic.in (common UP-state pattern), not the .gov.in subdomain. URL
+  was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

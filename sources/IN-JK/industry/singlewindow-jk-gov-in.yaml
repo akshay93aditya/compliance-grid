@@ -1,0 +1,38 @@
+id: singlewindow-jk-gov-in
+url: https://singlewindow.jk.gov.in/
+jurisdiction: IN-JK
+domain: industry
+governance_level: state
+authority:
+  name: Jammu and Kashmir Single Window Portal
+  type: department
+  parent: Government of Jammu and Kashmir
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - NOC
+    - Renewal
+  topics:
+    - single-window
+    - investor-services
+    - business-approvals
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: J&K single-window portal and service workflows.
+  approach: Map public service metadata and login/application boundaries.
+  next_step: Inspect service catalogue pages and downloadable instructions.
+notes: |
+  Jammu and Kashmir single-window portal. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

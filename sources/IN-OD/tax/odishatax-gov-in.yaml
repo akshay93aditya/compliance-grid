@@ -1,0 +1,39 @@
+id: odishatax-gov-in
+url: https://odishatax.gov.in/
+jurisdiction: IN-OD
+governance_level: state
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Commercial Tax Organisation, Odisha
+  type: department
+  parent: Government of Odisha
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - state-gst
+    - professional-tax
+    - vat
+    - entry-tax
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Odisha Commercial Tax notifications under the Odisha GST Act, Professional Tax Act, and residual VAT/entry-tax instruments.
+  approach: Probe the notifications surface for recipe-readiness. Note the gst.odishatax.gov.in subdomain did not respond; parent odishatax.gov.in is canonical.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Commercial Tax Organisation, Government of Odisha — state-level
+  GST + professional-tax administration. URL was verified reachable
+  via GET on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

@@ -1,0 +1,37 @@
+id: appcb-pcb-ap-gov-in
+url: https://pcb.ap.gov.in
+jurisdiction: IN-AP
+domain: environment
+governance_level: state
+authority:
+  name: Andhra Pradesh Pollution Control Board
+  type: board
+  parent: Government of Andhra Pradesh
+coverage:
+  instrument_types:
+    - Consent
+    - Notification
+    - Circular
+  topics:
+    - pollution-control
+    - environmental-consent
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until HTML and rendered DOM are inspected.
+  approach: Probe public consent, circular, notification, and guidelines listings.
+  next_step: Determine whether APPCB content is static HTML, browser-rendered, or tied to service workflows.
+notes: |
+  Andhra Pradesh Pollution Control Board portal. Verified reachable with
+  HTTP 200 on 2026-06-05. Useful state source for environmental consent
+  and pollution-control obligations in the D12 pilot state IN-AP. URL
+  reachability is verified; extraction access is not yet verified.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

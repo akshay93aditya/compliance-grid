@@ -1,0 +1,37 @@
+id: consumeraffairs-gov-in
+url: https://consumeraffairs.gov.in
+jurisdiction: IN
+domain: consumer
+governance_level: central
+authority:
+  name: Department of Consumer Affairs
+  type: department
+  parent: Ministry of Consumer Affairs, Food and Public Distribution
+coverage:
+  instrument_types:
+    - Act
+    - Rule
+    - Notification
+    - Order
+  topics:
+    - consumer-protection
+    - legal-metrology
+    - packaged-commodities
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Static HTML includes public pages and legal-metrology material.
+  approach: Crawl static links for Acts, rules, notifications, legal metrology, and packaged-commodity documents.
+  next_step: Write a Department of Consumer Affairs recipe for legal-metrology and consumer-protection pages.
+notes: |
+  Central consumer affairs and legal-metrology source. Verified reachable with
+  GET on 2026-06-05. HEAD returns 405, so verification uses GET.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

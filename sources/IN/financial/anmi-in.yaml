@@ -1,0 +1,39 @@
+id: anmi-in
+url: https://anmi.in/anmi_front/
+jurisdiction: IN
+governance_level: central
+domain: financial
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Association of National Exchange Members of India
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Article
+    - Update
+    - Circular
+  topics:
+    - stockbroking
+    - market-infrastructure
+    - sebi-circular-implementation
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: ANMI advisories on SEBI circulars affecting NSE/BSE broker members.
+  approach: Probe the circulars / advisories surface for recipe-readiness.
+  next_step: Identify the advisories index endpoint and confirm format.
+notes: |
+  Association of National Exchange Members of India (ANMI) — broker
+  industry body publishing analyses of SEBI circulars and exchange
+  notices. Secondary trust tier; commits must anchor to the original
+  SEBI / exchange notice. URL was verified reachable via HEAD on
+  2026-06-06 (canonical path follows the anmi.in → anmi.in/anmi_front
+  redirect).
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

@@ -1,0 +1,40 @@
+id: apegazette-cgg-gov-in
+url: https://apegazette.cgg.gov.in/
+jurisdiction: IN-AP
+domain: legal
+governance_level: state
+authority:
+  name: Andhra Pradesh e-Gazette
+  type: department
+  parent: Government of Andhra Pradesh
+coverage:
+  instrument_types:
+    - Gazette
+    - Act
+    - Rule
+    - Notification
+    - Order
+  topics:
+    - state-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Andhra Pradesh e-Gazette portal.
+  approach: Browser-smoke the portal and document allowed query/download behavior before extraction.
+  next_step: Verify search parameters and PDF download URLs through a browser session.
+notes: |
+  Official Andhra Pradesh e-Gazette URL identified through public search. Curl
+  reached the host on 2026-06-05 but received HTTP 403, so this is indexed as a
+  blocked gazette source until browser access behavior is verified.
+  
+  2026-06-07: AP eGazette returns 200 to vanilla Chrome UA — was UA-discrimination only.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

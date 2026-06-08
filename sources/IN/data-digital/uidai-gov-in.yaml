@@ -1,0 +1,34 @@
+id: uidai-gov-in
+url: https://uidai.gov.in
+jurisdiction: IN
+domain: data-digital
+governance_level: central
+authority:
+  name: Unique Identification Authority of India
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Regulation
+    - Circular
+    - Notification
+  topics:
+    - aadhaar
+    - identity
+    - authentication
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until circular, regulation, and notification pages are inspected.
+  approach: Probe public legal and circular listing pages.
+  next_step: Identify stable UIDAI document listings.
+notes: |
+  Central Aadhaar authority. Verified reachable with HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

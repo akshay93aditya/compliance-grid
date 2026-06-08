@@ -1,0 +1,37 @@
+id: dpiit-gov-in
+url: https://www.dpiit.gov.in
+jurisdiction: IN
+domain: industry
+governance_level: central
+authority:
+  name: Department for Promotion of Industry and Internal Trade
+  type: department
+  parent: Ministry of Commerce and Industry
+coverage:
+  instrument_types:
+    - Notification
+    - Rule
+    - Circular
+  topics:
+    - industrial-policy
+    - business-registration
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until HTML and rendered DOM are inspected.
+  approach: Probe HTML first, then decide static listing versus browser-required.
+  next_step: Inspect document, notification, and press-release listing surfaces.
+notes: |
+  DPIIT portal. Verified reachable with HTTP 200 on 2026-06-05 after
+  redirect from dpiit.gov.in to www.dpiit.gov.in. Source for industrial
+  policy and business-regulatory material. URL reachability is verified;
+  extraction access is not yet verified.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

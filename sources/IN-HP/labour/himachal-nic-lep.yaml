@@ -1,0 +1,38 @@
+id: himachal-nic-lep
+url: https://himachal.nic.in/lep
+jurisdiction: IN-HP
+domain: labour
+governance_level: state
+authority:
+  name: Department of Labour and Employment, Government of Himachal Pradesh
+  type: department
+coverage:
+  instrument_types:
+    - Notification
+    - Registration
+    - Licence
+    - Return
+    - Guideline
+  topics:
+    - labour-services
+    - employment
+    - shops-and-establishments
+    - factories
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Labour and Employment Department website under Himachal NIC.
+  approach: Crawl department pages, notices, downloadable documents, and service links.
+  next_step: Identify stable pages for Acts/rules, notifications, and service forms.
+notes: |
+  Official Labour and Employment Department site for Himachal Pradesh. HEAD
+  returned HTTP 404, but GET returned HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

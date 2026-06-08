@@ -1,0 +1,38 @@
+id: stpi-in
+url: https://www.stpi.in/en/
+jurisdiction: IN
+governance_level: central
+domain: industry
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Software Technology Parks of India
+  type: department
+  parent: Ministry of Electronics and Information Technology
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Guideline
+  topics:
+    - software-exports
+    - stpi-scheme
+    - it-industry
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: STPI scheme circulars, software-export bonded-unit compliance, EHTP scheme notices.
+  approach: Probe the circulars / notifications surface for recipe-readiness. Use the English-language path (/en/) to avoid the default Hindi redirect.
+  next_step: Identify the circulars index endpoint and confirm format.
+notes: |
+  Software Technology Parks of India — central body administering
+  the STPI and EHTP schemes for IT/software exports. The site
+  default-redirects to Hindi; the English path /en/ is the canonical
+  English entry. URL was verified reachable via GET on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

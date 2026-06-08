@@ -1,0 +1,38 @@
+id: sat-gov-in
+url: https://sat.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: securities
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Securities Appellate Tribunal
+  type: tribunal
+  parent: Department of Economic Affairs, Ministry of Finance
+coverage:
+  instrument_types:
+    - Order
+    - Judgment
+    - Notification
+  topics:
+    - securities-appeals
+    - sebi-appeals
+    - tribunals
+verification:
+  method: curl-head
+  status: blocked
+access:
+  status: needs-access-probe
+  update_surface: SAT orders against SEBI, PFRDA, and IRDAI decisions.
+  approach: URL returned HTTP 503 on probe (2026-06-05); re-probe before recipe work to confirm whether the outage is transient or structural.
+  next_step: Retry probe with longer timeouts and varied User-Agent before classifying as truly blocked or simply degraded.
+notes: |
+  Securities Appellate Tribunal — hears appeals against SEBI, PFRDA,
+  and IRDAI orders. URL returned 503 Service Unavailable on probe
+  2026-06-05; not currently in a verifiable state. Re-probe before
+  any recipe attempt.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

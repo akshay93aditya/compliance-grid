@@ -1,0 +1,40 @@
+id: rerc-rajasthan-gov-in
+url: https://rerc.rajasthan.gov.in/
+jurisdiction: IN-RJ
+governance_level: state
+domain: energy
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Rajasthan Electricity Regulatory Commission
+  type: statutory-regulator
+  parent: Government of Rajasthan
+coverage:
+  instrument_types:
+    - Order
+    - Notification
+    - Tariff Order
+    - Regulation
+  topics:
+    - state-electricity-tariff
+    - discom-licensing
+    - open-access
+    - renewable-tariff
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: RERC tariff orders, regulations, and open-access notifications affecting Rajasthan's three discoms (JVVNL, AVVNL, JdVVNL) and RVPNL transco.
+  approach: Probe the orders / regulations surface for recipe-readiness.
+  next_step: Identify the orders index endpoint and confirm format.
+notes: |
+  Rajasthan Electricity Regulatory Commission — state-level
+  electricity regulator constituted under the Electricity Act, 2003.
+  One of the few state SERCs with a .gov.in canonical (most use
+  .org). URL was verified reachable via GET on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

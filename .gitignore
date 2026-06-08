@@ -1,0 +1,48 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# CLI MVP — user's local business docs (input) + generated outputs.
+# Never commit either: docs are private; outputs are derived per-user.
+input-docs/
+output/
+# Patrol-job overlay (launchd writes Supabase URL here so .env keeps the
+# local-dev URL for tests and the dev server)
+.env.patrol
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage and test output
+coverage/
+.nyc_output/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tesseract.js language data (downloaded at runtime, ~10MB+ per language)
+*.traineddata
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Runtime logs (launchd patrol; not committed)
+logs/

@@ -1,0 +1,38 @@
+id: hspcb-org-in
+url: https://hspcb.org.in/
+jurisdiction: IN-HR
+domain: environment
+governance_level: state
+authority:
+  name: Haryana State Pollution Control Board
+  type: board
+  parent: Government of Haryana
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Direction
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: HSPCB public portal for consent, notices, guidelines, and directions.
+  approach: Crawl public pages and linked documents for consent, authorisation, notices, and directions.
+  next_step: Write recipes for public notices, consent guidance, and waste-management sections.
+notes: |
+  Haryana State Pollution Control Board portal. Verified reachable with HTTP 200
+  on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

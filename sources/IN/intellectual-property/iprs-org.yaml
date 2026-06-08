@@ -1,0 +1,37 @@
+id: iprs-org
+url: https://iprs.org/
+jurisdiction: IN
+governance_level: central
+domain: intellectual-property
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Indian Performing Right Society
+  type: statutory-professional-body
+coverage:
+  instrument_types:
+    - Notification
+    - Tariff
+    - Guideline
+  topics:
+    - copyright
+    - performing-rights
+    - music-licensing
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: IPRS tariffs, licensing schedules, copyright-board-aligned notifications.
+  approach: Probe the tariffs / licensing surface for recipe-readiness.
+  next_step: Identify the tariffs index endpoint and confirm format.
+notes: |
+  Indian Performing Right Society (IPRS) — copyright society
+  registered under the Copyright Act, 1957 for musical works and
+  associated literary works. URL was verified reachable via HEAD on
+  2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

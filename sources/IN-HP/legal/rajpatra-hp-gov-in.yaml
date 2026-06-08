@@ -1,0 +1,38 @@
+id: rajpatra-hp-gov-in
+url: https://rajpatra.hp.gov.in/advSearch.aspx
+jurisdiction: IN-HP
+domain: legal
+governance_level: state
+authority:
+  name: Himachal Pradesh Rajpatra
+  type: department
+  parent: Department of Printing and Stationery, Government of Himachal Pradesh
+coverage:
+  instrument_types:
+    - Gazette
+    - Notification
+    - Act
+    - Rule
+    - Order
+  topics:
+    - e-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Himachal Pradesh Rajpatra advanced search with CAPTCHA.
+  approach: Index public search surface; extraction requires manual/browser strategy because of CAPTCHA.
+  next_step: Determine whether latest-gazette PDFs can be enumerated without bypassing CAPTCHA.
+notes: |
+  Official Himachal Pradesh e-Gazette/Rajpatra search page. HEAD returned HTTP
+  404, but GET returned HTTP 200 on 2026-06-05. Search snippets describe a
+  CAPTCHA-protected advanced search and official Rajpatra publication.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

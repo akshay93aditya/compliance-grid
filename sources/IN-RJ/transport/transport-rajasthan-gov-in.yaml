@@ -1,0 +1,39 @@
+id: transport-rajasthan-gov-in
+url: https://transport.rajasthan.gov.in/
+jurisdiction: IN-RJ
+governance_level: state
+domain: transport
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Transport Department, Rajasthan
+  type: department
+  parent: Government of Rajasthan
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - motor-vehicles
+    - permits
+    - road-tax
+    - fitness-certificates
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Rajasthan Transport Department notifications under the Motor Vehicles Act and Rajasthan Motor Vehicles Taxation Act.
+  approach: Probe the notifications surface for recipe-readiness. The portal redirects from root to /content/transportportal/en.html.
+  next_step: Identify the canonical notifications endpoint and confirm format.
+notes: |
+  Transport Department, Government of Rajasthan — administers
+  motor-vehicle registration, permits, and state road tax. URL was
+  verified reachable via GET on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

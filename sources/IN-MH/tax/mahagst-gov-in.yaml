@@ -1,0 +1,43 @@
+id: mahagst-gov-in
+url: https://mahagst.gov.in/
+jurisdiction: IN-MH
+governance_level: state
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      notifications: /en/notifications
+    format: html-table
+    pdf_path_pattern: /public/uploads/notifications/{timestamp}_{filename}.pdf
+authority:
+  name: Department of Goods and Services Tax, Maharashtra
+  type: department
+  parent: Government of Maharashtra
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - state-gst
+    - professional-tax
+    - vat
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: MGST notifications/trade-circulars at /en/notifications — server-rendered HTML tables with alternating rows; PDFs hosted on mahagst.gov.in itself at /public/uploads/notifications/{timestamp}_{filename}.pdf.
+  approach: Recipe writer scrapes /en/notifications table rows; child PDFs fetched directly from the predictable path pattern.
+  next_step: Write an MGST table-row recipe; column schema matches typical 3-4 col gov-portal notification listing.
+notes: |
+  Department of Goods and Services Tax, Government of Maharashtra
+  — state-level GST + professional-tax administration. URL was
+  verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

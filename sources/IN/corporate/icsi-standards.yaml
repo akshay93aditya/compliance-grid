@@ -1,0 +1,37 @@
+id: icsi-standards
+url: https://www.icsi.edu/home/icsi-standards/
+jurisdiction: IN
+domain: corporate
+governance_level: central
+authority:
+  name: Institute of Company Secretaries of India
+  type: statutory-professional-body
+coverage:
+  instrument_types:
+    - Standard
+    - Guidance
+  topics:
+    - secretarial-standards
+    - company-law
+    - board-process
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: ICSI standards page for secretarial and auditing standards.
+  approach: Crawl standards page links and identify downloadable standard/guidance documents.
+  next_step: Write a standards-page recipe that captures document names, versions, and download links.
+notes: |
+  ICSI is a statutory professional body. Verified reachable with HTTP 200 on
+  2026-06-05. Standards and guidance are useful for corporate compliance
+  discovery, but legal obligations should be anchored to the Companies Act,
+  MCA rules, MCA circulars, gazette instruments, or the relevant official
+  standard document as applicable.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

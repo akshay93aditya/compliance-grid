@@ -1,0 +1,40 @@
+id: gujarat-eshram-gov-in
+url: https://gujarat.eshram.gov.in/
+jurisdiction: IN-GJ
+domain: labour
+governance_level: state
+authority:
+  name: Commissionerate of Labour, Government of Gujarat
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - Welfare Service
+    - Guideline
+  topics:
+    - labour-services
+    - shops-and-establishments
+    - contract-labour
+    - welfare
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: browser-required
+  update_surface: Gujarat eShram labour department portal.
+  approach: Browser-render the portal and enumerate public notifications, services, and guidelines.
+  next_step: Separate labour welfare/service workflows from public legal notices.
+notes: |
+  Current official Gujarat labour portal surfaced by search as the
+  Commissionerate of Labour site. Verified reachable with HTTP 200 on
+  2026-06-05. The older labour host redirected to an error page and then failed
+  resolution.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

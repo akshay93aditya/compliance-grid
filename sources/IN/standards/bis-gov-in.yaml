@@ -1,0 +1,36 @@
+id: bis-gov-in
+url: https://www.bis.gov.in
+jurisdiction: IN
+domain: standards
+governance_level: central
+authority:
+  name: Bureau of Indian Standards
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Standard
+    - Notification
+    - Scheme
+  topics:
+    - product-standards
+    - certification
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until HTML and rendered DOM are inspected.
+  approach: Probe standards, certification, notification, and scheme listings.
+  next_step: Determine whether BIS pages expose stable document links or require browser-rendered navigation.
+notes: |
+  Bureau of Indian Standards portal. Verified reachable with HTTP 200 on
+  2026-06-05 after redirect to www.bis.gov.in. Source for standards and
+  certification obligations. URL reachability is verified; extraction access
+  is not yet verified.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

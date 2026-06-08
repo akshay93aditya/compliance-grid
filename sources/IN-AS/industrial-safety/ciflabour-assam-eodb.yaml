@@ -1,0 +1,39 @@
+id: ciflabour-assam-eodb
+url: https://ciflabour.assam.gov.in/resource/ease-of-doing-business-new
+jurisdiction: IN-AS
+domain: industrial-safety
+governance_level: state
+authority:
+  name: Inspectorate of Factories, Government of Assam
+  type: department
+coverage:
+  instrument_types:
+    - Factory Plan Approval
+    - Factory Registration
+    - Licence
+    - Renewal
+    - Guideline
+  topics:
+    - factories
+    - industrial-safety
+    - eodb
+    - online-services
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Inspectorate of Factories EODB handoff page and downloadable guidelines.
+  approach: Crawl the resource page, linked e-services, and guideline PDFs; route transactional services to EODB metadata.
+  next_step: Capture factory plan approval and registration/licensing service links and identify official rules/forms.
+notes: |
+  Assam Inspectorate of Factories page for new EODB services. Verified reachable
+  with HTTP 200 on 2026-06-05. Search snippets identify links for factory plan
+  approval and factory registration/licensing/renewal.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

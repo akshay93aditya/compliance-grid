@@ -1,0 +1,38 @@
+id: mcdonline-nic-in
+url: https://mcdonline.nic.in
+jurisdiction: IN-DL
+domain: local-governance
+governance_level: local
+authority:
+  name: Municipal Corporation of Delhi
+  type: local-body
+  parent: Government of National Capital Territory of Delhi
+coverage:
+  instrument_types:
+    - Bye-law
+    - Public Notice
+    - Circular
+  topics:
+    - trade-license
+    - municipal-compliance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Root redirects to `/portal`; portal HTML contains public navigation and service links.
+  approach: Crawl the `/portal` static HTML and identify stable service, notice, and licence links.
+  next_step: Write an MCD listing recipe for local-body service pages and public notices.
+notes: |
+  Municipal Corporation of Delhi portal. Verified reachable with HTTP 200
+  on 2026-06-05. HTML inspected on 2026-06-05; root meta-refreshes to
+  `/portal`, which returns static HTML with public navigation. Local-body
+  entry; parent jurisdiction is IN-DL until city-level jurisdictions are
+  introduced.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,35 @@
+id: pngrb-gov-in
+url: https://pngrb.gov.in/eng-web/
+jurisdiction: IN
+domain: energy
+governance_level: central
+authority:
+  name: Petroleum and Natural Gas Regulatory Board
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Regulation
+    - Order
+    - Notification
+  topics:
+    - petroleum
+    - natural-gas
+    - pipelines
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: English site returned static HTML after redirect to `/eng-web/`.
+  approach: Crawl static HTML links and public document pages.
+  next_step: Write a PNGRB listing recipe for regulations, orders, and authorizations.
+notes: |
+  Central petroleum and natural gas regulator. Verified reachable with HTTP
+  200 on 2026-06-05 after redirect to `/eng-web/`.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

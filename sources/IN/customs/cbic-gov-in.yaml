@@ -1,0 +1,44 @@
+id: cbic-gov-in
+url: https://www.cbic.gov.in
+jurisdiction: IN
+domain: customs
+governance_level: central
+authority:
+  name: Central Board of Indirect Taxes and Customs
+  type: department
+  parent: Department of Revenue
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Instruction
+  topics:
+    - customs
+    - gst
+    - central-excise
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    note: CBIC root blocks both plain curl (connection reset) AND WebFetch-style browser UAs (returns near-empty page). True browser-acquire path required.
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: CBIC root blocks both plain curl AND WebFetch — connection reset / empty response. Requires the D49 browser-acquire path. Use alternate indexed CBIC surfaces (cbic-gst.gov.in, taxinformation.cbic.gov.in, ICEGATE) which respond cleanly to plain curl.
+  approach: Route CBIC root via browser-acquire only; otherwise prefer the cbic-gst / taxinformation / ICEGATE sister entries which are extraction-ready.
+  next_step: Verify the D49 browser-acquire path can reach CBIC root; if not, deprioritise this entry and rely on the sister surfaces.
+notes: |
+  Central indirect tax and customs board. **Confirmed still blocked
+  2026-06-07** — both plain curl (connection reset) and WebFetch
+  (returns essentially empty content, just the page title) fail to
+  retrieve the navigation tree. Sister surfaces cbic-gst.gov.in,
+  taxinformation.cbic.gov.in, and ICEGATE remain extraction-ready and
+  are the recommended primary routes.
+  
+  2026-06-07: CBIC root returns 200 to vanilla Chrome UA — was UA-discrimination only. The earlier 2026-06-07 WebFetch returning a near-empty page was a separate WebFetch-tool artefact; plain curl with browser UA + Accept-Language gets a full page.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,41 @@
+id: niti-gov-in
+url: https://www.niti.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: governance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: NITI Aayog
+  type: department
+coverage:
+  instrument_types:
+    - Policy
+    - Strategy Document
+    - Report
+    - Guideline
+  topics:
+    - public-policy
+    - cooperative-federalism
+    - government-strategy
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: NITI Aayog policy papers, strategy documents, sectoral guidance frequently picked up as inputs to ministry rule-making.
+  approach: Project UA blocked at HTTP 403 on probe 2026-06-06; browser UA returned 200. Use the D49 browser-acquire path.
+  next_step: Configure browser-acquire path, then identify the publications endpoint.
+notes: |
+  NITI Aayog — central planning and policy body (successor to the
+  Planning Commission). Publishes strategy papers that inform
+  ministry rule-making; not itself a regulator. Site blocks
+  Compliance-Grid project UA (HTTP 403) but accepts browser UA
+  (HTTP 200) on probe 2026-06-06.
+  
+  2026-06-07: NITI Aayog returns 200 to vanilla Chrome UA — earlier browser-required tag was wrong.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

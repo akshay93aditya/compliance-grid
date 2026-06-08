@@ -1,0 +1,43 @@
+id: ficci-in
+url: https://ficci.in/
+jurisdiction: IN
+governance_level: central
+domain: industry
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Federation of Indian Chambers of Commerce and Industry
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Article
+    - Update
+    - Policy Brief
+    - Report
+  topics:
+    - industry-policy
+    - regulatory-updates
+    - sectoral-commentary
+    - business-environment
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: FICCI publications, position papers, sectoral updates.
+  approach: Site returns HTTP 403 to the Compliance-Grid project User-Agent (per D28) but responds 200 to a common browser User-Agent — use the D49 browser-acquire path or a recipe-specific UA override.
+  next_step: Configure the browser-acquire path or a UA override for FICCI, then identify the publications index endpoint.
+notes: |
+  Federation of Indian Chambers of Commerce and Industry (FICCI) —
+  apex industry chamber. Probe results 2026-06-06 confirm the site
+  blocks the project crawler UA (HTTP 403) but accepts standard
+  browser UAs (HTTP 200). Recorded as browser-required for routing.
+  Secondary trust tier; commits must anchor to the original
+  government source.
+  
+  2026-06-07: FICCI returns 200 to vanilla Chrome UA — earlier browser-required tag was wrong.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

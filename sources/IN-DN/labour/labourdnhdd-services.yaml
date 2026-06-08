@@ -1,0 +1,38 @@
+id: labourdnhdd-services
+url: https://www.labourdnhdd.in/services
+jurisdiction: IN-DN
+domain: labour
+governance_level: state
+authority:
+  name: Labour Department, Dadra and Nagar Haveli and Daman and Diu
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Renewal
+    - Return
+    - Guideline
+  topics:
+    - labour-services
+    - shops-and-establishments
+    - contract-labour
+    - factories
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Labour department public service listing.
+  approach: Crawl public service cards, instructions, forms, and service links; separate authenticated workflows from public instructions.
+  next_step: Extract service names, legal basis, fee/timeline fields, and apply-link boundaries.
+notes: |
+  Official labour services portal for the merged UT. Verified reachable with
+  HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

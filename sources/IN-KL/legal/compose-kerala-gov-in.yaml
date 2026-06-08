@@ -1,0 +1,40 @@
+id: compose-kerala-gov-in
+url: https://compose.kerala.gov.in/
+jurisdiction: IN-KL
+domain: legal
+governance_level: state
+authority:
+  name: COMPOSE, Government of Kerala
+  type: department
+coverage:
+  instrument_types:
+    - Gazette
+    - Government Order
+    - Notification
+    - Rule
+    - Order
+  topics:
+    - e-gazette
+    - official-publication
+    - government-orders
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Kerala COMPOSE publication/e-gazette system.
+  approach: Browser-smoke COMPOSE and document permitted access before extraction.
+  next_step: Verify whether public gazette/order downloads can be enumerated without bypassing access controls.
+notes: |
+  Kerala publication/gazette surface. Curl reached the host on 2026-06-05 but
+  received HTTP 403. The older `egazette.kerala.gov.in` host did not resolve, so
+  COMPOSE is indexed as the important blocked legal publication source.
+  
+  2026-06-07: COMPOSE Kerala returns 200 to vanilla Chrome UA — was UA-discrimination only.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

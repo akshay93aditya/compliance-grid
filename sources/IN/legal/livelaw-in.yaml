@@ -1,0 +1,38 @@
+id: livelaw-in
+url: https://www.livelaw.in/
+jurisdiction: IN
+governance_level: central
+domain: legal
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: LiveLaw Media
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - News
+    - Order
+    - Judgment
+    - Article
+  topics:
+    - legal-news
+    - case-law
+    - court-updates
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Same-day court and tribunal coverage, judgment summaries, regulatory updates.
+  approach: Probe the daily-news listings and tag pages; modern news sites often have an RSS/sitemap surface that bypasses SPA concerns.
+  next_step: Check for RSS feed, sitemap.xml, and category pages.
+notes: |
+  LiveLaw — independent Indian legal news outlet with daily case-law
+  and regulatory coverage. Secondary trust tier — commits should
+  anchor to the original judgment / notification. URL was verified
+  reachable via HEAD on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

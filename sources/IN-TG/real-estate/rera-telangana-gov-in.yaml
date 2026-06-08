@@ -1,0 +1,46 @@
+id: rera-telangana-gov-in
+url: https://rera.telangana.gov.in/
+jurisdiction: IN-TG
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      orders_suo_motu: /SUOMOTU-TG-RERA-15121976ORDERS
+      public_notices: /PublicNoticesReports-TG-RERA-15121976PublicNotices_Reports
+      annual_reports: /AnnualReports-TG-RERA-15121976Annual_Reports
+    format: obfuscated-path-listing
+    note: "TG RERA uses long obfuscated path strings (anti-bot / cache-busting). The Circulars/Orders subpaths follow patterns like /{random}-TG-RERA-{random} and must be discovered fresh from the Downloads + Cause-List nav, not hardcoded — they may rotate."
+authority:
+  name: Telangana State Real Estate Regulatory Authority
+  type: statutory-regulator
+  parent: Government of Telangana
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Regulation
+    - Project Registration
+  topics:
+    - real-estate
+    - project-registration
+    - agent-registration
+    - consumer-complaints
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: TG RERA documents at obfuscated long-string paths under Downloads + Cause-List nav (Circulars, Orders by TGRERA, Orders of Authority, Orders of Adjudicating Officer, SUO MOTO Cases, Public Notices, Annual Reports). Pattern looks like anti-bot URL rotation.
+  approach: Recipe writer must dynamically discover listing paths each run by parsing homepage nav rather than hardcoding — TG RERA appears to rotate the obfuscated tail.
+  next_step: "Write a TG RERA recipe that scrapes the homepage nav first, extracts the current obfuscated paths for each listing category, then fetches each one. SUO MOTO appears stable (suffix ORDERS); the rest may rotate."
+notes: |
+  Telangana State Real Estate Regulatory Authority — state RERA
+  under the Real Estate (Regulation and Development) Act, 2016. URL
+  was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

@@ -1,0 +1,39 @@
+id: cestat-gov-in
+url: https://cestat.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Customs Excise and Service Tax Appellate Tribunal
+  type: tribunal
+  parent: Department of Revenue, Ministry of Finance
+coverage:
+  instrument_types:
+    - Order
+    - Judgment
+    - Notification
+  topics:
+    - indirect-tax-appeals
+    - customs
+    - excise
+    - service-tax
+    - tribunals
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: CESTAT orders, cause lists, regional bench daily orders.
+  approach: Probe the orders endpoint and the regional benches (Delhi, Mumbai, Kolkata, Chennai, Bangalore) before recipe work.
+  next_step: Identify the public orders endpoint and verify static-HTML vs portal-form access.
+notes: |
+  Customs, Excise and Service Tax Appellate Tribunal — appellate body
+  for indirect-tax disputes. URL was verified reachable via GET HEAD
+  on 2026-06-05 (HEAD itself was refused; GET range probe returned 200).
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

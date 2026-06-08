@@ -1,0 +1,39 @@
+id: registration-ap-gov-in
+url: https://registration.ap.gov.in/igrs
+jurisdiction: IN-AP
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Stamps and Registration Department, Andhra Pradesh
+  type: department
+  parent: Government of Andhra Pradesh
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - stamps-duty
+    - property-registration
+    - marriage-registration
+    - firms-registration
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: IGRS-AP notifications under the Indian Stamp Act + AP Registration Act covering stamp-duty rates, e-stamp procedures.
+  approach: Probe the notifications / circulars surface for recipe-readiness. Canonical via the registration.ap.gov.in → /igrs redirect.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Stamps and Registration Department (IGRS), Government of Andhra
+  Pradesh — administers stamps and property + firm + marriage
+  registration. URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

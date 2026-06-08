@@ -1,0 +1,37 @@
+id: fssai-gov-in
+url: https://www.fssai.gov.in
+jurisdiction: IN
+domain: food-safety
+governance_level: central
+authority:
+  name: Food Safety and Standards Authority of India
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Act
+    - Rule
+    - Regulation
+    - Notification
+  topics:
+    - food-business-licensing
+    - food-safety
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until HTML and rendered DOM are inspected.
+  approach: Probe Act, rules, regulations, notification, order, and licensing surfaces.
+  next_step: Determine stable public listings and whether FoSCoS-related material is public or workflow-gated.
+notes: |
+  FSSAI portal. Verified reachable with HTTP 200 on 2026-06-05. Source
+  for food-business licensing, Food Safety and Standards Act material,
+  rules, regulations, and notifications. URL reachability is verified;
+  extraction access is not yet verified.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

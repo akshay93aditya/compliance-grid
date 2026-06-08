@@ -1,0 +1,39 @@
+id: shramadhan-jharkhand-gov-in
+url: https://shramadhan.jharkhand.gov.in/
+jurisdiction: IN-JH
+domain: labour
+governance_level: state
+authority:
+  name: Department of Labour, Employment, Training and Skill Development, Government of Jharkhand
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Renewal
+    - Notification
+    - Inspection
+  topics:
+    - labour-services
+    - shops-and-establishments
+    - factories
+    - contract-labour
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Shramadhan labour portal service/workflow surface.
+  approach: Inspect public pages and service catalogue; keep login/application flows as metadata.
+  next_step: Identify public notifications, Acts/rules, forms, and service guidance.
+notes: |
+  Jharkhand Shramadhan labour portal. Verified reachable with HTTP 200 on
+  2026-06-05; response was a small app shell, so content access still needs
+  probing.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

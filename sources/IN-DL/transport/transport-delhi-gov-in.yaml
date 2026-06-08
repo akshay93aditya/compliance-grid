@@ -1,0 +1,41 @@
+id: transport-delhi-gov-in
+url: https://transport.delhi.gov.in/
+jurisdiction: IN-DL
+governance_level: state
+domain: transport
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Transport Department, GNCT of Delhi
+  type: department
+  parent: Government of National Capital Territory of Delhi
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - motor-vehicles
+    - permits
+    - road-tax
+    - fitness-certificates
+    - electric-vehicle-policy
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Delhi Transport Department notifications under the Motor Vehicles Act, the Delhi Motor Vehicles Taxation Act, and the Delhi EV Policy.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Transport Department, Government of National Capital Territory of
+  Delhi — administers motor-vehicle registration, permits, road
+  taxation, and the Delhi EV Policy framework. URL was verified
+  reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

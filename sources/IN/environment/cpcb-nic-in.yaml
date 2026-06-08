@@ -1,0 +1,36 @@
+id: cpcb-nic-in
+url: https://cpcb.nic.in
+jurisdiction: IN
+domain: environment
+governance_level: central
+authority:
+  name: Central Pollution Control Board
+  type: board
+  parent: Ministry of Environment, Forest and Climate Change
+coverage:
+  instrument_types:
+    - Rule
+    - Notification
+    - Order
+  topics:
+    - pollution-control
+    - environmental-compliance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Static HTML links include rules, forms, and circular or office-order pages.
+  approach: Crawl static HTML anchors and prioritize official PDF or document links.
+  next_step: Write a CPCB listing recipe for rules, circulars, office orders, and downloadable forms.
+notes: |
+  Central Pollution Control Board portal. Verified reachable with HTTP 200
+  on 2026-06-05. HTML was inspected on 2026-06-05 and contains usable
+  static links. This is reachable, but extraction still needs a portal recipe.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

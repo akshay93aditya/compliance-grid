@@ -1,0 +1,38 @@
+id: megspcb-gov-in
+url: https://megspcb.gov.in/
+jurisdiction: IN-ML
+domain: environment
+governance_level: state
+authority:
+  name: Meghalaya State Pollution Control Board
+  type: board
+  parent: Government of Meghalaya
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Direction
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: MSPCB public portal and linked consent/notice pages.
+  approach: Inspect the small static shell and follow public document links.
+  next_step: Find notices, consent, and authorisation pages and determine whether they are static or app-rendered.
+notes: |
+  Meghalaya State Pollution Control Board portal. Verified reachable with HTTP
+  200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

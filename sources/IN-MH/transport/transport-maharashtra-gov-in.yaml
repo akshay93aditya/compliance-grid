@@ -1,0 +1,39 @@
+id: transport-maharashtra-gov-in
+url: https://transport.maharashtra.gov.in/
+jurisdiction: IN-MH
+governance_level: state
+domain: transport
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Transport Department, Maharashtra
+  type: department
+  parent: Government of Maharashtra
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - motor-vehicles
+    - permits
+    - road-tax
+    - fitness-certificates
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Maharashtra Transport Department notifications under the Motor Vehicles Act and Maharashtra Motor Vehicles Taxation Act.
+  approach: Probe the notifications surface for recipe-readiness. Note the site responds on port 443 but the URL surfaces a path-specific redirect to /1035/Home.
+  next_step: Identify the canonical notifications endpoint and confirm format.
+notes: |
+  Transport Department, Government of Maharashtra — administers
+  motor-vehicle registration, permits, and state road tax. URL was
+  verified reachable via GET on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

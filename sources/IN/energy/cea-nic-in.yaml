@@ -1,0 +1,35 @@
+id: cea-nic-in
+url: https://cea.nic.in
+jurisdiction: IN
+domain: energy
+governance_level: central
+authority:
+  name: Central Electricity Authority
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Regulation
+    - Guideline
+    - Notification
+  topics:
+    - electricity
+    - electrical-safety
+    - power-system
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until regulations, safety, and guideline pages are inspected.
+  approach: Probe public static pages and PDF listings.
+  next_step: Identify CEA electrical-safety and regulation listing pages.
+notes: |
+  Central Electricity Authority portal. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

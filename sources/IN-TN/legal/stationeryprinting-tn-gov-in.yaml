@@ -1,0 +1,37 @@
+id: stationeryprinting-tn-gov-in
+url: https://stationeryprinting.tn.gov.in/
+jurisdiction: IN-TN
+domain: legal
+governance_level: state
+authority:
+  name: Stationery and Printing Department, Government of Tamil Nadu
+  type: department
+coverage:
+  instrument_types:
+    - Gazette
+    - Extraordinary Gazette
+    - Notification
+    - Act
+    - Rule
+  topics:
+    - e-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Tamil Nadu Stationery and Printing gazette listings and PDF links.
+  approach: Crawl gazette.php, extra_ordinary_lists.php, search_gazette.php, archive pages, and linked PDFs.
+  next_step: Write listing recipes for ordinary, extraordinary, search, and archive surfaces.
+notes: |
+  Tamil Nadu Stationery and Printing Department portal. GET verified reachable
+  with HTTP 200 on 2026-06-05. The home page exposes Gazettes, Extraordinary
+  Gazettes, Search, and Archives links plus current gazette PDFs.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

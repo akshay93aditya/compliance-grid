@@ -1,0 +1,39 @@
+id: iba-org-in
+url: https://www.iba.org.in/
+jurisdiction: IN
+governance_level: central
+domain: financial
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Indian Banks Association
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Article
+    - Update
+    - Circular
+    - Guideline
+  topics:
+    - banking
+    - sectoral-commentary
+    - banking-policy
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: IBA bulletins, sectoral guidance, KYC/AML communications.
+  approach: Probe the publications surface for recipe-readiness.
+  next_step: Identify the publications index endpoint and confirm format.
+notes: |
+  Indian Banks Association — peak association of Indian banks. Issues
+  industry guidance often adopted by RBI as common practice. Secondary
+  trust tier; commits affecting law-level claims must anchor to the
+  RBI/Ministry source. URL was verified reachable via GET range probe
+  on 2026-06-06 (HTTP 206 Partial Content).
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

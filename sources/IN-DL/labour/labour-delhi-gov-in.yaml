@@ -1,0 +1,38 @@
+id: labour-delhi-gov-in
+url: https://labour.delhi.gov.in/
+jurisdiction: IN-DL
+domain: labour
+governance_level: state
+authority:
+  name: Labour Department, Government of NCT of Delhi
+  type: department
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Registration
+    - Licence
+    - Minimum Wage Notification
+  topics:
+    - shops-and-establishments
+    - minimum-wages
+    - contract-labour
+    - labour-welfare
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Labour Department portal pages for notifications, orders, schemes, services, and downloads.
+  approach: Crawl department pages, notification lists, and linked PDFs.
+  next_step: Identify stable routes for minimum wages, shops and establishments, and contract labour materials.
+notes: |
+  Official Labour Department portal for Delhi. Verified reachable with HTTP 200
+  on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

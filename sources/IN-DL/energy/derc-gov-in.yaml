@@ -1,0 +1,40 @@
+id: derc-gov-in
+url: https://www.derc.gov.in/
+jurisdiction: IN-DL
+governance_level: state
+domain: energy
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Delhi Electricity Regulatory Commission
+  type: statutory-regulator
+  parent: Government of National Capital Territory of Delhi
+coverage:
+  instrument_types:
+    - Order
+    - Notification
+    - Tariff Order
+    - Regulation
+  topics:
+    - state-electricity-tariff
+    - discom-licensing
+    - open-access
+    - renewable-tariff
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: DERC tariff orders, regulations under the Electricity Act 2003, open-access notifications affecting the Delhi discoms (BRPL, BYPL, TPDDL).
+  approach: Probe the orders / regulations surface for recipe-readiness.
+  next_step: Identify the orders index endpoint and confirm format.
+notes: |
+  Delhi Electricity Regulatory Commission — state-level electricity
+  regulator constituted under the Electricity Act, 2003 (Delhi has
+  its own SERC; UTs except Delhi share the JERC at jercuts.gov.in).
+  URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

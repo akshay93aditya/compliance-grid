@@ -1,0 +1,38 @@
+id: taxguru-gst-updates
+url: https://taxguru.in/category/goods-and-service-tax/
+jurisdiction: IN
+domain: tax
+governance_level: central
+authority:
+  name: TaxGuru
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Tax Update
+    - Circular Summary
+    - Notification Summary
+    - Article
+  topics:
+    - gst
+    - cbic
+    - indirect-tax
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: TaxGuru GST category listing.
+  approach: Crawl category posts and capture official CBIC/GST/gazette links when present.
+  next_step: Inspect post markup and identify a stable way to separate official update summaries from commentary.
+notes: |
+  Public tax-law aggregator and commentary site. Verified reachable with HTTP
+  200 on 2026-06-05. Useful for GST change detection and cross-checking, but
+  obligations must anchor to CBIC, GST Council/GST portal, e-gazette, or statute
+  source documents rather than article text alone.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,37 @@
+id: dnh-gov-in
+url: https://dnh.gov.in/
+jurisdiction: IN-DN
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Administration of Dadra and Nagar Haveli and Daman and Diu
+  type: department
+  parent: Government of India (UT)
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+  topics:
+    - ut-administration
+    - inter-departmental-coordination
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Apex DNHDD UT-administration portal hosting cross-departmental notifications.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Apex portal of the Administration of the merged UT of Dadra and
+  Nagar Haveli and Daman and Diu. Parallel to the existing
+  daman-nic-in entry (which Codex provided). URL was verified
+  reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

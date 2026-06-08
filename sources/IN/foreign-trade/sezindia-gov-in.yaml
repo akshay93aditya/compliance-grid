@@ -1,0 +1,41 @@
+id: sezindia-gov-in
+url: https://sezindia.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: foreign-trade
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Special Economic Zones Division, Department of Commerce
+  type: department
+  parent: Ministry of Commerce and Industry
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Guideline
+    - Rule
+  topics:
+    - special-economic-zones
+    - exports
+    - foreign-trade
+    - sez-notifications
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: SEZ Act notifications, SEZ Rules updates, instruction letters to Development Commissioners.
+  approach: Probe the notifications / rules surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format. Update CENTRAL-COVERAGE's "known gaps" note (sezindia.nic.in didn't resolve, but sezindia.gov.in does).
+notes: |
+  Special Economic Zones Division — central authority for SEZ
+  regulation under the SEZ Act, 2005. Previously CENTRAL-COVERAGE.md
+  noted "sezindia.nic.in did not resolve on 2026-06-05"; on 2026-06-06
+  sezindia.gov.in returned HTTP 200 and is recorded as the canonical
+  source.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

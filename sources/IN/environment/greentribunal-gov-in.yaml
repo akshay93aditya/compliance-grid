@@ -1,0 +1,38 @@
+id: greentribunal-gov-in
+url: https://www.greentribunal.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: environment
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: National Green Tribunal
+  type: tribunal
+  parent: Ministry of Environment, Forest and Climate Change
+coverage:
+  instrument_types:
+    - Order
+    - Judgment
+    - Notification
+  topics:
+    - environment
+    - pollution-control
+    - environmental-appeals
+    - tribunals
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: NGT orders, judgments, case lists across regional benches (Principal, Pune, Bhopal, Chennai, Kolkata).
+  approach: Probe the orders and case-status endpoints; tribunal sites typically serve static HTML listings with PDF orders.
+  next_step: Identify the canonical orders endpoint per bench and verify format.
+notes: |
+  National Green Tribunal — environmental appellate tribunal
+  established under the NGT Act, 2010. URL was verified reachable
+  via HEAD on 2026-06-05 (canonical via the www. redirect).
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

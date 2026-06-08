@@ -1,0 +1,37 @@
+id: ipc-gov-in
+url: https://www.ipc.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: pharma
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Indian Pharmacopoeia Commission
+  type: statutory-regulator
+  parent: Ministry of Health and Family Welfare
+coverage:
+  instrument_types:
+    - Standard
+    - Notification
+    - Monograph
+  topics:
+    - pharmacopoeia
+    - drug-standards
+    - quality-standards
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Indian Pharmacopoeia monographs, addenda, drug-standard notifications.
+  approach: Probe the publications surface for recipe-readiness.
+  next_step: Identify the publications index endpoint and confirm format.
+notes: |
+  Indian Pharmacopoeia Commission — autonomous body setting drug
+  quality standards published as the Indian Pharmacopoeia. URL was
+  verified reachable via GET on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

@@ -1,0 +1,83 @@
+{
+  "name": "compliance-grid",
+  "version": "0.1.0",
+  "description": "A community-extending Knowledge Graph of India's regulatory obligations + the engine that keeps it current. Surfaces what compliance applies to a business — cited, freshness-labelled, plain-language — from primary regulators.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshay93aditya/compliance-grid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akshay93aditya/compliance-grid/issues"
+  },
+  "homepage": "https://github.com/akshay93aditya/compliance-grid#readme",
+  "keywords": [
+    "compliance",
+    "regulatory",
+    "india",
+    "knowledge-graph",
+    "ckg",
+    "ai-agents",
+    "anthropic",
+    "claude",
+    "extraction",
+    "ocr",
+    "federation",
+    "open-data"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "npm@10",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "db:migrate": "node-pg-migrate up",
+    "db:migrate:down": "node-pg-migrate down",
+    "db:migrate:create": "node-pg-migrate create -j sql",
+    "db:seed:export": "tsx scripts/export-seed.ts",
+    "db:setup": "npm run db:migrate",
+    "db:demo": "npm run db:migrate && tsx scripts/load-seed.ts",
+    "db:demo:clear": "tsx scripts/clear-demo.ts",
+    "sources:validate": "tsx scripts/validate-sources.ts",
+    "cg": "tsx scripts/cg.ts",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "patrol": "tsx scripts/patrol.ts",
+    "publish": "tsx scripts/publish.ts",
+    "pull": "tsx scripts/pull.ts",
+    "sync": "tsx scripts/sync.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.99.0",
+    "cheerio": "^1.2.0",
+    "domhandler": "^5.0.3",
+    "next": "^16.2.7",
+    "pdf-to-png-converter": "~3.18.0",
+    "pg": "^8.21.0",
+    "playwright": "^1.60.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "tesseract.js": "^7.0.0",
+    "undici": "^7.26.0",
+    "unpdf": "^1.6.2",
+    "yaml": "^2.9.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/node": "^25.9.1",
+    "@types/pg": "^8.20.0",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "node-pg-migrate": "^8.0.4",
+    "tailwindcss": "^4.3.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}

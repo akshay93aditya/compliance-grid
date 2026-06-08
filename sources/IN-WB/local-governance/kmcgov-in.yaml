@@ -1,0 +1,39 @@
+id: kmcgov-in
+url: https://www.kmcgov.in/
+jurisdiction: IN-WB
+governance_level: local
+domain: local-governance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Kolkata Municipal Corporation
+  type: local-body
+  parent: Government of West Bengal
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Bylaw
+  topics:
+    - property-tax
+    - building-approvals
+    - trade-licenses
+    - water-supply
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: KMC notifications on property tax, building plan approvals under KMC Act, trade licenses, water connection.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Kolkata Municipal Corporation — largest civic body in eastern
+  India. Canonical domain is .in (not .gov.in). URL was verified
+  reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

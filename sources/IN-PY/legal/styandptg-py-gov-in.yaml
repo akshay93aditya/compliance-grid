@@ -1,0 +1,37 @@
+id: styandptg-py-gov-in
+url: https://styandptg.py.gov.in/
+jurisdiction: IN-PY
+domain: legal
+governance_level: state
+authority:
+  name: Directorate of Stationery and Printing, Government of Puducherry
+  type: department
+coverage:
+  instrument_types:
+    - Gazette
+    - Notification
+    - Act
+    - Rule
+    - Order
+  topics:
+    - e-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Directorate of Stationery and Printing website and Gazette links.
+  approach: Crawl Gazette link targets, publication pages, subscription notices, and linked PDFs.
+  next_step: Write listing recipe for gazette pages and test egazette.py.gov.in timeout separately.
+notes: |
+  Directorate of Stationery and Printing, Government of Puducherry portal. GET
+  verified reachable with HTTP 200 on 2026-06-05 and page text includes a
+  Gazette link. Direct egazette.py.gov.in timed out during this batch.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

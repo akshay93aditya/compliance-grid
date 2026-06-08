@@ -1,0 +1,42 @@
+id: fci-gov-in
+url: https://fci.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: agriculture
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Food Corporation of India
+  type: market-infrastructure
+  parent: Ministry of Consumer Affairs Food and Public Distribution
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Tender
+    - Guideline
+  topics:
+    - food-grain-procurement
+    - msp-operations
+    - public-distribution-system
+    - storage-and-warehousing
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: FCI procurement notices, MSP-implementation circulars, tender bulletins for storage and movement.
+  approach: Probe the notifications / tender surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Food Corporation of India — central public sector enterprise
+  responsible for food-grain procurement at MSP, storage, and
+  distribution under the National Food Security Act regime. Issues
+  notices affecting state procurement agencies, transporters, and
+  warehousing service providers. URL was verified reachable via
+  HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

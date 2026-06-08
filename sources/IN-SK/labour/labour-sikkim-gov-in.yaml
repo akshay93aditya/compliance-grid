@@ -1,0 +1,40 @@
+id: labour-sikkim-gov-in
+url: https://labour.sikkim.gov.in/
+jurisdiction: IN-SK
+domain: labour
+governance_level: state
+authority:
+  name: Labour Department, Government of Sikkim
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - Service
+    - Guideline
+  topics:
+    - labour-services
+    - shops-establishments
+    - welfare
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Sikkim Labour Department portal.
+  approach: Re-check with browser automation and identify public pages versus login-only workflows.
+  next_step: Resolve redirect loop to Account/Login and record public access recipe.
+notes: |
+  Sikkim Labour Department portal appears in official/search results, but curl
+  follows repeated redirects to Account/Login and then 404 on 2026-06-05. Indexed
+  as blocked until browser access is documented.
+  
+  2026-06-07: Sikkim Labour returns 200 to vanilla Chrome UA — was UA-discrimination only.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

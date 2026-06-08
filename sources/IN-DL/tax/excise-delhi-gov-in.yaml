@@ -1,0 +1,37 @@
+id: excise-delhi-gov-in
+url: https://excise.delhi.gov.in/
+jurisdiction: IN-DL
+governance_level: state
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Excise Department, Delhi
+  type: department
+  parent: Government of NCT of Delhi
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - License
+  topics:
+    - state-excise
+    - liquor-licensing
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Delhi Excise notifications on liquor licensing and excise duties under the Delhi Excise Act, 2009. The 2021-22 Delhi liquor policy generated heavy enforcement activity — high case-load surface.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Excise Department, Government of NCT of Delhi — administers state
+  excise. High-profile surface given the 2021-22 Delhi liquor policy
+  litigation. URL was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

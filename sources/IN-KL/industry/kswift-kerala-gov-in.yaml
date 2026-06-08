@@ -1,0 +1,40 @@
+id: kswift-kerala-gov-in
+url: https://kswift.kerala.gov.in/index/
+jurisdiction: IN-KL
+domain: industry
+governance_level: state
+authority:
+  name: Kerala Single Window Interface for Fast and Transparent Clearance
+  type: department
+  parent: Government of Kerala
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - NOC
+    - Renewal
+  topics:
+    - single-window
+    - industrial-clearances
+    - investor-services
+    - business-approvals
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: K-SWIFT portal and service workflows.
+  approach: Browser/probe service pages and public guidance; keep application workflows session based.
+  next_step: Enumerate public approvals, department services, and downloadable instructions.
+notes: |
+  Kerala K-SWIFT single-window portal. HEAD followed into a 405 error page, but
+  GET returned HTTP 200 at `/index/` on 2026-06-05. Search snippets identify it
+  as Kerala's online single-window clearance mechanism.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

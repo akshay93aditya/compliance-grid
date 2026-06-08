@@ -1,0 +1,39 @@
+id: india-briefing-news
+url: https://www.india-briefing.com/news/
+jurisdiction: IN
+domain: legal
+governance_level: central
+authority:
+  name: India Briefing
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Regulatory Update
+    - Legal Analysis
+    - Compliance Commentary
+  topics:
+    - foreign-investment
+    - tax
+    - employment
+    - corporate
+    - trade
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: India Briefing news listing for India legal, tax, investment, and compliance updates.
+  approach: Crawl posts and capture cited official sources, dates, and affected compliance domains.
+  next_step: Determine tag/category URLs that isolate regulatory and compliance updates.
+notes: |
+  Public business/regulatory commentary source. Category probes redirected to
+  the general news index, which returned HTTP 200 on 2026-06-05. Use only for
+  discovery and context; official government, regulator, or gazette sources must
+  carry the committed legal claim.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

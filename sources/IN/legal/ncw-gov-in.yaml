@@ -1,0 +1,41 @@
+id: ncw-gov-in
+url: https://www.ncw.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: National Commission for Women
+  type: statutory-regulator
+  parent: Government of India (Ministry of Women and Child Development)
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Advisory
+    - Report
+  topics:
+    - womens-rights
+    - workplace-harassment
+    - domestic-violence
+    - dowry
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: NCW advisories, orders, and reports on women's rights enforcement under the National Commission for Women Act, 1990 — including POSH Act inquiries, dowry/domestic-violence interventions, workplace harassment guidance.
+  approach: Probe the advisories surface for recipe-readiness.
+  next_step: Identify the orders index endpoint and confirm format.
+notes: |
+  National Commission for Women — statutory body under the
+  National Commission for Women Act, 1990. Relevant to employers
+  for POSH Act compliance guidance. First-pass batch-4 of central
+  expansion probed ncw.gov.in without www and got non-200; canonical
+  is the www variant. URL was verified reachable via GET on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

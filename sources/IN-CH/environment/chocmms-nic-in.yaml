@@ -1,0 +1,41 @@
+id: chocmms-nic-in
+url: https://chocmms.nic.in/
+jurisdiction: IN-CH
+domain: environment
+governance_level: state
+authority:
+  name: Chandigarh Pollution Control Committee
+  type: board
+  parent: Chandigarh Administration
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - SOP
+    - Guideline
+    - Public Notice
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+    - eodb
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: CPCC OCMMS homepage, SOP links, and EODB handoff instructions.
+  approach: Inspect public SOP/guideline links before mapping consent and authorisation workflows.
+  next_step: Enumerate public SOP pages and document the EODB redirect flow.
+notes: |
+  Chandigarh Pollution Control Committee OCMMS portal. The `www` host had a
+  certificate-name mismatch, but the bare `chocmms.nic.in` host returned HTTP
+  200 on 2026-06-05. Search snippets state the portal is integrated with the
+  Chandigarh EODB single-window system.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

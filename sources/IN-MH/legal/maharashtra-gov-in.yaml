@@ -1,0 +1,36 @@
+id: maharashtra-gov-in
+url: https://maharashtra.gov.in/
+jurisdiction: IN-MH
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: General Administration Department, Maharashtra
+  type: department
+  parent: Government of Maharashtra
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+  topics:
+    - state-administration
+    - inter-departmental-coordination
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Apex Maharashtra state-government portal hosting General Administration Department notifications.
+  approach: Probe the notifications surface for recipe-readiness. Note the www variant 301-redirects to the apex; canonical is the apex without www.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Apex state-government portal of Maharashtra. The www variant
+  301-redirects to the apex; canonical entry is the apex without
+  www. URL was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

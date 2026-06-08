@@ -1,0 +1,37 @@
+id: msme-gov-in
+url: https://msme.gov.in
+jurisdiction: IN
+domain: industry
+governance_level: central
+authority:
+  name: Ministry of Micro, Small and Medium Enterprises
+  type: ministry
+coverage:
+  instrument_types:
+    - Notification
+    - Scheme
+    - Guideline
+  topics:
+    - msme
+    - udyam
+    - enterprise-registration
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: MSME portal is important, but plain curl receives HTTP 403.
+  approach: Try browser-acquire and identify public notification, scheme, and Udyam guidance pages.
+  next_step: Browser-smoke MSME public document surfaces.
+notes: |
+  Central MSME ministry. Verified host existence on 2026-06-05 via HTTP 403
+  to plain curl. Automated access is not yet verified.
+  
+  2026-06-07: MSME root returns 200 to vanilla Chrome UA — was UA-discrimination only.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

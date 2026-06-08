@@ -1,0 +1,38 @@
+id: cyrilshroff-com
+url: https://www.cyrilshroff.com/
+jurisdiction: IN
+governance_level: central
+domain: legal
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Cyril Amarchand Mangaldas
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Article
+    - Update
+    - Newsletter
+  topics:
+    - regulatory-updates
+    - law-firm-commentary
+    - corporate-law
+    - dispute-resolution
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Cyril Amarchand Mangaldas insights / newsletters / sectoral practice updates.
+  approach: Probe the insights/newsletters surface; many firm sites have an RSS or feed. Secondary trust tier — commits must anchor to the original government source the article references.
+  next_step: Identify the insights index endpoint and confirm whether listings are server-rendered or JS-rendered.
+notes: |
+  Cyril Amarchand Mangaldas — large Indian full-service law firm.
+  Publishes regular regulatory commentary across corporate, tax,
+  competition, and dispute-resolution practices. Secondary trust
+  tier. URL was verified reachable via GET on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

@@ -1,0 +1,38 @@
+id: haryana-gov-in-egazette
+url: https://www.haryana.gov.in/e-gazette/
+jurisdiction: IN-HR
+domain: legal
+governance_level: state
+authority:
+  name: Government of Haryana
+  type: department
+coverage:
+  instrument_types:
+    - Gazette
+    - Notification
+    - Act
+    - Rule
+    - Order
+  topics:
+    - e-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Haryana state portal e-gazette page and linked gazette service.
+  approach: Crawl the state e-gazette page and verify the current gazette search/download endpoint.
+  next_step: Replace this discovery page with the direct gazette search URL once the government host is verified.
+notes: |
+  Haryana state portal e-gazette page. Verified reachable with HTTP 200 on
+  2026-06-05. A direct `egazettewww.haryana.gov.in` host from search snippets
+  did not resolve, so this verified government page is indexed as the legal
+  discovery surface.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

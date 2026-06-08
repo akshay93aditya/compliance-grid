@@ -1,0 +1,39 @@
+id: cdslindia-com
+url: https://www.cdslindia.com/
+jurisdiction: IN
+governance_level: central
+domain: securities
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Central Depository Services Limited
+  type: market-infrastructure
+coverage:
+  instrument_types:
+    - Circular
+    - Notice
+    - Notification
+    - Operating Procedure
+  topics:
+    - securities-depository
+    - demat
+    - sebi-circular-implementation
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: CDSL operating circulars affecting Depository Participants and issuers, parallel to NSDL.
+  approach: Probe the circulars surface for recipe-readiness.
+  next_step: Identify the circulars index endpoint and confirm format.
+notes: |
+  Central Depository Services Limited — one of India's two SEBI-
+  registered depositories (the other is NSDL, already indexed).
+  Issues operating circulars affecting Depository Participants,
+  issuers, and beneficial owners. URL was verified reachable via
+  GET range probe on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

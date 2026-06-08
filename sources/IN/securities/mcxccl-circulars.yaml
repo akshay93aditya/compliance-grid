@@ -1,0 +1,36 @@
+id: mcxccl-circulars
+url: https://www.mcxccl.com/circulars/all-circulars
+jurisdiction: IN
+domain: securities
+governance_level: central
+authority:
+  name: Multi Commodity Exchange Clearing Corporation Limited
+  type: market-infrastructure
+coverage:
+  instrument_types:
+    - Circular
+  topics:
+    - commodity-derivatives
+    - clearing
+    - settlement
+    - members
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: blocked
+access:
+  status: blocked
+  update_surface: MCXCCL all circulars listing page.
+  approach: Respect anti-bot controls; verify through browser access before any automated recipe.
+  next_step: Browser-smoke the page and document allowed crawl behavior before extraction.
+notes: |
+  MCXCCL is a clearing corporation source for commodity-derivatives circulars.
+  The URL is indexed by search and curl reached the host on 2026-06-05, but the
+  page returned HTTP 403 to curl. Keep this source as blocked until browser and
+  robots/access behavior are reviewed.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

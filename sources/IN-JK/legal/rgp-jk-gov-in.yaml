@@ -1,0 +1,36 @@
+id: rgp-jk-gov-in
+url: https://rgp.jk.gov.in/
+jurisdiction: IN-JK
+domain: legal
+governance_level: state
+authority:
+  name: Ranbir Government Press, Jammu and Kashmir
+  type: department
+coverage:
+  instrument_types:
+    - Gazette
+    - Notification
+    - Rule
+    - Order
+    - Public Notice
+  topics:
+    - state-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Ranbir Government Press portal for gazette/publication material.
+  approach: Crawl public listing pages and follow gazette/document links.
+  next_step: Identify stable gazette issue and notification listing URLs.
+notes: |
+  Jammu and Kashmir Government Press/Rajpatra source. Verified reachable with
+  HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

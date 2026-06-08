@@ -1,0 +1,36 @@
+id: cbic-gst-gov-in
+url: https://cbic-gst.gov.in
+jurisdiction: IN
+domain: tax
+governance_level: central
+authority:
+  name: Central Board of Indirect Taxes and Customs GST Portal
+  type: department
+  parent: Department of Revenue
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Rule
+  topics:
+    - gst
+    - central-tax
+    - integrated-tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Static HTML contains GST notification and circular navigation.
+  approach: Crawl static pages for central tax, integrated tax, circulars, and forms.
+  next_step: Write a CBIC-GST listing recipe for notification and circular pages.
+notes: |
+  CBIC GST portal. Verified reachable with GET on 2026-06-05. HEAD returns
+  405, so verification uses GET.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

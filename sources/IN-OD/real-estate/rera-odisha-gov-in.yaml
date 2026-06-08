@@ -1,0 +1,39 @@
+id: rera-odisha-gov-in
+url: https://rera.odisha.gov.in/
+jurisdiction: IN-OD
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Odisha Real Estate Regulatory Authority
+  type: statutory-regulator
+  parent: Government of Odisha
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Regulation
+    - Project Registration
+  topics:
+    - real-estate
+    - project-registration
+    - agent-registration
+    - consumer-complaints
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Odisha RERA project + agent registrations, orders, and complaint dispositions under the Real Estate (Regulation and Development) Act, 2016.
+  approach: Probe the orders / project-registration surface for recipe-readiness.
+  next_step: Identify the orders index endpoint and confirm format.
+notes: |
+  Odisha Real Estate Regulatory Authority — state RERA under the
+  Real Estate (Regulation and Development) Act, 2016. URL was
+  verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

@@ -1,0 +1,38 @@
+id: jspcb-org-in
+url: https://jspcb.org.in/
+jurisdiction: IN-JH
+domain: environment
+governance_level: state
+authority:
+  name: Jharkhand State Pollution Control Board
+  type: board
+  parent: Government of Jharkhand
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Direction
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: JSPCB public website pages and WordPress document links.
+  approach: Crawl notices, circulars, guidelines, consent, and authorisation pages.
+  next_step: Write a WordPress/listing recipe for notices and downloadable compliance documents.
+notes: |
+  Jharkhand State Pollution Control Board portal. The older `www.jspcb.nic.in`
+  host did not resolve, while `jspcb.org.in` returned HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

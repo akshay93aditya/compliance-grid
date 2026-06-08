@@ -1,0 +1,20 @@
+id: esic-in
+url: https://www.esic.gov.in
+jurisdiction: IN
+governance_level: central
+domain: labour
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+access:
+  status: needs-access-probe
+  update_surface: ESIC portal — ESI registration, contribution returns, medical-benefit rules.
+  approach: Probe circulars / notifications surfaces before recipe work.
+  next_step: Identify which sub-paths surface ESIC circulars vs operational pages, and verify access mode.
+notes: |
+  Employees' State Insurance Corporation. Source for ESI
+  registration, contribution returns, medical-benefit rules.
+  Recipe TODO.
+maintainer: akshay93aditya
+added: 2026-06-05

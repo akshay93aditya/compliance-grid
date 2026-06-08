@@ -1,0 +1,35 @@
+id: cert-in-org-in
+url: https://www.cert-in.org.in
+jurisdiction: IN
+domain: data-digital
+governance_level: central
+authority:
+  name: Indian Computer Emergency Response Team
+  type: department
+  parent: Ministry of Electronics and Information Technology
+coverage:
+  instrument_types:
+    - Direction
+    - Advisory
+    - Guideline
+  topics:
+    - cyber-security
+    - incident-reporting
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until advisory, direction, and vulnerability-note pages are inspected.
+  approach: Probe static HTML document links first.
+  next_step: Identify CERT-In direction and advisory listing URLs.
+notes: |
+  National cyber incident and advisory authority. Verified reachable with
+  HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

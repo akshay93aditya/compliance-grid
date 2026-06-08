@@ -1,0 +1,39 @@
+id: swp-nicdemo-in
+url: https://swp.nicdemo.in/
+jurisdiction: IN-DN
+domain: industry
+governance_level: state
+authority:
+  name: Single Window Portal, Dadra and Nagar Haveli and Daman and Diu
+  type: department
+  parent: Administration of Dadra and Nagar Haveli and Daman and Diu
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - NOC
+    - Renewal
+  topics:
+    - single-window
+    - industrial-clearances
+    - business-services
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: UT single-window portal for investor and business service workflows.
+  approach: Map public service catalogues and instructions; treat application/login flows as session based.
+  next_step: Verify department/service filters and downloadable guidance documents.
+notes: |
+  Single-window portal for the merged UT. Verified reachable with HTTP 200 on
+  2026-06-05. The `nicdemo.in` host is retained because it is the URL that
+  verified and was surfaced by public search for the UT portal.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

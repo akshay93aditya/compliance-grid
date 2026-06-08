@@ -1,0 +1,38 @@
+id: taxinformation-cbic-gov-in
+url: https://taxinformation.cbic.gov.in
+jurisdiction: IN
+domain: tax
+governance_level: central
+authority:
+  name: CBIC Tax Information Portal
+  type: department
+  parent: Central Board of Indirect Taxes and Customs
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Update
+  topics:
+    - gst
+    - customs
+    - central-excise
+    - service-tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: browser-required
+  update_surface: GET returns a JavaScript app shell for tax notifications and circulars.
+  approach: Use browser-acquire or inspect API calls exposed by the SPA.
+  next_step: Browser-smoke latest updates, GST, customs, central excise, and service tax listings.
+notes: |
+  CBIC tax information portal. Verified reachable with GET on 2026-06-05.
+  Plain curl shows a JavaScript application shell, so browser/API inspection is
+  required.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

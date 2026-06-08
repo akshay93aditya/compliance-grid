@@ -1,0 +1,37 @@
+id: lakshadweep-labour-employment
+url: https://lakshadweep.gov.in/departments/labour-employment-and-training/
+jurisdiction: IN-LD
+domain: labour
+governance_level: state
+authority:
+  name: Labour, Employment and Training Department, Union Territory of Lakshadweep
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - Form
+    - Guideline
+  topics:
+    - labour-services
+    - employment
+    - shops-and-establishments
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Lakshadweep labour department page on the administration portal.
+  approach: Crawl department page, linked forms, notices, and service references.
+  next_step: Find service/application links and any downloadable labour-law documents.
+notes: |
+  Official Labour, Employment and Training Department page for Lakshadweep.
+  Verified reachable with HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

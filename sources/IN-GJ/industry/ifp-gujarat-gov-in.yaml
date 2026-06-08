@@ -1,0 +1,39 @@
+id: ifp-gujarat-gov-in
+url: https://ifp.gujarat.gov.in/DIGIGOV/
+jurisdiction: IN-GJ
+domain: industry
+governance_level: state
+authority:
+  name: Gujarat Investor Facilitation Portal
+  type: department
+  parent: Industries and Mines Department, Government of Gujarat
+coverage:
+  instrument_types:
+    - Clearance
+    - Licence
+    - Registration
+    - Incentive
+    - Guideline
+  topics:
+    - investor-facilitation
+    - single-window
+    - industrial-clearances
+    - business-services
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Gujarat IFP portal and DIGIGOV workflow.
+  approach: Browser/probe public service catalogue and document login/application boundaries.
+  next_step: Identify public service list, policies, and department clearance documents.
+notes: |
+  Gujarat Investor Facilitation Portal. The root redirected to `/DIGIGOV/` and
+  returned HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

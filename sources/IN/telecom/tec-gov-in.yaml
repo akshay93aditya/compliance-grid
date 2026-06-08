@@ -1,0 +1,39 @@
+id: tec-gov-in
+url: https://www.tec.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: telecom
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Telecommunication Engineering Centre
+  type: department
+  parent: Department of Telecommunications
+coverage:
+  instrument_types:
+    - Standard
+    - Notification
+    - Specification
+    - Guideline
+  topics:
+    - telecom-standards
+    - equipment-certification
+    - mtcte
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: TEC technical standards, MTCTE certification notices, equipment specifications.
+  approach: Probe the standards / certification surface for recipe-readiness.
+  next_step: Identify the standards index endpoint and confirm format.
+notes: |
+  Telecommunication Engineering Centre — central technical body of
+  DoT for setting telecom standards and operating the Mandatory
+  Testing and Certification of Telecommunication Equipment (MTCTE)
+  regime. URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

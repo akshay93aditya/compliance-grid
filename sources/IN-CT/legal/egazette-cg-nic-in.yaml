@@ -1,0 +1,38 @@
+id: egazette-cg-nic-in
+url: https://egazette.cg.nic.in/
+jurisdiction: IN-CT
+domain: legal
+governance_level: state
+authority:
+  name: Chhattisgarh e-Gazette
+  type: department
+  parent: Government of Chhattisgarh
+coverage:
+  instrument_types:
+    - Gazette
+    - Act
+    - Rule
+    - Notification
+    - Order
+  topics:
+    - state-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Chhattisgarh e-Gazette portal.
+  approach: Inspect whether gazette search/listing links are static, browser-rendered, or form driven.
+  next_step: Capture document metadata fields and download URLs.
+notes: |
+  Official Chhattisgarh e-Gazette portal. Verified reachable with HTTP 200 on
+  2026-06-05. Use as the primary state source for Acts, rules, notifications,
+  and orders published in the Chhattisgarh Gazette.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

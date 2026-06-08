@@ -1,0 +1,41 @@
+id: investmp-enseur-in
+url: https://investmp.enseur.in/single_window_system
+jurisdiction: IN-MP
+domain: industry
+governance_level: state
+authority:
+  name: Invest Madhya Pradesh
+  type: department
+  parent: Department of Industrial Policy and Investment Promotion, Government of Madhya Pradesh
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - Incentive
+    - Land Allotment
+  topics:
+    - single-window
+    - investor-services
+    - industrial-clearances
+    - incentives
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Invest MP single-window system page and investor portal.
+  approach: Browser/probe public service metadata; route authenticated incentive/land allotment workflows separately.
+  next_step: Inspect service catalogue, policies, approval wizard, and NSWS integration links.
+notes: |
+  Invest Madhya Pradesh single-window page. Verified reachable with HTTP 200 on
+  2026-06-05. Search snippets describe MP Invest as one stop solution for
+  approvals, policies, sector opportunities, EODB, land allotment, and
+  incentives.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

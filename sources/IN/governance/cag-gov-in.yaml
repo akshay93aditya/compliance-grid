@@ -1,0 +1,39 @@
+id: cag-gov-in
+url: https://cag.gov.in/en
+jurisdiction: IN
+governance_level: central
+domain: governance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Comptroller and Auditor General of India
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Audit Report
+    - Guideline
+    - Standard
+    - Circular
+  topics:
+    - audit
+    - public-finance
+    - performance-audit
+    - governance
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: CAG audit reports (union + state) and auditing standards.
+  approach: Probe the audit-reports and standards endpoints; CAG site serves static listings with PDF reports.
+  next_step: Identify the union-audit-report and state-audit-report listing endpoints and confirm format.
+notes: |
+  Comptroller and Auditor General of India — constitutional auditor.
+  Outputs audit reports across central + state governments and the
+  Government Auditing Standards. URL canonical-english path verified
+  reachable via HEAD on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

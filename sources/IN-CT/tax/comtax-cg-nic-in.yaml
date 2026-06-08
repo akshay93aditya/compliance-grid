@@ -1,0 +1,39 @@
+id: comtax-cg-nic-in
+url: https://comtax.cg.nic.in/
+jurisdiction: IN-CT
+governance_level: state
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Commercial Taxes Department, Chhattisgarh
+  type: department
+  parent: Government of Chhattisgarh
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - state-gst
+    - professional-tax
+    - vat
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Chhattisgarh Commercial Taxes Department notifications under the CGGST Act and residual VAT/entry-tax regimes.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Commercial Taxes Department, Government of Chhattisgarh — state-
+  level GST + professional-tax administration. Canonical web
+  presence is on the .nic.in domain (`comtax.cg.nic.in`) rather
+  than `.gov.in`. URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

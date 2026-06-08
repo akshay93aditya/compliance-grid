@@ -1,0 +1,38 @@
+id: pblabour-gov-in
+url: https://pblabour.gov.in/
+jurisdiction: IN-PB
+domain: labour
+governance_level: state
+authority:
+  name: Department of Labour, Government of Punjab
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - Circular
+    - Guideline
+  topics:
+    - labour-services
+    - shops-establishments
+    - factories
+    - welfare
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: browser-required
+  update_surface: Punjab labour department portal and eLabour services.
+  approach: Use browser automation for public pages, notices, services, and downloadable documents.
+  next_step: Identify public registration, licence, return, and renewal pages.
+notes: |
+  Punjab labour portal. Verified reachable with HTTP 200 on 2026-06-05. The
+  Punjab state portal department listing also points to pblabour.gov.in.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

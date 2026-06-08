@@ -1,0 +1,38 @@
+id: dgshipping-gov-in
+url: https://www.dgshipping.gov.in
+jurisdiction: IN
+domain: maritime
+governance_level: central
+authority:
+  name: Directorate General of Shipping
+  type: department
+  parent: Ministry of Ports, Shipping and Waterways
+coverage:
+  instrument_types:
+    - Circular
+    - Order
+    - Notice
+  topics:
+    - shipping
+    - maritime
+    - seafarers
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: DG Shipping portal is important, but plain curl receives HTTP 401.
+  approach: Try browser-acquire and identify public circular, notice, and order pages.
+  next_step: Browser-smoke public DG Shipping notices and circulars.
+notes: |
+  Central shipping regulator. Verified host existence on 2026-06-05 via HTTP
+  401 to plain curl. Automated access is not yet verified.
+  
+  2026-06-07: DG Shipping root returns 200 to vanilla Chrome UA — was UA-discrimination only.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,41 @@
+id: goatransport-gov-in
+url: https://goatransport.gov.in/
+jurisdiction: IN-GA
+governance_level: state
+domain: transport
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Transport Department, Goa
+  type: department
+  parent: Government of Goa
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - motor-vehicles
+    - permits
+    - road-tax
+    - fitness-certificates
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Goa Transport Department notifications under the Motor Vehicles Act and Goa Motor Vehicles Tax Act.
+  approach: Probe the notifications surface for recipe-readiness. Note 302-redirect from root to /Default.
+  next_step: Identify the canonical notifications endpoint and confirm format.
+notes: |
+  Transport Department, Government of Goa — administers motor-
+  vehicle registration, permits, and state road tax. Found on second
+  re-probe 2026-06-07 (first-pass batch-3 probe of transport.goa.gov.in
+  returned 000; canonical is goatransport.gov.in). URL was verified
+  reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

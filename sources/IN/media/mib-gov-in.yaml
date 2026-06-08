@@ -1,0 +1,35 @@
+id: mib-gov-in
+url: https://www.mib.gov.in
+jurisdiction: IN
+domain: media
+governance_level: central
+authority:
+  name: Ministry of Information and Broadcasting
+  type: ministry
+coverage:
+  instrument_types:
+    - Rule
+    - Guideline
+    - Advisory
+  topics:
+    - broadcasting
+    - digital-media
+    - advertising
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until rules, advisories, and guideline pages are inspected.
+  approach: Probe public ministry listings and document links.
+  next_step: Identify MIB advisory, broadcasting, digital-media, and advertising guideline surfaces.
+notes: |
+  Central information and broadcasting ministry. Verified reachable with HTTP
+  200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

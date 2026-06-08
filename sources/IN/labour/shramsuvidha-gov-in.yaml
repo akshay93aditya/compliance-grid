@@ -1,0 +1,22 @@
+id: shramsuvidha-gov-in
+url: https://shramsuvidha.gov.in
+jurisdiction: IN
+governance_level: central
+domain: labour
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+access:
+  status: needs-access-probe
+  update_surface: Shram Suvidha unified compliance portal — central + state labour filings, Factories Act, ESI, EPF.
+  approach: Inspect the portal's information-architecture and listing pages before committing to a fetch recipe.
+  next_step: Probe whether listings are static or JS-rendered, whether forms/sessions are required, and which sub-paths host rules vs filings.
+notes: |
+  Shram Suvidha — Central unified compliance portal under the
+  Ministry of Labour & Employment. Aggregates central + state labour
+  filings, returns under Acts like the Factories Act, ESI Act, EPF
+  Act. Likely requires the browser path. Recipe TODO. High-value
+  source: a single portal that touches dozens of obligations.
+maintainer: akshay93aditya
+added: 2026-06-05

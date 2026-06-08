@@ -1,0 +1,20 @@
+id: incometax-gov-in
+url: https://www.incometax.gov.in
+jurisdiction: IN
+governance_level: central
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+access:
+  status: needs-access-probe
+  update_surface: Income Tax Department portal — return filing, audits, TDS notifications.
+  approach: Probe before recipe work — identify circular/notification surfaces vs interactive taxpayer flows.
+  next_step: Find the canonical CBDT circular listing endpoint and verify access mode.
+notes: |
+  Income Tax Department of India. Source for income-tax related
+  filing obligations (returns, audits, TDS). Likely requires the
+  browser path. Recipe TODO.
+maintainer: akshay93aditya
+added: 2026-06-05

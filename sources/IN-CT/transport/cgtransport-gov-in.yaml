@@ -1,0 +1,39 @@
+id: cgtransport-gov-in
+url: https://cgtransport.gov.in/
+jurisdiction: IN-CT
+governance_level: state
+domain: transport
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Transport Department, Chhattisgarh
+  type: department
+  parent: Government of Chhattisgarh
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - motor-vehicles
+    - permits
+    - road-tax
+    - fitness-certificates
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Chhattisgarh Transport Department notifications under the Motor Vehicles Act and CG Motor Vehicles Taxation Act.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Transport Department, Government of Chhattisgarh — administers
+  motor-vehicle registration, permits, and state road tax. URL was
+  verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

@@ -1,0 +1,37 @@
+id: mpeda-gov-in
+url: https://www.mpeda.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: foreign-trade
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Marine Products Export Development Authority
+  type: statutory-regulator
+  parent: Ministry of Commerce and Industry
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Guideline
+  topics:
+    - marine-exports
+    - seafood-quality
+    - export-registration
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: MPEDA notifications affecting marine exporters — RCMC, quality standards, scheme guidelines.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Marine Products Export Development Authority (MPEDA) — statutory
+  body for promoting and regulating exports of marine products. URL
+  was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

@@ -1,0 +1,33 @@
+id: uppcb-up-gov-in
+url: https://uppcb.up.gov.in/
+jurisdiction: IN-UP
+domain: environment
+governance_level: state
+authority:
+  name: Uttar Pradesh Pollution Control Board
+  type: board
+  parent: Government of Uttar Pradesh
+coverage:
+  instrument_types: [Consent, Authorisation, Public Notice, Direction, Guideline]
+  topics: [pollution-control, environmental-consent, waste-management]
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Uttar Pradesh Pollution Control Board portal.
+  approach: Re-check with browser automation and avoid infinite redirect loops.
+  next_step: Resolve repeated frmHttpErrorPage.aspx redirects and document fetch recipe.
+notes: |
+  UPPCB host identified as official but curl followed repeated redirects to
+  frmHttpErrorPage.aspx on 2026-06-05. Indexed as blocked until browser access is
+  documented.
+  
+  2026-06-07: UPPCB returns 200 to vanilla Chrome UA on full GET (HEAD still 302 to an error page; recipe should use GET).
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,46 @@
+id: nseindia-com
+url: https://www.nseindia.com/
+jurisdiction: IN
+governance_level: central
+domain: securities
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+authority:
+  name: National Stock Exchange of India
+  type: market-infrastructure
+coverage:
+  instrument_types:
+    - Circular
+    - Notice
+    - Notification
+    - Listing Compliance
+  topics:
+    - stock-exchange
+    - listed-company-disclosures
+    - sebi-circular-implementation
+    - corporate-actions
+verification:
+  method: curl-head
+  status: blocked
+access:
+  status: browser-required
+  update_surface: NSE member circulars, listed-company corporate filings, exchange notices implementing SEBI circulars.
+  approach: Site applies strict bot detection (returns 403 to both project UA and a minimal browser UA on probe 2026-06-06). Returns 200 only when the full browser header set is sent (Sec-Fetch-* + Accept-Language + Accept-Encoding). Use the D49 browser-acquire path; a recipe that uses raw curl will fail.
+  next_step: Configure the browser-acquire path with realistic header set; identify the canonical corporate-filings / circulars endpoint.
+notes: |
+  National Stock Exchange of India — primary equity, derivatives,
+  and debt exchange. Parallel to BSE (already indexed). Issues
+  member circulars and aggregates listed-company corporate filings
+  that implement SEBI circulars. Heavy bot protection: HTTP 403 on
+  probe 2026-06-06 with project UA AND with bare browser UA. HTTP
+  200 only when sending the full browser header set (Sec-Fetch-*
+  + Accept-Language + Accept-Encoding). Recorded as
+  browser-required for routing; verification.status: blocked
+  reflects the project-UA result honestly.
+  
+  2026-06-07: NSE still 403 to vanilla Chrome UA (TLS-fingerprinting WAF). Remains browser-required (D49 path).
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

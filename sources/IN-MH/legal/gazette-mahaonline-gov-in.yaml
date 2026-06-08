@@ -1,0 +1,39 @@
+id: gazette-mahaonline-gov-in
+url: https://gazette.mahaonline.gov.in/
+jurisdiction: IN-MH
+domain: legal
+governance_level: state
+authority:
+  name: Maharashtra Government Gazette
+  type: department
+  parent: Directorate of Government Printing, Stationery and Publications, Government of Maharashtra
+coverage:
+  instrument_types:
+    - Gazette
+    - Notification
+    - Act
+    - Rule
+    - Order
+  topics:
+    - e-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Maharashtra e-Gazette portal.
+  approach: Browser-smoke the portal and determine the correct search/listing route because the root redirects to an error page.
+  next_step: Identify public gazette search and download endpoints.
+notes: |
+  Maharashtra Government Gazette portal. Search results identify this as the
+  official e-Gazette site; curl reached the host on 2026-06-05 and followed a
+  redirect to `/Error/Error`, so access still needs route/browser probing. The
+  guessed `egazette.mahaonline.gov.in` host did not resolve.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

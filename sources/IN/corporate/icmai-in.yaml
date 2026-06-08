@@ -1,0 +1,37 @@
+id: icmai-in
+url: https://www.icmai.in
+jurisdiction: IN
+domain: corporate
+governance_level: central
+authority:
+  name: Institute of Cost Accountants of India
+  type: statutory-professional-body
+coverage:
+  instrument_types:
+    - Standard
+    - Guidance
+    - Announcement
+  topics:
+    - cost-accounting
+    - cost-audit
+    - corporate-reporting
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: ICMAI public website sections for cost accounting, cost audit, announcements, and guidance.
+  approach: Identify stable public listing pages before building a crawler.
+  next_step: Verify narrower ICMAI standards/guidance URLs and split this broad source if needed.
+notes: |
+  ICMAI is a statutory professional body. HEAD returned HTTP 405 but GET returned
+  HTTP 200 on 2026-06-05, so this is reachable but not yet mapped to a specific
+  standards listing. Use for discovery and anchor obligations to the relevant
+  standard, MCA instrument, or statute.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

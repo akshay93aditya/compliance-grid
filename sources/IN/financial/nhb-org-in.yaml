@@ -1,0 +1,34 @@
+id: nhb-org-in
+url: https://www.nhb.org.in
+jurisdiction: IN
+domain: financial
+governance_level: central
+authority:
+  name: National Housing Bank
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Direction
+    - Circular
+    - Notification
+  topics:
+    - housing-finance
+    - housing-finance-companies
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until circular and notification pages are inspected.
+  approach: Probe public circular, notification, and supervision pages.
+  next_step: Determine stable NHB listing URLs for HFC compliance.
+notes: |
+  National Housing Bank portal. Verified reachable with HTTP 200 on
+  2026-06-05 after redirect to www.nhb.org.in.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

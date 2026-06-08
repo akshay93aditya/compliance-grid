@@ -1,0 +1,29 @@
+id: silpasathi-wb-gov-in
+url: https://silpasathi.wb.gov.in/
+jurisdiction: IN-WB
+domain: industry
+governance_level: state
+authority:
+  name: Silpa Sathi, Government of West Bengal
+  type: department
+coverage:
+  instrument_types: [Clearance, Registration, Licence, NOC, Single Window Service]
+  topics: [single-window, business-services, industrial-clearances, eodb]
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Silpa Sathi single-window portal and industrial services.
+  approach: Inspect public service catalogue, licences, renewals, central inspection, and guidance.
+  next_step: Enumerate public approvals and service metadata.
+notes: |
+  Silpa Sathi portal. Verified reachable with HTTP 200 on 2026-06-05. Search
+  snippets show the portal as West Bengal's state online single-window service.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

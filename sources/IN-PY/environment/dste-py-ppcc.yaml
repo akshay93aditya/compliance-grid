@@ -1,0 +1,39 @@
+id: dste-py-ppcc
+url: https://dste.py.gov.in/ppcc/
+jurisdiction: IN-PY
+domain: environment
+governance_level: state
+authority:
+  name: Puducherry Pollution Control Committee
+  type: committee
+  parent: Department of Science, Technology and Environment, Government of Puducherry
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Direction
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Puducherry Pollution Control Committee website and linked public documents.
+  approach: Crawl latest news, directions, circulars, consent guidance, and linked PDFs.
+  next_step: Write listing recipes for Directions, latest news, and public document folders.
+notes: |
+  Puducherry Pollution Control Committee page under dste.py.gov.in. GET verified
+  reachable with HTTP 200 on 2026-06-05; HEAD returned 404, so extraction should
+  use GET.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

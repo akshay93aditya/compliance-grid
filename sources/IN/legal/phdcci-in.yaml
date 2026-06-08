@@ -1,0 +1,40 @@
+id: phdcci-in
+url: https://www.phdcci.in/
+jurisdiction: IN
+governance_level: central
+domain: legal
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: PHD Chamber of Commerce and Industry
+  type: secondary-tracker
+  parent: Apex industry chamber
+coverage:
+  instrument_types:
+    - Publication
+    - Report
+    - Advisory
+    - Representation
+  topics:
+    - industry-policy
+    - business-environment
+    - regulatory-tracking
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: PHDCCI publications, policy notes, and industry representations on emerging regulatory developments. Most relevant for North India industrial corridor (UP/Punjab/Haryana/Delhi) policy tracking.
+  approach: Probe the publications surface for recipe-readiness.
+  next_step: Identify the publications index endpoint and confirm format.
+notes: |
+  PHD Chamber of Commerce and Industry — one of the major Indian
+  industry chambers (PHDCCI, CII, FICCI, ASSOCHAM, NASSCOM). First-
+  pass batch-2 of central expansion deferred PHDCCI because the
+  candidate URL probed didn't respond; canonical is the .in domain
+  (www variant). URL was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

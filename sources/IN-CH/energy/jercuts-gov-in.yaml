@@ -1,0 +1,43 @@
+id: jercuts-gov-in
+url: https://jercuts.gov.in/
+jurisdiction: IN-CH
+governance_level: central
+domain: energy
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Joint Electricity Regulatory Commission for State of Goa and Union Territories
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Order
+    - Notification
+    - Tariff Order
+    - Regulation
+  topics:
+    - state-electricity-tariff
+    - discom-licensing
+    - open-access
+    - renewable-tariff
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: JERC orders covering Chandigarh, Andaman and Nicobar Islands, Dadra and Nagar Haveli + Daman and Diu, Lakshadweep, Puducherry, and Goa.
+  approach: Probe the orders / regulations surface for recipe-readiness.
+  next_step: Identify the orders index endpoint and confirm format.
+notes: |
+  Joint Electricity Regulatory Commission for State of Goa and Union
+  Territories (JERC) — single multi-jurisdiction electricity
+  regulator constituted under the Electricity Act, 2003. Covers
+  Chandigarh, A&N, Dadra and Nagar Haveli + Daman and Diu,
+  Lakshadweep, Puducherry, and Goa. Indexed under IN-CH as the
+  canonical entry; cross-jurisdiction filings under other UTs
+  resolve through this same body. URL was verified reachable via
+  HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

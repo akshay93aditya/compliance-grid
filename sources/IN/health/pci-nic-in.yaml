@@ -1,0 +1,37 @@
+id: pci-nic-in
+url: https://www.pci.nic.in/
+jurisdiction: IN
+governance_level: central
+domain: health
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Pharmacy Council of India
+  type: statutory-regulator
+  parent: Ministry of Health and Family Welfare
+coverage:
+  instrument_types:
+    - Notification
+    - Regulation
+    - Guideline
+  topics:
+    - pharmacy
+    - pharmacist-registration
+    - pharmacy-education
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: PCI regulations under the Pharmacy Act, 1948 covering pharmacist registration and education.
+  approach: Probe the regulations surface for recipe-readiness.
+  next_step: Identify the regulations index endpoint and confirm format.
+notes: |
+  Pharmacy Council of India — statutory body under the Pharmacy Act,
+  1948 regulating pharmacist registration and pharmacy education.
+  URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

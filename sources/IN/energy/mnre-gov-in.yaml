@@ -1,0 +1,35 @@
+id: mnre-gov-in
+url: https://mnre.gov.in
+jurisdiction: IN
+domain: energy
+governance_level: central
+authority:
+  name: Ministry of New and Renewable Energy
+  type: ministry
+coverage:
+  instrument_types:
+    - Notification
+    - Guideline
+    - Scheme
+  topics:
+    - renewable-energy
+    - solar
+    - wind
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until notification, guideline, and scheme pages are inspected.
+  approach: Probe public CMS pages and PDF listings.
+  next_step: Identify renewable-energy compliance and scheme document listings.
+notes: |
+  Central renewable-energy ministry. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

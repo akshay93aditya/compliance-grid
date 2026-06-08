@@ -1,0 +1,38 @@
+id: ghmc-gov-in
+url: https://www.ghmc.gov.in/
+jurisdiction: IN-TG
+governance_level: local
+domain: local-governance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Greater Hyderabad Municipal Corporation
+  type: local-body
+  parent: Government of Telangana
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Bylaw
+  topics:
+    - property-tax
+    - building-approvals
+    - trade-licenses
+    - water-supply
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: GHMC notifications on property tax, building plan approvals, trade licenses across Hyderabad metropolitan area (hosts HITEC City + Genome Valley).
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Greater Hyderabad Municipal Corporation — civic body of Hyderabad
+  metro. URL was verified reachable via GET on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

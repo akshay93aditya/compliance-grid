@@ -1,0 +1,40 @@
+id: cvc-gov-in
+url: https://www.cvc.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: governance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Central Vigilance Commission
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Circular
+    - Guideline
+    - Notification
+    - Manual
+  topics:
+    - vigilance
+    - anti-corruption
+    - procurement-integrity
+    - governance
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: CVC circulars (vigilance, procurement, banking), CVC manual updates, special chapter directives.
+  approach: Probe the Circulars/Guidelines endpoints; CVC traditionally serves a static HTML listing with PDF children.
+  next_step: Identify the canonical circulars endpoint and confirm static-HTML access.
+notes: |
+  Central Vigilance Commission — statutory apex body for anti-
+  corruption oversight of central-government bodies and PSUs.
+  Outputs include vigilance circulars affecting procurement and
+  governance practices. URL was verified reachable via HEAD on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

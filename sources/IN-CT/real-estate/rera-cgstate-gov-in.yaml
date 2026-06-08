@@ -1,0 +1,39 @@
+id: rera-cgstate-gov-in
+url: https://rera.cgstate.gov.in/
+jurisdiction: IN-CT
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Chhattisgarh Real Estate Regulatory Authority
+  type: statutory-regulator
+  parent: Government of Chhattisgarh
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Regulation
+    - Project Registration
+  topics:
+    - real-estate
+    - project-registration
+    - agent-registration
+    - consumer-complaints
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Chhattisgarh RERA project + agent registrations, regulatory orders, complaint dispositions under RERA, 2016.
+  approach: Probe the orders / project-registration surface for recipe-readiness.
+  next_step: Identify the orders index endpoint and confirm format.
+notes: |
+  Chhattisgarh Real Estate Regulatory Authority — state RERA
+  authority under the Real Estate (Regulation and Development) Act,
+  2016. URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

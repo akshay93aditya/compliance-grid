@@ -1,0 +1,39 @@
+id: fimmda-org
+url: https://www.fimmda.org/
+jurisdiction: IN
+governance_level: central
+domain: financial
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Fixed Income Money Market and Derivatives Association of India
+  type: statutory-professional-body
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Guideline
+    - Reference Rate
+  topics:
+    - money-markets
+    - government-securities
+    - derivatives
+    - reference-rates
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: FIMMDA circulars, reference rates, RBI-aligned guidelines for the wholesale debt market.
+  approach: Probe the circulars / rates surface for recipe-readiness.
+  next_step: Identify the circulars index endpoint and confirm format.
+notes: |
+  Fixed Income Money Market and Derivatives Association of India
+  (FIMMDA) — RBI-recognised SRO setting benchmark reference rates
+  and market-conduct guidance for the wholesale debt market. URL
+  was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

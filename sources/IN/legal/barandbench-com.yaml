@@ -1,0 +1,35 @@
+id: barandbench-com
+url: https://www.barandbench.com/
+jurisdiction: IN
+governance_level: central
+domain: legal
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Bar and Bench
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - News
+    - Article
+  topics:
+    - legal-news
+    - regulatory-updates
+    - court-updates
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Daily court coverage, regulatory updates, and curated case digests.
+  approach: Probe the news and category endpoints; check for RSS feed.
+  next_step: Identify RSS / sitemap surfaces, then confirm static vs JS-rendered article pages.
+notes: |
+  Bar and Bench — independent Indian legal news outlet. Secondary
+  trust tier — commits should anchor to the original judgment /
+  notification. URL was verified reachable via HEAD on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

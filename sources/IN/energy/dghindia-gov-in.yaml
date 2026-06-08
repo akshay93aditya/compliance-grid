@@ -1,0 +1,39 @@
+id: dghindia-gov-in
+url: https://www.dghindia.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: energy
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Directorate General of Hydrocarbons
+  type: statutory-regulator
+  parent: Ministry of Petroleum and Natural Gas
+coverage:
+  instrument_types:
+    - Notification
+    - Guideline
+    - Circular
+    - Procedure
+  topics:
+    - upstream-oil-and-gas
+    - hydrocarbon-exploration
+    - production-sharing-contracts
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: DGH notifications under the OALP/HELP frameworks, PSC compliance procedures, technical advisory circulars to operators.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Directorate General of Hydrocarbons — central technical authority
+  for upstream oil-and-gas regulation, operating under the Ministry
+  of Petroleum and Natural Gas. URL was verified reachable via
+  HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

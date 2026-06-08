@@ -1,0 +1,39 @@
+id: environment-rajasthan-rpcb
+url: https://environment.rajasthan.gov.in/rpcb
+jurisdiction: IN-RJ
+domain: environment
+governance_level: state
+authority:
+  name: Rajasthan State Pollution Control Board
+  type: board
+  parent: Government of Rajasthan
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Direction
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Rajasthan State Pollution Control Board public portal.
+  approach: Crawl clearances, guidelines, notices, directions, consent, and linked PDFs.
+  next_step: Write listing recipes for RSPCB clearance, notice, and guideline pages.
+notes: |
+  Rajasthan State Pollution Control Board page under environment.rajasthan.gov.in.
+  GET verified reachable with HTTP 200 on 2026-06-05. HEAD returned HTTP 403,
+  so fetchers should use GET and preserve a normal browser user agent.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

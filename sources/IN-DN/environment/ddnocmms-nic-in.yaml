@@ -1,0 +1,39 @@
+id: ddnocmms-nic-in
+url: https://ddnocmms.nic.in/
+jurisdiction: IN-DN
+domain: environment
+governance_level: state
+authority:
+  name: Pollution Control Committee, Dadra and Nagar Haveli and Daman and Diu
+  type: board
+  parent: Administration of Dadra and Nagar Haveli and Daman and Diu
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Guideline
+    - Return
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: UT OCMMS portal for pollution consent and authorisation workflows.
+  approach: Inspect public instructions and linked documents first; authenticated OCMMS workflows remain access metadata.
+  next_step: Enumerate public notice/guideline links and document login boundaries.
+notes: |
+  OCMMS portal for Dadra and Nagar Haveli and Daman and Diu. The `www` hostname
+  had a certificate-name mismatch, but the bare `ddnocmms.nic.in` host returned
+  HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

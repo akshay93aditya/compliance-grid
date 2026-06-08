@@ -1,0 +1,41 @@
+id: maitri-mahaonline-gov-in
+url: https://maitri.mahaonline.gov.in/
+jurisdiction: IN-MH
+domain: industry
+governance_level: state
+authority:
+  name: Maharashtra Industry, Trade and Investment Facilitation Cell
+  type: department
+  parent: Industries Department, Government of Maharashtra
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - NOC
+    - Incentive
+  topics:
+    - single-window
+    - investor-services
+    - industrial-clearances
+    - business-approvals
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: MAITRI single-window portal and industries department MAITRI information page.
+  approach: Browser/probe public service metadata and route authenticated workflows separately.
+  next_step: Inspect public portal pages, service catalogue, and industry.maharashtra.gov.in MAITRI pages.
+notes: |
+  Maharashtra MAITRI single-window portal. Verified reachable with HTTP 200 on
+  2026-06-05. The Industries Department MAITRI information page also returned
+  HTTP 200 and describes MAITRI as the state's single-window investment
+  facilitation agency.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

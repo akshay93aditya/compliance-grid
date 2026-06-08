@@ -1,0 +1,38 @@
+id: labour-telangana-gov-in
+url: https://labour.telangana.gov.in/
+jurisdiction: IN-TG
+domain: labour
+governance_level: state
+authority:
+  name: Labour Department, Government of Telangana
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - Circular
+    - Guideline
+  topics:
+    - labour-services
+    - shops-establishments
+    - factories
+    - welfare
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Telangana labour department website and service surfaces.
+  approach: Inspect public pages, forms, notices, and e-service metadata.
+  next_step: Identify registration, licence, renewal, return, and inspection pages.
+notes: |
+  Telangana Labour Department portal. Verified reachable with HTTP 200 on
+  2026-06-05 after redirect to /home.do.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,38 @@
+id: ugc-gov-in
+url: https://www.ugc.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: education
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: University Grants Commission
+  type: statutory-regulator
+  parent: Ministry of Education
+coverage:
+  instrument_types:
+    - Notification
+    - Regulation
+    - Circular
+    - Guideline
+  topics:
+    - higher-education
+    - university-regulation
+    - academic-standards
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: UGC regulations and notifications under the UGC Act, 1956 covering universities and degree colleges.
+  approach: Probe the regulations / circulars surface for recipe-readiness.
+  next_step: Identify the regulations index endpoint and confirm format.
+notes: |
+  University Grants Commission — statutory body under the UGC Act,
+  1956 regulating university education in India. URL was verified
+  reachable via GET on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

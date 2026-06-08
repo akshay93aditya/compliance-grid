@@ -1,0 +1,39 @@
+id: apct-gov-in
+url: https://apct.gov.in/
+jurisdiction: IN-AP
+governance_level: state
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Commercial Taxes Department, Andhra Pradesh
+  type: department
+  parent: Government of Andhra Pradesh
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - state-gst
+    - vat
+    - professional-tax
+    - entry-tax
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: APCT circulars under the SGST Act, Andhra Pradesh Professional Tax Act, and residual VAT/entry-tax regimes.
+  approach: Probe the circulars / notifications surface for recipe-readiness.
+  next_step: Identify the canonical circulars endpoint and confirm format.
+notes: |
+  Commercial Taxes Department, Government of Andhra Pradesh — the
+  state's GST + professional-tax administration. URL was verified
+  reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

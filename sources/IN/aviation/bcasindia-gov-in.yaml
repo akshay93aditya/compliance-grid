@@ -1,0 +1,34 @@
+id: bcasindia-gov-in
+url: https://bcasindia.gov.in
+jurisdiction: IN
+domain: aviation
+governance_level: central
+authority:
+  name: Bureau of Civil Aviation Security
+  type: department
+  parent: Ministry of Civil Aviation
+coverage:
+  instrument_types:
+    - Circular
+    - Order
+    - Guideline
+  topics:
+    - aviation-security
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: browser-required
+  update_surface: Public site returns a small application-style HTML page.
+  approach: Use browser-acquire before parsing public circular or guideline pages.
+  next_step: Browser-smoke BCAS public document surfaces.
+notes: |
+  Central civil aviation security bureau. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

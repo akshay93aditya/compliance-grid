@@ -1,0 +1,38 @@
+id: dca-telangana-gov-in
+url: https://dca.telangana.gov.in/
+jurisdiction: IN-TG
+governance_level: state
+domain: pharma
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Drugs Control Administration, Telangana
+  type: department
+  parent: Government of Telangana
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - License
+  topics:
+    - drug-licensing
+    - pharmacy-licensing
+    - cosmetics-licensing
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Telangana DCA licensing, notifications, and enforcement orders under the Drugs and Cosmetics Act, 1940.
+  approach: Probe the licensing surface for recipe-readiness.
+  next_step: Identify the licensing index endpoint and confirm format.
+notes: |
+  Drugs Control Administration, Government of Telangana — state-
+  level drug licensing under the Drugs and Cosmetics Act, 1940.
+  URL was verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

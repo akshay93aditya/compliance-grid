@@ -1,0 +1,41 @@
+id: midcindia-org
+url: https://www.midcindia.org/
+jurisdiction: IN-MH
+governance_level: state
+domain: industry
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Maharashtra Industrial Development Corporation
+  type: statutory-regulator
+  parent: Government of Maharashtra
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Policy
+    - Scheme Document
+  topics:
+    - industrial-areas
+    - land-allotment
+    - common-effluent-treatment
+    - industrial-water
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: "MIDC notifications affecting industrial-area allottees — land-allotment, lease, water tariff, common-effluent-treatment plant operations."
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Maharashtra Industrial Development Corporation — statutory body
+  under the MIDC Act, 1961 administering industrial areas across
+  Maharashtra. Binding terms affect industrial-land allottees,
+  CETP users, and industrial-water consumers. URL was verified
+  reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

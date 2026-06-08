@@ -1,0 +1,36 @@
+id: ipindia-gov-in
+url: https://ipindia.gov.in
+jurisdiction: IN
+domain: intellectual-property
+governance_level: central
+authority:
+  name: Office of the Controller General of Patents, Designs and Trade Marks
+  type: department
+  parent: Department for Promotion of Industry and Internal Trade
+coverage:
+  instrument_types:
+    - Rule
+    - Public Notice
+    - Guideline
+  topics:
+    - patents
+    - trademarks
+    - designs
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until public notices, rules, and office-order pages are inspected.
+  approach: Probe public IP India document listings and notice pages.
+  next_step: Identify stable patent, trademark, design, and GI notice/rule surfaces.
+notes: |
+  Central intellectual-property office. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

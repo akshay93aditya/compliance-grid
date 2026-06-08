@@ -1,0 +1,68 @@
+name: sync
+
+# Federation-pull half of the cadenced sync. Runs `cg pull` daily so the
+# local CKG stays current with the Commons companion repo.
+#
+# Why pull-only, not pull+patrol: patrol's source fetches go directly to
+# Indian government portals (e.g. karmikaspandana.karnataka.gov.in),
+# which IP-block GitHub Actions's US-based runners. Patrol runs on the
+# operator's laptop via launchd instead (see scripts/launchd/); federation
+# pull works fine from any IP and benefits from a reliable daily cadence.
+#
+# Required repository secrets (set per-fork by the operator running it):
+#   DATABASE_URL                  - Postgres connection string reachable
+#                                   from the GitHub Actions runner.
+#   COMPLIANCE_GRID_DATA_REMOTE   - git URL of the companion data repo.
+#
+# **Fork-safe**: forks that haven't configured the secrets will skip
+# cleanly (the job gates on DATABASE_URL being non-empty). The
+# scheduled cron only runs on the canonical repo to avoid every fork
+# scheduling its own daily run.
+#
+# Cadence: 06:00 IST daily (00:30 UTC), plus a workflow_dispatch button.
+
+on:
+  schedule:
+    - cron: '30 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  pull:
+    # Only run on the canonical repo. Forks that want this cadence can
+    # remove or edit the conditional.
+    if: github.repository_owner == 'akshay93aditya'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+
+      - name: Skip if secrets are not configured
+        id: gate
+        run: |
+          if [ -z "${{ secrets.DATABASE_URL }}" ] || [ -z "${{ secrets.COMPLIANCE_GRID_DATA_REMOTE }}" ]; then
+            echo "::warning::DATABASE_URL or COMPLIANCE_GRID_DATA_REMOTE not set; skipping."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run migrations
+        if: steps.gate.outputs.skip != 'true'
+        run: npm run db:migrate
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      - name: Run cg pull (federation half only)
+        if: steps.gate.outputs.skip != 'true'
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          COMPLIANCE_GRID_DATA_REMOTE: ${{ secrets.COMPLIANCE_GRID_DATA_REMOTE }}
+          COMPLIANCE_GRID_DATA_WORKSPACE: ${{ runner.temp }}/compliance-grid-data
+          PULL_EXTRACTED_BY: commons
+        run: npm run pull

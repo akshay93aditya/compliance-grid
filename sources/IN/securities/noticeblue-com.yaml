@@ -1,0 +1,38 @@
+id: noticeblue-com
+url: https://noticeblue.com
+jurisdiction: IN
+domain: securities
+governance_level: central
+authority:
+  name: NoticeBlue
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Circular
+    - Notice
+  topics:
+    - nse
+    - bse
+    - mcx
+    - sebi
+    - exchange-circulars
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: browser-required
+  update_surface: Circular tracker and search interface for NSE, BSE, MCX, and SEBI circulars.
+  approach: Use browser acquisition to inspect public circular listings and cross-references.
+  next_step: Determine whether public circular pages expose stable official-document links without login.
+notes: |
+  Public secondary tracker for exchange and SEBI circular discovery. Verified
+  reachable with HTTP 200 on 2026-06-05 and the response indicates a Next.js
+  rendered surface. Useful for early detection and cross-references only; CKG
+  obligations must anchor to the official exchange, SEBI, or gazette source.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

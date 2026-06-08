@@ -1,0 +1,40 @@
+id: state-bihar-labour
+url: https://state.bihar.gov.in/labour/CitizenHome.html
+jurisdiction: IN-BR
+domain: labour
+governance_level: state
+authority:
+  name: Labour Resources Department, Government of Bihar
+  type: department
+coverage:
+  instrument_types:
+    - Act
+    - Rule
+    - Notification
+    - Registration
+    - Licence
+  topics:
+    - labour-registration
+    - minimum-wages
+    - shops-and-establishments
+    - factories
+    - contract-labour
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Labour Resources Department citizen portal.
+  approach: Inspect public notices, Acts/rules, forms, and service links; separate workflow pages from static legal documents.
+  next_step: Identify stable notification and service-catalogue URLs.
+notes: |
+  Official Bihar Labour Resources Department portal. Verified reachable with
+  HTTP 200 on 2026-06-05. The response was a small app shell, so access needs
+  content probing before extraction readiness is claimed.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

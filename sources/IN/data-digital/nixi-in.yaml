@@ -1,0 +1,38 @@
+id: nixi-in
+url: https://nixi.in/
+jurisdiction: IN
+governance_level: central
+domain: data-digital
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: National Internet Exchange of India
+  type: market-infrastructure
+  parent: Ministry of Electronics and Information Technology
+coverage:
+  instrument_types:
+    - Notification
+    - Policy
+    - Guideline
+  topics:
+    - internet-exchange
+    - dot-in-domain
+    - ipv6
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: NIXI policies on .IN domain registration, IPv6 advisory, internet-exchange operating notices.
+  approach: Probe the policies / advisory surface for recipe-readiness.
+  next_step: Identify the policies index endpoint and confirm format.
+notes: |
+  National Internet Exchange of India (NIXI) — operates the .IN
+  domain registry and India's internet-exchange points; not-for-profit
+  organisation under MeitY. URL was verified reachable via HEAD on
+  2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

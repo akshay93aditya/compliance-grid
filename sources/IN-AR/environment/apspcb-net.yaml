@@ -1,0 +1,40 @@
+id: apspcb-net
+url: https://apspcb.net/
+jurisdiction: IN-AR
+domain: environment
+governance_level: state
+authority:
+  name: Arunachal Pradesh State Pollution Control Board
+  type: board
+  parent: Government of Arunachal Pradesh
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Direction
+    - Public Hearing Notice
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+    - public-hearing
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: APSPCB website latest news, directions, public hearing notices, and consent/UCAMS links.
+  approach: Crawl WordPress pages, latest-news links, and downloadable notices/guidelines.
+  next_step: Write a WordPress/listing recipe for latest news, directions, and public hearing documents.
+notes: |
+  Arunachal Pradesh State Pollution Control Board portal. Verified reachable
+  with HTTP 200 on 2026-06-05. Search snippets show latest-news items for
+  directions, environmental public hearings, monitoring reports, and UCAMS.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

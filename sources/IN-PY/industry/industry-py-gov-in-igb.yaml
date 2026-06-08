@@ -1,0 +1,38 @@
+id: industry-py-gov-in-igb
+url: https://industry.py.gov.in/industrial-guidance-bureau-igb
+jurisdiction: IN-PY
+domain: industry
+governance_level: state
+authority:
+  name: Industrial Guidance Bureau, Government of Puducherry
+  type: department
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - NOC
+    - Single Window Service
+  topics:
+    - single-window
+    - business-services
+    - industrial-clearances
+    - eodb
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Industrial Guidance Bureau public page and linked clearance information.
+  approach: Crawl clearance lists, department links, service guidance, and downloadable forms.
+  next_step: Enumerate business clearance sources and map them to department portals.
+notes: |
+  Puducherry Industrial Guidance Bureau page. Verified reachable with HTTP 200
+  on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

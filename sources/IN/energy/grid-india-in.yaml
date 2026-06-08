@@ -1,0 +1,39 @@
+id: grid-india-in
+url: https://grid-india.in/
+jurisdiction: IN
+governance_level: central
+domain: energy
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Grid Controller of India Limited
+  type: market-infrastructure
+  parent: Ministry of Power
+coverage:
+  instrument_types:
+    - Procedure
+    - Notification
+    - Circular
+    - Guideline
+  topics:
+    - grid-operations
+    - load-dispatch
+    - power-system-operation
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Grid Controller procedures, load-dispatch communications, CERC-driven grid code implementations.
+  approach: Probe the procedures / circulars surface for recipe-readiness.
+  next_step: Identify the procedures index endpoint and confirm format.
+notes: |
+  Grid Controller of India (formerly POSOCO) — central transmission
+  utility owning the national load-despatch centres. Procedures
+  affect generators, transmission licensees, and large consumers.
+  URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

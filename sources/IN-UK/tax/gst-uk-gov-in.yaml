@@ -1,0 +1,39 @@
+id: gst-uk-gov-in
+url: https://gst.uk.gov.in/
+jurisdiction: IN-UK
+governance_level: state
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: State Tax Department, Uttarakhand
+  type: department
+  parent: Government of Uttarakhand
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - state-gst
+    - vat
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Uttarakhand State Tax notifications under the Uttarakhand GST Act and residual VAT instruments.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  State Tax Department, Government of Uttarakhand — state-level GST
+  administration. The commercial-tax umbrella subdomain
+  (comtax.uk.gov.in) did not respond; this gst subdomain is the
+  primary live surface. URL was verified reachable via HEAD on
+  2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

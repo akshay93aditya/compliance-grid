@@ -1,0 +1,39 @@
+id: it-tn-gov-in
+url: https://it.tn.gov.in/
+jurisdiction: IN-TN
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Information Technology Department, Tamil Nadu
+  type: department
+  parent: Government of Tamil Nadu
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Policy
+  topics:
+    - it-policy
+    - cyber-security
+    - e-governance
+    - data-protection-state
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Tamil Nadu IT Department notifications on state IT policy, cyber-security advisories, and DPDP Act state-rollout guidance.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Information Technology Department, Government of Tamil Nadu —
+  state IT policy, cyber-security, e-governance. URL was verified
+  reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

@@ -1,0 +1,42 @@
+id: ncdc-in
+url: https://www.ncdc.in/
+jurisdiction: IN
+governance_level: central
+domain: agriculture
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: National Cooperative Development Corporation
+  type: statutory-regulator
+  parent: Ministry of Cooperation
+coverage:
+  instrument_types:
+    - Notification
+    - Guideline
+    - Scheme Document
+    - Circular
+  topics:
+    - cooperatives
+    - agricultural-cooperatives
+    - cooperative-finance
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: NCDC scheme guidelines, sector-specific cooperative advisories, financing terms for member cooperatives.
+  approach: Project UA blocked at HTTP 403 on 2026-06-06; browser UA returned 200. Use D49 browser-acquire path.
+  next_step: Configure browser-acquire path, then identify the scheme guidelines index endpoint.
+notes: |
+  National Cooperative Development Corporation — statutory body
+  under the NCDC Act, 1962 financing and promoting cooperative
+  societies in agriculture-related and allied sectors. Site blocks
+  Compliance-Grid project UA at HTTP 403 (probe 2026-06-06) but
+  accepts browser UA at HTTP 200.
+  
+  2026-06-07: NCDC returns 200 to vanilla Chrome UA — earlier tag of browser-required was wrong; plain Chrome UA suffices.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

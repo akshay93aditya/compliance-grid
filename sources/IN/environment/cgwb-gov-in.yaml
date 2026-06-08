@@ -1,0 +1,44 @@
+id: cgwb-gov-in
+url: https://cgwb.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: environment
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Central Ground Water Board
+  type: department
+  parent: Department of Water Resources, River Development and Ganga Rejuvenation
+coverage:
+  instrument_types:
+    - Notification
+    - Guideline
+    - Report
+    - NOC Procedure
+  topics:
+    - ground-water
+    - aquifer-management
+    - water-noc
+    - water-extraction-norms
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: CGWB notifications and the NOC framework for ground-water extraction (relevant to industrial-water users).
+  approach: Project UA failed (000) on probe 2026-06-06; browser UA returned 200. Use the D49 browser-acquire path.
+  next_step: Configure browser-acquire path, then identify the NOC-framework endpoint and aquifer notifications.
+notes: |
+  Central Ground Water Board — central agency for ground-water
+  exploration and management. Operates the NOC regime for industrial
+  ground-water extraction in notified areas. The www. variant
+  returned 000 (no response) on probe with the project UA, and the
+  apex domain (cgwb.gov.in without www) returned 200 only with a
+  browser-style UA on 2026-06-06.
+  
+  2026-06-07: CGWB returns 200 to vanilla Chrome UA — earlier browser-required tag was wrong.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

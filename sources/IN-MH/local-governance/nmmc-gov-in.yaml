@@ -1,0 +1,39 @@
+id: nmmc-gov-in
+url: https://www.nmmc.gov.in/
+jurisdiction: IN-MH
+governance_level: local
+domain: local-governance
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Navi Mumbai Municipal Corporation
+  type: local-body
+  parent: Government of Maharashtra
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Bylaw
+  topics:
+    - property-tax
+    - building-approvals
+    - trade-licenses
+    - water-supply
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: NMMC notifications on property tax, building plan approvals, trade licenses for the Navi Mumbai planned city (significant IT + chemicals corridor).
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Navi Mumbai Municipal Corporation — planned city across the harbour
+  from Mumbai, hosts CIDCO-developed industrial belts. URL was
+  verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

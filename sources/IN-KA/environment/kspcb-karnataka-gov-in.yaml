@@ -1,0 +1,36 @@
+id: kspcb-karnataka-gov-in
+url: https://kspcb.karnataka.gov.in
+jurisdiction: IN-KA
+domain: environment
+governance_level: state
+authority:
+  name: Karnataka State Pollution Control Board
+  type: board
+  parent: Government of Karnataka
+coverage:
+  instrument_types:
+    - Consent
+    - Notification
+    - Circular
+  topics:
+    - pollution-control
+    - environmental-consent
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until HTML and rendered DOM are inspected.
+  approach: Probe public consent, circular, notification, and guidelines listings.
+  next_step: Determine whether KSPCB pages are static HTML, Drupal listings, or browser-rendered.
+notes: |
+  Karnataka State Pollution Control Board portal. Verified reachable with
+  HTTP 200 on 2026-06-05. State environmental source for the IN-KA pilot.
+  URL reachability is verified; extraction access is not yet verified.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

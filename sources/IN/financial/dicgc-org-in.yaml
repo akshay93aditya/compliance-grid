@@ -1,0 +1,38 @@
+id: dicgc-org-in
+url: https://dicgc.org.in/
+jurisdiction: IN
+governance_level: central
+domain: financial
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Deposit Insurance and Credit Guarantee Corporation
+  type: statutory-regulator
+  parent: Reserve Bank of India
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Guideline
+  topics:
+    - deposit-insurance
+    - credit-guarantee
+    - bank-resolution
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: DICGC notifications under the DICGC Act covering deposit-insurance premia, claim settlement procedures, and member-bank notices.
+  approach: Probe the circulars / notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Deposit Insurance and Credit Guarantee Corporation — wholly-owned
+  subsidiary of RBI; operates the deposit insurance scheme under
+  the DICGC Act, 1961. Issues binding notifications to member
+  banks. URL was verified reachable via GET on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

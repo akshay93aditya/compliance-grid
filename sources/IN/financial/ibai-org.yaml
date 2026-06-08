@@ -1,0 +1,39 @@
+id: ibai-org
+url: https://www.ibai.org/
+jurisdiction: IN
+governance_level: central
+domain: financial
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+authority:
+  name: Insurance Brokers Association of India
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Article
+    - Update
+    - Guideline
+    - Code
+  topics:
+    - insurance-broking
+    - irdai-circular-implementation
+    - market-conduct
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: browser-required
+  update_surface: IBAI bulletins, member advisories, IRDAI-aligned best practices for insurance brokers.
+  approach: Project UA blocked at HTTP 403 on 2026-06-06; browser UA returned 200. Use the D49 browser-acquire path or a UA override.
+  next_step: Configure browser-acquire path, then identify the publications index endpoint.
+notes: |
+  Insurance Brokers Association of India — apex association of
+  IRDAI-licensed insurance brokers. Site blocks the Compliance-Grid
+  project UA at HTTP 403 but accepts browser UA at HTTP 200
+  (probe 2026-06-06). Secondary trust tier; commits affecting
+  law-level claims must anchor to the IRDAI source.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

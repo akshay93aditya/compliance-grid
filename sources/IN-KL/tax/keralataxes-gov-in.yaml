@@ -1,0 +1,39 @@
+id: keralataxes-gov-in
+url: https://keralataxes.gov.in/
+jurisdiction: IN-KL
+governance_level: state
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: State GST Department, Kerala
+  type: department
+  parent: Government of Kerala
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - state-gst
+    - professional-tax
+    - vat
+    - building-tax
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Kerala State GST Department notifications under the KGST Act and Kerala Building Tax / Professional Tax legislation.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  State GST Department, Government of Kerala — state-level GST +
+  professional-tax + building-tax administration. URL was verified
+  reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

@@ -1,0 +1,38 @@
+id: ncdrc-nic-in
+url: https://ncdrc.nic.in/
+jurisdiction: IN
+governance_level: central
+domain: consumer
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: National Consumer Disputes Redressal Commission
+  type: tribunal
+  parent: Department of Consumer Affairs, Ministry of Consumer Affairs Food and Public Distribution
+coverage:
+  instrument_types:
+    - Order
+    - Judgment
+    - Notification
+  topics:
+    - consumer-protection
+    - consumer-disputes
+    - redressal
+    - tribunals
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: NCDRC orders and judgments under the Consumer Protection Act.
+  approach: Probe the orders/judgments surface for recipe-readiness.
+  next_step: Identify the canonical orders endpoint and confirm format.
+notes: |
+  National Consumer Disputes Redressal Commission — apex consumer
+  redressal forum under the Consumer Protection Act, 2019. URL was
+  verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

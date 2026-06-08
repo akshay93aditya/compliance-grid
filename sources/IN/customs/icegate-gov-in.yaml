@@ -1,0 +1,36 @@
+id: icegate-gov-in
+url: https://www.icegate.gov.in
+jurisdiction: IN
+domain: customs
+governance_level: central
+authority:
+  name: Indian Customs Electronic Gateway
+  type: transactional-portal
+  parent: Central Board of Indirect Taxes and Customs
+coverage:
+  instrument_types:
+    - Advisory
+    - Workflow
+    - Public Notice
+  topics:
+    - customs
+    - import-export
+    - electronic-filing
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Public advisories, service pages, and electronic filing guidance are visible in static HTML.
+  approach: Crawl public advisory and service links; treat authenticated filing workflows separately.
+  next_step: Write an ICEGATE recipe for public advisories, registration, electronic filing, e-payment, and enquiry pages.
+notes: |
+  Central customs electronic filing portal. Verified reachable with GET on
+  2026-06-05. HEAD returns 405, so verification uses GET.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

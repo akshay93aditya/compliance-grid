@@ -1,0 +1,30 @@
+id: wbpcb-gov-in
+url: https://www.wbpcb.gov.in/html/index.htm
+jurisdiction: IN-WB
+domain: environment
+governance_level: state
+authority:
+  name: West Bengal Pollution Control Board
+  type: board
+  parent: Government of West Bengal
+coverage:
+  instrument_types: [Consent, Authorisation, Public Notice, Direction, Guideline]
+  topics: [pollution-control, environmental-consent, waste-management]
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: West Bengal Pollution Control Board public website.
+  approach: Crawl EODB, industrial pollution control, notices, directions, and linked PDFs.
+  next_step: Write recipes for consent, notice, and direction pages.
+notes: |
+  West Bengal Pollution Control Board portal. Verified reachable with HTTP 200
+  on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,30 @@
+id: industries-tripura-gov-in
+url: https://industries.tripura.gov.in/
+jurisdiction: IN-TR
+domain: industry
+governance_level: state
+authority:
+  name: Department of Industries and Commerce, Government of Tripura
+  type: department
+coverage:
+  instrument_types: [Clearance, Registration, Licence, NOC, Single Window Service]
+  topics: [single-window, business-services, industrial-clearances, eodb]
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Tripura Industries and Commerce website, policies, notices, and service links.
+  approach: Crawl policies, schemes, notice board, publications, and single-window references.
+  next_step: Verify current SWAAGAT/single-window endpoint; swp.tripura.gov.in did not resolve.
+notes: |
+  Tripura Industries and Commerce portal. Verified reachable with HTTP 200 on
+  2026-06-05. Search results identify SWAAGAT as Tripura's single-window system,
+  but the guessed swp.tripura.gov.in host did not resolve in this batch.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

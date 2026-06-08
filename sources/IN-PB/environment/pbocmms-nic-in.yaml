@@ -1,0 +1,40 @@
+id: pbocmms-nic-in
+url: https://pbocmms.nic.in/
+jurisdiction: IN-PB
+domain: environment
+governance_level: state
+authority:
+  name: Punjab Pollution Control Board OCMMS
+  type: board
+  parent: Punjab Pollution Control Board
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Return
+    - Certificate
+    - Public Notice
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+    - annual-returns
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Punjab OCMMS portal for pollution control consents, authorisations, returns, and certificates.
+  approach: Extract public service metadata, fee calculators, certificate verification surfaces, and public documents.
+  next_step: Write recipes for public OCMMS pages and keep logged-in industry workflows out of scope.
+notes: |
+  Punjab OCMMS portal. Verified reachable with HTTP 200 on 2026-06-05. Search
+  snippets identify Punjab Pollution Control Board and note that many approvals
+  are routed through Invest Punjab Business First.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

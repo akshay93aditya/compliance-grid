@@ -1,0 +1,40 @@
+id: ospcboard-odisha-gov-in
+url: https://ospcboard.odisha.gov.in/
+jurisdiction: IN-OD
+domain: environment
+governance_level: state
+authority:
+  name: State Pollution Control Board, Odisha
+  type: board
+  parent: Government of Odisha
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Direction
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+    - public-hearing
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Odisha State Pollution Control Board website and linked online systems.
+  approach: Crawl news, announcements, public hearings, consent pages, authorisation pages, and linked PDFs.
+  next_step: Write recipes for public hearing, online consent, waste authorisation, and direction pages.
+notes: |
+  State Pollution Control Board, Odisha portal. Verified reachable with HTTP 200
+  on 2026-06-05. This odisha.gov.in host supersedes older ospcboard.org checks
+  that had TLS certificate-name issues.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

@@ -1,0 +1,25 @@
+id: indiacode-nic-in
+url: https://www.indiacode.nic.in
+jurisdiction: IN
+governance_level: central
+domain: legal
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+access:
+  status: static-html-needs-recipe
+  update_surface: India Code — canonical central repository of Acts of Parliament.
+  approach: Returns HTTP 403 to unknown crawlers via Akamai WAF (D33 empirical finding). Direct extraction is not currently viable.
+  next_step: Investigate respectful crawl negotiations, partnership with a legal-data aggregator, or manual seed curation.
+notes: |
+  India Code — the canonical central repository of Acts of
+  Parliament. Highest-value source for the instrument skeleton.
+  Per D33, returns HTTP 403 to unknown crawlers (Akamai). Recipe
+  TODO; may require manual curation or partnership with a
+  legal-data aggregator until a respectful crawl pattern is
+  negotiated.
+  
+  2026-06-07: IndiaCode root returns 200 to vanilla Chrome UA — was UA-discrimination only.
+maintainer: akshay93aditya
+added: 2026-06-05

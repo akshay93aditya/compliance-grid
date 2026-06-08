@@ -1,0 +1,39 @@
+id: bspcb-bihar-gov-in
+url: https://bspcb.bihar.gov.in/
+jurisdiction: IN-BR
+domain: environment
+governance_level: state
+authority:
+  name: Bihar State Pollution Control Board
+  type: board
+  parent: Government of Bihar
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Notification
+    - Public Notice
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: BSPCB website notices, consent, authorisation, and public information pages.
+  approach: Crawl static pages and linked PDFs for consent, waste, public notices, and guidelines.
+  next_step: Write listing recipes for notices, consent guidance, and downloadable forms.
+notes: |
+  Bihar State Pollution Control Board portal. Verified reachable with HTTP 200
+  on 2026-06-05. Use for environmental consent and pollution-control compliance
+  sources in Bihar.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

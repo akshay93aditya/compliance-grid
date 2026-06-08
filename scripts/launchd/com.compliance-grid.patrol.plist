@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Local launchd job for the daily content-hash patrol. Installs to
+  ~/Library/LaunchAgents/com.compliance-grid.patrol.plist and runs
+  scripts/launchd/run-patrol.sh on its own schedule because the patrol
+  needs to fetch directly from Indian government portals, which IP-block
+  US-based GitHub Actions runners. The federation pull half stays in CI
+  (see .github/workflows/sync.yml).
+
+  Cadence: daily at 02:00 local time (lo-load early-morning window).
+  StandardOut/Err: captured to logs/patrol/launchd.{out,err}.log so the
+  wrapper's tee output and launchd's own messages are both inspectable.
+
+  REPLACE __REPO_PATH__ with the absolute path to your compliance-grid
+  checkout (e.g. /Users/akshay/code/compliance-grid) before installing.
+
+  IMPORTANT: do NOT place the checkout under ~/Documents/, ~/Desktop/,
+  or ~/Downloads/. macOS TCC privacy protection blocks launchd-spawned
+  processes from reading files in those locations without Full Disk
+  Access permission granted to /bin/bash. ~/code/, ~/dev/, or the home
+  root work without any UI permission step.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.compliance-grid.patrol</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>__REPO_PATH__/scripts/launchd/run-patrol.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>__REPO_PATH__</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>COMPLIANCE_GRID_REPO</key>
+        <string>__REPO_PATH__</string>
+    </dict>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>2</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>__REPO_PATH__/logs/patrol/launchd.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>__REPO_PATH__/logs/patrol/launchd.err.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>ThrottleInterval</key>
+    <integer>3600</integer>
+</dict>
+</plist>

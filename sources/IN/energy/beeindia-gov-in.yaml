@@ -1,0 +1,34 @@
+id: beeindia-gov-in
+url: https://beeindia.gov.in
+jurisdiction: IN
+domain: energy
+governance_level: central
+authority:
+  name: Bureau of Energy Efficiency
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Regulation
+    - Notification
+    - Scheme
+  topics:
+    - energy-efficiency
+    - standards-and-labelling
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: GET returns static HTML with public navigation.
+  approach: Crawl public links for standards, labelling, notifications, and schemes.
+  next_step: Write a BEE listing recipe for standards-and-labelling and notification pages.
+notes: |
+  Central energy-efficiency authority. Verified reachable with GET on
+  2026-06-05. HEAD returns 405, so verification uses GET.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

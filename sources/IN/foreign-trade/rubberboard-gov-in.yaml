@@ -1,0 +1,38 @@
+id: rubberboard-gov-in
+url: https://rubberboard.gov.in/public
+jurisdiction: IN
+governance_level: central
+domain: foreign-trade
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Rubber Board
+  type: statutory-regulator
+  parent: Ministry of Commerce and Industry
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Guideline
+  topics:
+    - rubber-industry
+    - exports
+    - production-permits
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Rubber Board notifications, scheme guidelines, exporter advisories.
+  approach: Probe the notifications surface for recipe-readiness. The legacy rubberboard.org.in redirects to rubberboard.gov.in/public; use the canonical post-redirect URL.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Rubber Board — statutory body under the Rubber Act, 1947 regulating
+  rubber production, processing, and export. URL was verified via
+  HEAD on 2026-06-06; canonical path follows the rubberboard.org.in
+  → rubberboard.gov.in/public redirect.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

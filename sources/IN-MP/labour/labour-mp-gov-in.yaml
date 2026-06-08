@@ -1,0 +1,39 @@
+id: labour-mp-gov-in
+url: https://labour.mp.gov.in/
+jurisdiction: IN-MP
+domain: labour
+governance_level: state
+authority:
+  name: Labour Department, Government of Madhya Pradesh
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - Service
+    - Guideline
+  topics:
+    - labour-services
+    - shops-and-establishments
+    - factories
+    - mp-online
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Madhya Pradesh Labour Department portal and MPOnline service links.
+  approach: Inspect portal shell and identify public service/notices before mapping MPOnline workflows.
+  next_step: Find stable service pages and document links for labour registrations, licences, and returns.
+notes: |
+  Madhya Pradesh Labour Department portal. HEAD returned HTTP 404, but GET
+  returned HTTP 200 on 2026-06-05. Search snippets identify this as the official
+  MP labour portal and show labour services through MPOnline.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

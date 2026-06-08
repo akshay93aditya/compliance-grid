@@ -1,0 +1,38 @@
+id: mpcb-mizoram-gov-in
+url: https://mpcb.mizoram.gov.in/
+jurisdiction: IN-MZ
+domain: environment
+governance_level: state
+authority:
+  name: Mizoram Pollution Control Board
+  type: board
+  parent: Government of Mizoram
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Direction
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Mizoram Pollution Control Board public portal.
+  approach: Crawl notices, circulars, guidelines, consent information, and document links.
+  next_step: Write listing recipes for public notices, consent, and waste-management materials.
+notes: |
+  Mizoram Pollution Control Board portal. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

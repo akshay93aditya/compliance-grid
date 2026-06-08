@@ -1,0 +1,36 @@
+id: moef-gov-in
+url: https://moef.gov.in
+jurisdiction: IN
+domain: environment
+governance_level: central
+authority:
+  name: Ministry of Environment, Forest and Climate Change
+  type: ministry
+coverage:
+  instrument_types:
+    - Act
+    - Rule
+    - Notification
+    - Office Memorandum
+  topics:
+    - environment
+    - forest
+    - climate-change
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until notification, rule, and office-memorandum pages are inspected.
+  approach: Probe public ministry listings and document links.
+  next_step: Identify MoEFCC notification, rule, and office-memorandum listings.
+notes: |
+  Central environment ministry. Verified reachable with HTTP 200 on
+  2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

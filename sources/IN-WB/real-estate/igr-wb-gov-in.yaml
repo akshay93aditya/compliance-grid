@@ -1,0 +1,42 @@
+id: igr-wb-gov-in
+url: https://igr.wb.gov.in/
+jurisdiction: IN-WB
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Inspector General of Registration, West Bengal
+  type: department
+  parent: Government of West Bengal
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - stamps
+    - registration
+    - property-conveyance
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: West Bengal IGR notifications on stamp duty, registration fees, and conveyance under the Indian Stamp Act (WB amendments) and Registration Act.
+  approach: Use browser-acquire path due to User-Agent discrimination (D28 pattern).
+  next_step: Verify under browser UA; identify the notifications index endpoint.
+  notes: Returns HTTP 403 to the project User-Agent but HTTP 200 under a standard browser UA. wbregistration.gov.in 301-redirects here.
+notes: |
+  Inspector General of Registration, Government of West Bengal —
+  administers stamps and registration. Blocked under project User-
+  Agent (D28 pattern); browser-required. Verified 200 under browser
+  UA on 2026-06-07.
+  
+  2026-06-07: WB IGR returns 200 to vanilla Chrome UA — earlier browser-required tag was wrong.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

@@ -1,0 +1,37 @@
+id: punjab-gov-in
+url: https://punjab.gov.in/
+jurisdiction: IN-PB
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: General Administration Department, Punjab
+  type: department
+  parent: Government of Punjab
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+  topics:
+    - state-administration
+    - inter-departmental-coordination
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Apex Punjab state-government portal home. Distinct from the existing punjab.gov.in/impnotifications/ entry which is the notifications listing subpath.
+  approach: Probe the portal surface for recipe-readiness.
+  next_step: Identify directly-linked listing endpoints from the apex.
+notes: |
+  Apex state-government portal of Punjab. The existing entry
+  punjab-gov-in-notifications indexes the /impnotifications/ subpath;
+  this entry indexes the apex itself. URL was verified reachable via
+  HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

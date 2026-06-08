@@ -1,0 +1,40 @@
+id: siam-in
+url: https://www.siam.in/
+jurisdiction: IN
+governance_level: central
+domain: industry
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Society of Indian Automobile Manufacturers
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Article
+    - Update
+    - Policy Brief
+    - Report
+  topics:
+    - automobile-industry
+    - emissions
+    - vehicle-standards
+    - regulatory-updates
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: SIAM position papers, emission-standard analyses, MoRTH/BIS regulatory commentary.
+  approach: Probe the publications surface for recipe-readiness.
+  next_step: Identify the publications index endpoint and confirm format.
+notes: |
+  Society of Indian Automobile Manufacturers (SIAM) — apex industry
+  body for automobile manufacturers. Publishes commentary on MoRTH /
+  BIS / MoEFCC emission and safety regulations. Secondary trust tier;
+  commits must anchor to the original government source. URL was
+  verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

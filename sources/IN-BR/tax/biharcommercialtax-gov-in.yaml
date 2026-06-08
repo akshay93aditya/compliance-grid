@@ -1,0 +1,38 @@
+id: biharcommercialtax-gov-in
+url: https://www.biharcommercialtax.gov.in/
+jurisdiction: IN-BR
+governance_level: state
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Commercial Taxes Department, Bihar
+  type: department
+  parent: Government of Bihar
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - state-gst
+    - professional-tax
+    - electricity-duty
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Bihar Commercial Taxes Department notifications under the BGST Act, Bihar Professional Tax Act.
+  approach: Probe the notifications surface for recipe-readiness. NOTE the site immediately redirects HTTPS-on-443 to HTTP-on-port-7778 (`http://www.biharcommercialtax.gov.in:7778/bweb/`); recipe writer needs to permit the protocol downgrade and the port-specific path, or pin the canonical port-specific URL directly.
+  next_step: Identify the notifications index endpoint and confirm format; consider pinning the canonical url to the port-7778 path.
+notes: |
+  Commercial Taxes Department, Government of Bihar — state-level
+  GST + professional-tax administration. URL was verified reachable
+  via HEAD on 2026-06-06 (redirects to the port-7778 backend).
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

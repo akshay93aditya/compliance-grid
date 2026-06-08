@@ -1,0 +1,39 @@
+id: meghalayaonline-gov-in
+url: https://meghalayaonline.gov.in/
+jurisdiction: IN-ML
+domain: industry
+governance_level: state
+authority:
+  name: e-Services for Meghalaya
+  type: department
+  parent: Government of Meghalaya
+coverage:
+  instrument_types:
+    - Service
+    - Registration
+    - Licence
+    - Certificate
+    - Application
+  topics:
+    - e-services
+    - labour-services
+    - citizen-services
+    - business-services
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Meghalaya online e-services portal.
+  approach: Inspect service listings and identify compliance-related department services.
+  next_step: Map labour/business services and login boundaries.
+notes: |
+  Meghalaya e-services portal. Verified reachable with HTTP 200 on 2026-06-05.
+  Search snippets show labour department services among the portal services.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

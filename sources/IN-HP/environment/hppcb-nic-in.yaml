@@ -1,0 +1,39 @@
+id: hppcb-nic-in
+url: https://hppcb.nic.in/
+jurisdiction: IN-HP
+domain: environment
+governance_level: state
+authority:
+  name: Himachal Pradesh State Pollution Control Board
+  type: board
+  parent: Government of Himachal Pradesh
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Direction
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: HPPCB portal and linked public notice/consent guidance pages.
+  approach: Inspect the site shell and linked pages to determine static/browser/form behavior.
+  next_step: Find stable notices, consent, and authorisation sections.
+notes: |
+  Himachal Pradesh State Pollution Control Board portal. Verified reachable with
+  HTTP 200 on 2026-06-05, but the response was a small site shell, so content
+  access still needs probing.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

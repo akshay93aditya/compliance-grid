@@ -1,0 +1,46 @@
+id: merc-gov-in
+url: https://merc.gov.in/
+jurisdiction: IN-MH
+governance_level: state
+domain: energy
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      orders: /orders/
+    format: html-table
+    columns: [s_no, order_date, case_no, order_type, description, attachments]
+authority:
+  name: Maharashtra Electricity Regulatory Commission
+  type: statutory-regulator
+  parent: Government of Maharashtra
+coverage:
+  instrument_types:
+    - Order
+    - Notification
+    - Tariff Order
+    - Regulation
+  topics:
+    - state-electricity-tariff
+    - discom-licensing
+    - open-access
+    - renewable-tariff
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: MERC orders at /orders/ — server-rendered HTML table (S.No., Order Date, Case No., Order Type, Description, Attachments). One of the highest-volume state SERCs.
+  approach: Recipe writer scrapes /orders/ table rows; child documents are PDFs linked from the Attachments column.
+  next_step: Write a MERC table-row recipe with the 6-column schema above.
+notes: |
+  Maharashtra Electricity Regulatory Commission — state-level
+  electricity regulator constituted under the Electricity Act, 2003.
+  Probably the highest-volume state SERC by case count (multiple
+  discoms in Mumbai + statewide). URL was verified reachable via
+  HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

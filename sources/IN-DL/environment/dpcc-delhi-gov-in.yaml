@@ -1,0 +1,45 @@
+id: dpcc-delhi-gov-in
+url: https://dpcc.delhi.gov.in/
+jurisdiction: IN-DL
+domain: environment
+governance_level: state
+authority:
+  name: Delhi Pollution Control Committee
+  type: board
+  parent: Government of NCT of Delhi
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Direction
+    - Public Notice
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+    - air-quality
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      notifications: /notifications
+      home: /
+    format: anchor-list
+    pdf_path_pattern: /sites/default/files/{year-month}/{slug}.pdf
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: verified
+  update_surface: DPCC notifications and homepage expose Drupal-style PDF anchors; each anchor's visible text is the document title (e.g. "National Ambient Air Quality Standards", "CETP Standard").
+  approach: Recipe `dpcc-delhi-gov-in` (src/recipes/dpcc-delhi.ts) extracts every `a[href]` matching `.pdf`; live smoke pulls 7 standards from /notifications in ~630ms.
+  next_step: Add deeper subpages (Acts/Rules, Forms) if their PDFs aren't already on the homepage / /notifications.
+notes: |
+  Delhi Pollution Control Committee portal. `dpcc.delhigovt.nic.in` redirected
+  to this canonical Delhi government domain and returned HTTP 200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

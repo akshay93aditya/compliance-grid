@@ -1,0 +1,38 @@
+id: py-gov-in
+url: https://py.gov.in/
+jurisdiction: IN-PY
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: General Administration Department, Puducherry
+  type: department
+  parent: Government of Puducherry (UT)
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+  topics:
+    - ut-administration
+    - inter-departmental-coordination
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Apex Puducherry UT-government portal hosting General Administration Department notifications.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Apex UT-government portal of Puducherry. Note that electricity
+  regulation for Puducherry is handled by the Joint Electricity
+  Regulatory Commission for Goa and UTs (JERC-UTs, indexed under
+  IN-CH), not a Puducherry-specific SERC. URL was verified reachable
+  via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

@@ -1,0 +1,41 @@
+id: shramevjayate-cg-gov-in
+url: https://shramevjayate.cg.gov.in/shramik
+jurisdiction: IN-CT
+domain: labour
+governance_level: state
+authority:
+  name: Chhattisgarh Labour Department
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Inspection Manual
+    - Notification
+    - Welfare Service
+  topics:
+    - labour-services
+    - minimum-wages
+    - shops-and-establishments
+    - factories
+    - worker-welfare
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: browser-required
+  update_surface: ShramEvJayate labour portal and public manuals/service pages.
+  approach: Browser-render the Next.js portal and identify public manuals, notifications, and service catalogue links.
+  next_step: Enumerate labour service routes and determine whether notifications are hosted on this portal or gazette-only.
+notes: |
+  Chhattisgarh labour portal. The older `cglabour.nic.in` host did not resolve
+  on 2026-06-05; `shramevjayate.cg.gov.in/shramik` redirected from the root and
+  returned HTTP 200 with a Next.js response. Search results also surfaced
+  official labour inspection manuals under this domain.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

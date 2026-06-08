@@ -1,0 +1,39 @@
+id: teamleaseregtech-updates
+url: https://www.teamleaseregtech.com/updates/
+jurisdiction: IN
+domain: legal
+governance_level: central
+authority:
+  name: TeamLease RegTech
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Regulatory Update
+    - Notification Summary
+    - Circular Summary
+  topics:
+    - labour
+    - finance-taxation
+    - ehs
+    - secretarial
+    - industry-specific
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: TeamLease RegTech legal/compliance updates listing.
+  approach: Crawl update cards/articles and extract outbound official-document links where present.
+  next_step: Inspect article pages for official source links and decide whether the listing can be polled without login.
+notes: |
+  Commercial regulatory-update tracker. The updates URL redirected to a trailing
+  slash and returned HTTP 200 on 2026-06-05. Use as a discovery/cross-check
+  source across central compliance domains; do not commit obligations from
+  summaries alone without official source_refs.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

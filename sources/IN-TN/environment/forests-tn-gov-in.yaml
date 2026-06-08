@@ -1,0 +1,38 @@
+id: forests-tn-gov-in
+url: https://www.forests.tn.gov.in/
+jurisdiction: IN-TN
+governance_level: state
+domain: environment
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Forest Department, Tamil Nadu
+  type: department
+  parent: Government of Tamil Nadu
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Clearance
+  topics:
+    - forest-clearance
+    - wildlife-protection
+    - tree-felling-permit
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Tamil Nadu Forest Department notifications on forest clearance under the Forest (Conservation) Act, 1980, wildlife protection orders, and tree-felling permits.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Forest Department, Government of Tamil Nadu — administers forest
+  clearance and wildlife protection. URL was verified reachable via
+  HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

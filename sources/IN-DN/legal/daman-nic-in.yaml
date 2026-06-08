@@ -1,0 +1,38 @@
+id: daman-nic-in
+url: https://daman.nic.in/
+jurisdiction: IN-DN
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Administration of Daman and Diu (under DNH and DD UT)
+  type: department
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+  topics:
+    - ut-administration
+    - daman-and-diu
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Daman and Diu administration notifications across departments under the unified UT (Dadra and Nagar Haveli and Daman and Diu).
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Daman Administration portal — Daman and Diu's administrative
+  portal under the unified Dadra and Nagar Haveli and Daman and
+  Diu Union Territory (merger effective 26 January 2020). Parallel
+  to the DNH portal (Codex's first-pass already indexes ddd-gov-in
+  and ddnocmms-nic-in). URL was verified reachable via HEAD on
+  2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

@@ -1,0 +1,45 @@
+id: irdai-gov-in
+url: https://irdai.gov.in
+jurisdiction: IN
+domain: financial
+governance_level: central
+authority:
+  name: Insurance Regulatory and Development Authority of India
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Regulation
+    - Circular
+    - Order
+  topics:
+    - insurance
+    - insurers
+    - insurance-intermediaries
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      notifications: /notifications
+    format: html-table-with-pagination
+    columns: [archive_indicator, title_bilingual, publication_date, reference_number, file_size_format, download]
+    pdf_path_pattern: /documents/37343/370706/{encoded_filename}.pdf?version={num}&t={timestamp}&download=true
+    pagination: 3 pages, ~41 notifications total at probe time
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: IRDAI notifications at /notifications — server-rendered tabular listing with bilingual Hindi/English titles, dates, reference numbers, and PDF download links via a document-management portlet.
+  approach: Recipe writer scrapes table rows across paginated /notifications pages; child PDFs use the /documents/37343/370706/ path pattern with versioned URLs.
+  next_step: "Write an IRDAI recipe — paginated table scraper; note bilingual titles (Hindi + English in same cell)."
+notes: |
+  Central insurance regulator. **Upgrade from blocked:** confirmed
+  via WebFetch 2026-06-07 that /notifications returns server-rendered
+  HTML with structured table. Codex's curl HTTP 403 was project-UA
+  discrimination — WebFetch's browser-like UA gets through. May need
+  browser-acquire path for production scraping if the WAF tightens.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

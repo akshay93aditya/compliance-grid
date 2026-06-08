@@ -1,0 +1,37 @@
+id: serviceonline-bihar-gov-in
+url: https://serviceonline.bihar.gov.in/
+jurisdiction: IN-BR
+governance_level: state
+domain: industry
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: ServicePlus Bihar Single Window Portal
+  type: transactional-portal
+  parent: Government of Bihar
+coverage:
+  instrument_types:
+    - Service Catalog
+    - Notification
+    - Form
+  topics:
+    - single-window
+    - business-services
+    - citizen-services
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Bihar single-window service catalog covering business approvals, certificates, citizen services.
+  approach: Probe the service catalog surface for recipe-readiness; transactional portal so much of the action is form-driven.
+  next_step: Identify the service catalog endpoint and confirm format.
+notes: |
+  ServicePlus (Bihar) — state single-window for business and
+  citizen services. URL was verified reachable via HEAD on
+  2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

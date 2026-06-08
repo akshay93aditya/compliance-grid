@@ -1,0 +1,30 @@
+id: labour-wb-gov-in
+url: https://labour.wb.gov.in/
+jurisdiction: IN-WB
+domain: labour
+governance_level: state
+authority:
+  name: Labour Department, Government of West Bengal
+  type: department
+coverage:
+  instrument_types: [Registration, Licence, Notification, Circular, Guideline]
+  topics: [labour-services, shops-establishments, factories, welfare]
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: West Bengal Labour Department public portal.
+  approach: Crawl notices, services, forms, circulars, and linked PDFs.
+  next_step: Identify public registration, licensing, renewal, and return pages.
+notes: |
+  West Bengal Labour Department portal. Verified reachable with HTTP 200 on
+  2026-06-05. The www host had a certificate-name mismatch, so use the non-www
+  host.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

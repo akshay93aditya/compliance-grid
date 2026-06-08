@@ -1,0 +1,52 @@
+id: up-rera-in
+url: https://up-rera.in/
+jurisdiction: IN-UP
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      regulations: /frm_Regulation_View.aspx
+      legal_acts_rules: /Legal
+    direct_pdf_paths:
+      notifications: /pdf/rerenotification.pdf
+      project_account_directions: /pdf/RERAAccountDirections11052026.pdf
+      general_rules_2016: /pdf/rera.pdf
+    format: mixed-listing-and-direct-pdf
+authority:
+  name: Uttar Pradesh Real Estate Regulatory Authority
+  type: statutory-regulator
+  parent: Government of Uttar Pradesh
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Regulation
+    - Project Registration
+  topics:
+    - real-estate
+    - project-registration
+    - agent-registration
+    - consumer-complaints
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: UP RERA exposes (a) a regulation listing aspx at /frm_Regulation_View.aspx and (b) direct top-level PDFs at /pdf/{name}.pdf (rerenotification, RERAAccountDirections, rera general rules). Mixed pattern — no single index covers all instruments.
+  approach: Recipe writer must crawl two surfaces — the regulation listing aspx PLUS the /pdf/ direct-link set referenced from the homepage navigation.
+  next_step: Write a two-pronged UP RERA recipe — scrape the regulation listing + enumerate the homepage's /pdf/ link list.
+notes: |
+  Uttar Pradesh Real Estate Regulatory Authority — state RERA under
+  the Real Estate (Regulation and Development) Act, 2016. Confirmed
+  via WebFetch 2026-06-07 that there's no single notifications listing;
+  the homepage links to /pdf/rerenotification.pdf etc. directly and
+  to /frm_Regulation_View.aspx for the regulation set. Canonical
+  domain is .in (not .gov.in). High case volume due to NCR-adjacent
+  project density.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

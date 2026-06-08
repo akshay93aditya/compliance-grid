@@ -1,0 +1,46 @@
+id: tnrera-in
+url: https://tnrera.in/
+jurisdiction: IN-TN
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+  config:
+    note: SPA — initial GET returns a "Loading your experience…" shell. Listings are populated client-side after JS executes.
+authority:
+  name: Tamil Nadu Real Estate Regulatory Authority
+  type: statutory-regulator
+  parent: Government of Tamil Nadu
+coverage:
+  instrument_types:
+    - Notification
+    - Order
+    - Regulation
+    - Project Registration
+  topics:
+    - real-estate
+    - project-registration
+    - agent-registration
+    - consumer-complaints
+verification:
+  method: curl-get
+  status: verified
+access:
+  status: blocked
+  update_surface: tnrera.in is currently a domain-park advertising page (mydomaincontact.com redirect) — site is offline or transferred. Earlier "SPA shell" classification was correct at the time but the site state has degraded.
+  approach: Defer; periodic re-probe to see if the canonical site comes back. If TN RERA migrates to a sub-path on tn.gov.in or a new domain, re-index under the new URL.
+  next_step: Quarterly re-probe of tnrera.in + a search for the new TN RERA canonical (e.g. rera.tn.gov.in). When live, return to browser-required classification.
+notes: |
+  Tamil Nadu Real Estate Regulatory Authority — state RERA under
+  the Real Estate (Regulation and Development) Act, 2016. **2026-06-07
+  browser-acquire smoke discovered the domain has been parked** —
+  Playwright loads a 15 KB shell that contains only 2 anchors, both
+  to mydomaincontact.com / "#" placeholder. The earlier curl-get probe
+  saw the loading-shell text; turns out that shell never resolves to
+  real content because the underlying app is gone. Adding to the
+  squatter-watch list.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

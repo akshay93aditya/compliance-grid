@@ -1,0 +1,25 @@
+id: mca-gov-in
+url: https://www.mca.gov.in
+jurisdiction: IN
+governance_level: central
+domain: corporate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+access:
+  status: blocked
+  update_surface: Ministry of Corporate Affairs — Companies Act, LLP Act, MCA21 notifications.
+  approach: Blocked behind Akamai WAF (D33 empirical finding — HTTP 403 to unknown crawlers, including 2026-06-07 WebFetch re-probe). Direct extraction not viable via either plain curl or browser-like UAs.
+  next_step: Investigate respectful crawl negotiations, partnerships with legal-data aggregators (Manupatra/SCC/CCH for MCA notifications), or manual seed curation. Browser-acquire alone is unlikely to defeat Akamai if it fingerprints TLS/headers.
+notes: |
+  Ministry of Corporate Affairs. Source for the Companies Act,
+  LLP Act, registered company filings, MCA21 notifications. Per
+  D33, behind Akamai WAF that blocks unknown crawlers with HTTP
+  403. **Re-verified blocked 2026-06-07** via WebFetch (also HTTP
+  403). Direct extraction is not viable; alternative paths (manual
+  curation, partnerships with legal-data aggregators like Manupatra
+  /SCC) likely needed. Entry preserved here so the limitation is
+  known.
+maintainer: akshay93aditya
+added: 2026-06-05

@@ -1,0 +1,36 @@
+id: wb-gov-in
+url: https://wb.gov.in/
+jurisdiction: IN-WB
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: General Administration Department, West Bengal
+  type: department
+  parent: Government of West Bengal
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+  topics:
+    - state-administration
+    - inter-departmental-coordination
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Apex West Bengal state-government portal hosting General Administration Department notifications. Canonical is the apex without www; the www variant returns 404.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Apex state-government portal of West Bengal. The www variant
+  returns 404; canonical entry is the apex without www. URL was
+  verified reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

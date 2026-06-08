@@ -1,0 +1,40 @@
+id: hudco-org-in
+url: https://hudco.org.in/
+jurisdiction: IN
+governance_level: central
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Housing and Urban Development Corporation
+  type: market-infrastructure
+  parent: Ministry of Housing and Urban Affairs
+coverage:
+  instrument_types:
+    - Circular
+    - Guideline
+    - Scheme Document
+    - Report
+  topics:
+    - housing-finance
+    - urban-development
+    - infrastructure-finance
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: HUDCO scheme documents, lending guidelines, technical assistance circulars to urban-local bodies.
+  approach: Probe the publications surface for recipe-readiness.
+  next_step: Identify the publications index endpoint and confirm format.
+notes: |
+  Housing and Urban Development Corporation (HUDCO) — listed public
+  sector enterprise extending housing and urban-infrastructure
+  finance under MoHUA. Issues borrower-side terms affecting state
+  housing boards and urban-local bodies. URL was verified reachable
+  via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

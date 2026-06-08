@@ -1,0 +1,37 @@
+id: itat-gov-in
+url: https://itat.gov.in/
+jurisdiction: IN
+governance_level: central
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Income Tax Appellate Tribunal
+  type: tribunal
+  parent: Department of Legal Affairs, Ministry of Law and Justice
+coverage:
+  instrument_types:
+    - Order
+    - Judgment
+    - Notification
+  topics:
+    - income-tax
+    - direct-tax-appeals
+    - tribunals
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: ITAT orders, cause lists, daily judgments, member-wise benches.
+  approach: Probe the cause-list and orders endpoints before recipe work; tribunal sites typically serve static listings but require login/auth for full text.
+  next_step: Identify the public orders/judgments endpoint and verify HTML vs PDF format.
+notes: |
+  Income Tax Appellate Tribunal — direct-tax appellate body. Source for
+  ITAT orders, judgments, cause lists. URL was verified reachable
+  via HEAD on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

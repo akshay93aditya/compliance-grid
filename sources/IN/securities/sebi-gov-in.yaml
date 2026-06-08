@@ -1,0 +1,46 @@
+id: sebi-gov-in
+url: https://www.sebi.gov.in
+jurisdiction: IN
+domain: securities
+governance_level: central
+authority:
+  name: Securities and Exchange Board of India
+  type: statutory-regulator
+coverage:
+  instrument_types:
+    - Regulation
+    - Circular
+    - Notification
+  topics:
+    - securities
+    - listed-entities
+    - intermediaries
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      action_endpoint: /sebiweb/home/HomeAction.do
+      query_params:
+        doListingAll: "yes"
+      types_param: [Notification, Circular, Regulation, Order]
+    format: html-table-then-detail-html
+    detail_pattern: /{category}/{subcategory}/{month-year}/{slug}_{ID}.html
+    columns: [date, type, title]
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: SEBI listings via the HomeAction.do action endpoint with type= param (Notification/Circular/Regulation/Order). Server-rendered table with Date/Type/Title columns; titles link to HTML detail pages (NOT direct PDFs) at /{category}/{subcategory}/{month-year}/{slug}_{ID}.html.
+  approach: Recipe writer enumerates HomeAction.do?doListingAll=yes&type={Type} listings; each row links to an HTML detail page that contains the canonical document (may be inline HTML or embedded PDF).
+  next_step: Write a SEBI two-stage recipe — first scrape HomeAction.do table rows, then fetch the linked HTML detail page per entry.
+notes: |
+  Securities and Exchange Board of India portal. Confirmed via
+  WebFetch 2026-06-07 that the action endpoint serves a 3-column
+  listing (Date/Type/Title) with links to HTML detail pages. Two-stage
+  fetch needed: listing -> detail page -> document.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

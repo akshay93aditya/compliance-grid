@@ -1,0 +1,37 @@
+id: tnpcb-gov-in
+url: https://tnpcb.gov.in
+jurisdiction: IN-TN
+domain: environment
+governance_level: state
+authority:
+  name: Tamil Nadu Pollution Control Board
+  type: board
+  parent: Government of Tamil Nadu
+coverage:
+  instrument_types:
+    - Consent
+    - Notification
+    - Circular
+  topics:
+    - pollution-control
+    - environmental-consent
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until HTML and rendered DOM are inspected.
+  approach: Probe public consent, circular, notification, and guidelines listings.
+  next_step: Determine whether TNPCB content is static HTML, browser-rendered, or form-backed.
+notes: |
+  Tamil Nadu Pollution Control Board portal. Verified reachable with
+  HTTP 200 on 2026-06-05. State environmental source for pollution-control
+  and consent material. URL reachability is verified; extraction access is
+  not yet verified.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

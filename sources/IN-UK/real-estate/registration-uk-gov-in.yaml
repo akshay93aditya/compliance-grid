@@ -1,0 +1,38 @@
+id: registration-uk-gov-in
+url: https://registration.uk.gov.in/
+jurisdiction: IN-UK
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Inspector General of Registration, Uttarakhand
+  type: department
+  parent: Government of Uttarakhand
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - stamps
+    - registration
+    - property-conveyance
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Uttarakhand IGR notifications on stamp duty, registration fees, and conveyance under the Indian Stamp Act (UK amendments) and Registration Act.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Inspector General of Registration, Government of Uttarakhand —
+  administers stamps and registration. URL was verified reachable
+  via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

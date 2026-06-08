@@ -1,0 +1,37 @@
+id: printing-arunachal-gov-in
+url: https://printing.arunachal.gov.in/
+jurisdiction: IN-AR
+domain: legal
+governance_level: state
+authority:
+  name: Directorate of Printing, Government of Arunachal Pradesh
+  type: department
+coverage:
+  instrument_types:
+    - Gazette
+    - Act
+    - Rule
+    - Notification
+    - Order
+  topics:
+    - state-gazette
+    - official-publication
+trust_tier: gazette
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Directorate of Printing website and gazette/document listings.
+  approach: Crawl gazette/document listings and follow PDF links.
+  next_step: Inspect listing pagination and document metadata fields for gazette date, part, and department.
+notes: |
+  Official Arunachal Pradesh printing/gazette source. Verified reachable with
+  HTTP 200 on 2026-06-05. Public search results show gazette PDFs hosted under
+  this domain.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

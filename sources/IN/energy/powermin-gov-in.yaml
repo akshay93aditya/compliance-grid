@@ -1,0 +1,34 @@
+id: powermin-gov-in
+url: https://www.powermin.gov.in
+jurisdiction: IN
+domain: energy
+governance_level: central
+authority:
+  name: Ministry of Power
+  type: ministry
+coverage:
+  instrument_types:
+    - Notification
+    - Rule
+    - Guideline
+  topics:
+    - electricity
+    - power-sector
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until notification, rule, and scheme pages are inspected.
+  approach: Probe HTML and rendered DOM for public document listings.
+  next_step: Identify stable Ministry of Power notification and rule pages.
+notes: |
+  Central power ministry. Verified reachable with HTTP 200 on 2026-06-05
+  after redirect to www.powermin.gov.in.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

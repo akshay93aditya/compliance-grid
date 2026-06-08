@@ -1,0 +1,39 @@
+id: gstkarnataka-gov-in
+url: https://gstkarnataka.gov.in/
+jurisdiction: IN-KA
+governance_level: state
+domain: tax
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Commercial Taxes Department, Karnataka
+  type: department
+  parent: Government of Karnataka
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - state-gst
+    - professional-tax
+    - vat
+    - karasamadhana
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Karnataka Commercial Taxes Department notifications under the KGST Act and Karnataka Professional Tax Act.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Commercial Taxes Department, Government of Karnataka — state-
+  level GST + professional-tax administration. URL was verified
+  reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

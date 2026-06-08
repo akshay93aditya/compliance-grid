@@ -1,0 +1,39 @@
+id: industries-delhi-gov-in
+url: https://industries.delhi.gov.in/
+jurisdiction: IN-DL
+domain: industry
+governance_level: state
+authority:
+  name: Department of Industries, Government of NCT of Delhi
+  type: department
+coverage:
+  instrument_types:
+    - Notification
+    - Industrial Area Order
+    - Registration
+    - Licence
+    - Guideline
+  topics:
+    - industrial-areas
+    - business-services
+    - gazette-notifications
+    - industrial-policy
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: Industries department portal and gazette-notifications listing.
+  approach: Crawl department pages, gazette-notifications, policy pages, and downloadable forms/orders.
+  next_step: Add a focused recipe for `/gazette-notifications` and industrial area notifications.
+notes: |
+  Delhi Industries Department portal. Verified reachable with HTTP 200 on
+  2026-06-05; its `/gazette-notifications` page also returned HTTP 200 and
+  search snippets show industrial-area gazette notifications.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

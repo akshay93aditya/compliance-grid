@@ -1,0 +1,37 @@
+id: indiankanoon-org
+url: https://indiankanoon.org/
+jurisdiction: IN
+governance_level: central
+domain: legal
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Indian Kanoon
+  type: secondary-tracker
+coverage:
+  instrument_types:
+    - Order
+    - Judgment
+    - Act
+  topics:
+    - case-law
+    - judgments
+    - legal-search
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Searchable index of Supreme Court, High Court, and tribunal judgments + central + state Acts.
+  approach: Probe the search and document endpoints; site has public read access but bot rate-limits and prefers respectful crawling. Confirm robots policy before scaling.
+  next_step: Check robots.txt and verify document fetch shape (HTML vs JSON).
+notes: |
+  Indian Kanoon — long-running independent legal search engine that
+  indexes judgments and statutes across Indian courts. Secondary
+  trust tier — commits should anchor to the original court / statute
+  source. URL was verified reachable via HEAD on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

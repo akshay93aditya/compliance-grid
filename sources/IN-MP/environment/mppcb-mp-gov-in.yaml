@@ -1,0 +1,40 @@
+id: mppcb-mp-gov-in
+url: https://mppcb.mp.gov.in/
+jurisdiction: IN-MP
+domain: environment
+governance_level: state
+authority:
+  name: Madhya Pradesh Pollution Control Board
+  type: board
+  parent: Government of Madhya Pradesh
+coverage:
+  instrument_types:
+    - Consent
+    - Authorisation
+    - Public Notice
+    - Direction
+    - Guideline
+  topics:
+    - pollution-control
+    - environmental-consent
+    - waste-management
+    - xgn
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: static-html-needs-recipe
+  update_surface: MPPCB public portal and XGN online application links.
+  approach: Crawl public notices, guidelines, consent information, and XGN handoff pages.
+  next_step: Write recipes for notices/guidelines and document XGN workflow boundaries.
+notes: |
+  Madhya Pradesh Pollution Control Board portal. Verified reachable with HTTP
+  200 on 2026-06-05. Search snippets identify XGN for online combined
+  applications for consent and waste authorisations.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

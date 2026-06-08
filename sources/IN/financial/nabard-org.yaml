@@ -1,0 +1,42 @@
+id: nabard-org
+url: https://www.nabard.org/english/Default.aspx
+jurisdiction: IN
+governance_level: central
+domain: financial
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: National Bank for Agriculture and Rural Development
+  type: statutory-regulator
+  parent: Reserve Bank of India
+coverage:
+  instrument_types:
+    - Circular
+    - Notification
+    - Guideline
+    - Scheme Document
+  topics:
+    - agricultural-finance
+    - rural-credit
+    - cooperative-banks
+    - regional-rural-banks
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: NABARD circulars to cooperative banks, RRBs, and refinance institutions covering rural and agricultural lending.
+  approach: Probe the English-language circulars surface for recipe-readiness. The site default-redirects to Hindi; use the explicit /english/Default.aspx path.
+  next_step: Identify the circulars index endpoint and confirm format.
+notes: |
+  National Bank for Agriculture and Rural Development — central
+  development bank for rural and agricultural finance, operating
+  under the NABARD Act, 1981. Issues binding circulars to
+  cooperative banks, RRBs, and refinance recipients. The site
+  default-redirects to Hindi; canonical English path is
+  /english/Default.aspx, verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

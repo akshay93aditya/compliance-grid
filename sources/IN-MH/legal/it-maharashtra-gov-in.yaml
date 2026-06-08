@@ -1,0 +1,39 @@
+id: it-maharashtra-gov-in
+url: https://it.maharashtra.gov.in/
+jurisdiction: IN-MH
+governance_level: state
+domain: legal
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Information Technology Department, Maharashtra
+  type: department
+  parent: Government of Maharashtra
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Policy
+  topics:
+    - it-policy
+    - cyber-security
+    - e-governance
+    - data-protection-state
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Maharashtra IT Department notifications on state IT policy, cyber-security advisories, and state-level data-protection implementation guidance (relevant to DPDP Act, 2023 state-rollout). Anchor for Maharashtra IT sector compliance.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Information Technology Department, Government of Maharashtra —
+  state IT policy, cyber-security, e-governance. URL was verified
+  reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07

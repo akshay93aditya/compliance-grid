@@ -1,0 +1,39 @@
+id: factories-ap-gov-in
+url: https://factories.ap.gov.in/
+jurisdiction: IN-AP
+domain: industrial-safety
+governance_level: state
+authority:
+  name: Directorate of Factories and Boilers, Government of Andhra Pradesh
+  type: department
+coverage:
+  instrument_types:
+    - Factory Licence
+    - Boiler Registration
+    - Inspection
+    - Return
+    - Guideline
+  topics:
+    - factories
+    - boilers
+    - occupational-safety
+    - inspections
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Directorate portal for factories and boilers services.
+  approach: Inspect whether the portal is a static shell, SPA, or redirects to service workflows.
+  next_step: Identify public acts/rules/forms/circulars and separate them from login-only licence workflows.
+notes: |
+  Directorate of Factories and Boilers portal for Andhra Pradesh. Verified
+  reachable with HTTP 200 on 2026-06-05, but the HEAD response was a small HTML
+  shell, so extraction access still needs DOM/browser inspection.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

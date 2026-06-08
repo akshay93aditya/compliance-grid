@@ -1,0 +1,39 @@
+id: icai-org
+url: https://www.icai.org
+jurisdiction: IN
+domain: corporate
+governance_level: central
+authority:
+  name: Institute of Chartered Accountants of India
+  type: statutory-professional-body
+coverage:
+  instrument_types:
+    - Standard
+    - Guidance
+    - Announcement
+  topics:
+    - accounting-standards
+    - auditing-standards
+    - financial-reporting
+    - audit
+trust_tier: secondary
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: ICAI public website sections for standards, guidance, announcements, and publications.
+  approach: Identify stable listing pages for standards and announcements before crawling documents.
+  next_step: Split into narrower ICAI source entries once canonical listing URLs are verified.
+notes: |
+  ICAI is a statutory professional body for chartered accountants. The root site
+  returned HTTP 200 on 2026-06-05. This entry is intentionally broad pending
+  narrower verified listing URLs for standards and announcements. Use it for
+  discovery and route obligations to the relevant ICAI standard/guidance
+  document, MCA instrument, or statute as applicable.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

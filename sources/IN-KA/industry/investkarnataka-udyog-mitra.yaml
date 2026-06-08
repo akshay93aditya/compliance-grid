@@ -1,0 +1,40 @@
+id: investkarnataka-udyog-mitra
+url: https://sws.investkarnataka.co.in/
+jurisdiction: IN-KA
+domain: industry
+governance_level: state
+authority:
+  name: Karnataka Udyog Mitra
+  type: department
+  parent: Department of Commerce and Industries, Government of Karnataka
+coverage:
+  instrument_types:
+    - Clearance
+    - Registration
+    - Licence
+    - NOC
+    - Incentive
+  topics:
+    - single-window
+    - investor-services
+    - industrial-clearances
+    - approval-wizard
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: browser-required
+  update_surface: Karnataka Single Window System and Karnataka Udyog Mitra information pages.
+  approach: Browser-render the SWS portal and use Invest Karnataka/KUM pages to cross-check service coverage.
+  next_step: Enumerate public approval/incentive wizard outputs and service metadata without entering authenticated flows.
+notes: |
+  Karnataka Single Window System for investors. Verified reachable with HTTP 200
+  on 2026-06-05. Search results from Invest Karnataka describe KUM as the
+  Government of Karnataka nodal single-window facilitation agency.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

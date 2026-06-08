@@ -1,0 +1,45 @@
+# Dependabot config — keeps deps fresh without auto-merging into main.
+# Runs weekly so PRs don't pile up; grouped to reduce review burden.
+
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '06:00'
+      timezone: 'Asia/Kolkata'
+    open-pull-requests-limit: 5
+    labels:
+      - 'dependencies'
+    groups:
+      # Bundle related updates so the PR stream stays tractable.
+      next-react:
+        patterns:
+          - 'next'
+          - 'react'
+          - 'react-dom'
+          - '@types/react*'
+      typescript:
+        patterns:
+          - 'typescript'
+          - 'tsx'
+          - '@types/node'
+      lint-test:
+        patterns:
+          - 'vitest'
+          - 'eslint*'
+          - 'prettier*'
+
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '06:00'
+      timezone: 'Asia/Kolkata'
+    open-pull-requests-limit: 3
+    labels:
+      - 'dependencies'
+      - 'github-actions'

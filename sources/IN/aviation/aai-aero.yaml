@@ -1,0 +1,37 @@
+id: aai-aero
+url: https://www.aai.aero/
+jurisdiction: IN
+governance_level: central
+domain: aviation
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Airports Authority of India
+  type: statutory-regulator
+  parent: Ministry of Civil Aviation
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Tender
+  topics:
+    - aviation
+    - airports
+    - air-navigation-services
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: AAI notifications, tenders, advisories impacting airport operations + commercial users.
+  approach: Probe the public-notifications and tender endpoints before recipe work.
+  next_step: Identify the public notifications endpoint and confirm format.
+notes: |
+  Airports Authority of India — statutory body managing most civilian
+  airports and the air-traffic-management infrastructure. URL was
+  verified reachable via HEAD on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

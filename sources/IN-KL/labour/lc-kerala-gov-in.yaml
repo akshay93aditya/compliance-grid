@@ -1,0 +1,43 @@
+id: lc-kerala-gov-in
+url: https://lc.kerala.gov.in/
+jurisdiction: IN-KL
+domain: labour
+governance_level: state
+authority:
+  name: Labour Commissionerate, Government of Kerala
+  type: department
+coverage:
+  instrument_types:
+    - Registration
+    - Licence
+    - Notification
+    - Return
+    - Guideline
+  topics:
+    - labour-services
+    - shops-and-establishments
+    - contract-labour
+    - welfare
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+  config:
+    listing_paths:
+      home: /
+    format: anchor-list
+    pdf_path_pattern: /sites/default/files/inline-files/{slug}.pdf
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: verified
+  update_surface: Kerala Labour Commissionerate homepage features circulars + advisories as Drupal inline-file anchors. Each anchor's text is the human title; href points at /sites/default/files/inline-files/{slug}.pdf. Trailing "-reg" suffix on titles is stripped by the recipe.
+  approach: Recipe `lc-kerala-gov-in` (src/recipes/lc-kerala.ts) extracts every `a[href]` matching `.pdf`; live smoke pulls 23 circulars in ~280ms.
+  next_step: Add /sites/default/files page enumeration if additional surfaces beyond the homepage need to be scraped.
+notes: |
+  Official Kerala Labour Commissionerate portal. Verified reachable with HTTP
+  200 on 2026-06-05.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

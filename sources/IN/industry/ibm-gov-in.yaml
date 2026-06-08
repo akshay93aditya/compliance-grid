@@ -1,0 +1,41 @@
+id: ibm-gov-in
+url: https://ibm.gov.in/IBMPortal/
+jurisdiction: IN
+governance_level: central
+domain: industry
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Indian Bureau of Mines
+  type: department
+  parent: Ministry of Mines
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Guideline
+    - Report
+  topics:
+    - mining
+    - mineral-conservation
+    - mining-leases
+    - mineral-statistics
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: IBM notifications under the MMDR Act / MCDR rules, mining leases, mineral conservation guidance.
+  approach: Probe the notifications / circulars surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Indian Bureau of Mines — central body under the Ministry of Mines
+  for non-coal/lignite mining regulation, mineral conservation, and
+  mining-statistics publication. Canonical path follows the
+  ibm.gov.in → ibm.gov.in/IBMPortal redirect observed on probe
+  2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

@@ -1,0 +1,35 @@
+id: dot-gov-in
+url: https://www.dot.gov.in
+jurisdiction: IN
+domain: telecom
+governance_level: central
+authority:
+  name: Department of Telecommunications
+  type: department
+  parent: Ministry of Communications
+coverage:
+  instrument_types:
+    - Notification
+    - Rule
+    - Circular
+  topics:
+    - telecom-licensing
+    - communications
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Unknown until notification, circular, and licensing pages are inspected.
+  approach: Probe HTML and rendered DOM; decide static versus browser recipe.
+  next_step: Inspect DoT notification and licence-related listings.
+notes: |
+  Central telecom department. Verified reachable with HTTP 200 on
+  2026-06-05 after redirect to www.dot.gov.in.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

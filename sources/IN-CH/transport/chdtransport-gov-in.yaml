@@ -1,0 +1,39 @@
+id: chdtransport-gov-in
+url: https://chdtransport.gov.in/
+jurisdiction: IN-CH
+governance_level: state
+domain: transport
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: State Transport Authority, Chandigarh
+  type: department
+  parent: Chandigarh Administration
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - motor-vehicles
+    - permits
+    - fitness-certificates
+    - road-tax
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Chandigarh STA notifications under the Motor Vehicles Act and Punjab/Chandigarh motor-vehicles taxation rules.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  State Transport Authority, Chandigarh — administers motor-vehicle
+  registration, permits, and Chandigarh-specific road taxation.
+  URL was verified reachable via HEAD on 2026-06-06.
+maintainer: akshay93aditya
+added: 2026-06-06
+last_verified: 2026-06-06

@@ -1,0 +1,40 @@
+id: eodb-chd-gov-in
+url: https://eodb.chd.gov.in/
+jurisdiction: IN-CH
+domain: industry
+governance_level: state
+authority:
+  name: Chandigarh EODB Single Window System
+  type: department
+  parent: Chandigarh Administration
+coverage:
+  instrument_types:
+    - Clearance
+    - Licence
+    - Registration
+    - Renewal
+    - NOC
+  topics:
+    - single-window
+    - business-services
+    - pollution-services
+    - labour-services
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: true
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: form-postback-needs-recipe
+  update_surface: Chandigarh EODB portal service catalogue and application workflows.
+  approach: Map public service catalogue, department links, and manuals; treat application flows as session/form based.
+  next_step: Inspect department service filters and public instructions for stable extraction links.
+notes: |
+  Chandigarh single-window EODB portal. HTTP redirected to HTTPS and returned
+  HTTP 200 on 2026-06-05. Pollution services are explicitly integrated with this
+  EODB portal according to CPCC search snippets.
+maintainer: akshay93aditya
+added: 2026-06-05
+last_verified: 2026-06-05

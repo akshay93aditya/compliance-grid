@@ -1,0 +1,38 @@
+id: igrs-rajasthan-gov-in
+url: https://igrs.rajasthan.gov.in/
+jurisdiction: IN-RJ
+governance_level: state
+domain: real-estate
+trust_tier: govt-portal
+fetch_recipe:
+  kind: listing-page
+  requires_browser: false
+authority:
+  name: Inspector General of Registration and Stamps, Rajasthan
+  type: department
+  parent: Government of Rajasthan
+coverage:
+  instrument_types:
+    - Notification
+    - Circular
+    - Order
+    - Form
+  topics:
+    - stamps
+    - registration
+    - property-conveyance
+verification:
+  method: curl-head
+  status: verified
+access:
+  status: needs-access-probe
+  update_surface: Rajasthan IGRS notifications on stamp duty, registration fees, and conveyance under the Rajasthan Stamp Act and Registration Act.
+  approach: Probe the notifications surface for recipe-readiness.
+  next_step: Identify the notifications index endpoint and confirm format.
+notes: |
+  Inspector General of Registration and Stamps, Government of
+  Rajasthan — administers stamps and registration. URL was verified
+  reachable via HEAD on 2026-06-07.
+maintainer: akshay93aditya
+added: 2026-06-07
+last_verified: 2026-06-07
