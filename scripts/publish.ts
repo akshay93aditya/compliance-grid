@@ -7,11 +7,17 @@
 //
 // Required env:
 //   DATABASE_URL                       — local CKG to read from
-//   COMPLIANCE_GRID_DATA_REMOTE        — git URL of the companion repo
+//   COMPLIANCE_GRID_DATA_REMOTE        — git URL the publisher pushes to
+//                                        (upstream for maintainers, the
+//                                        publisher's fork for external
+//                                        contributors)
 //   COMPLIANCE_GRID_DATA_WORKSPACE     — local path for the clone
 //   PUBLISH_EXTRACTED_BY               — extractor identifier (e.g. GH handle)
 // Optional env:
 //   COMPLIANCE_GRID_DATA_BASE_BRANCH   — default 'main'
+//   COMPLIANCE_GRID_DATA_UPSTREAM      — owner/name of the upstream repo
+//                                        when the PR should land cross-fork
+//                                        (default: same as REMOTE → same-repo PR)
 //   PUBLISH_DRY_RUN=1                  — write JSONL + commit + push branch but skip gh pr create AND skip marking obligations published
 //
 // The dry-run mode is the integration-testable shape: it exercises every
@@ -37,6 +43,7 @@ import {
   ensureWorkspace,
   writeMergedJsonl,
 } from '../src/publish/git-workspace';
+import { resolveGhPrTarget } from '../src/publish/git-url';
 
 function envRequired(name: string): string {
   const v = process.env[name];
@@ -124,6 +131,7 @@ async function main(): Promise<number> {
   const workspace = envRequired('COMPLIANCE_GRID_DATA_WORKSPACE');
   const extractedBy = envRequired('PUBLISH_EXTRACTED_BY');
   const baseBranch = process.env.COMPLIANCE_GRID_DATA_BASE_BRANCH ?? 'main';
+  const upstream = process.env.COMPLIANCE_GRID_DATA_UPSTREAM;
   const dryRun = process.env.PUBLISH_DRY_RUN === '1';
 
   const pending = await countUnpublishedObligations(getPool());
@@ -172,20 +180,16 @@ async function main(): Promise<number> {
 
   let prUrl: string | undefined;
   if (!dryRun) {
+    const target = resolveGhPrTarget({ remote, upstream, branch });
     const gh = spawnSync(
       'gh',
       [
         'pr',
         'create',
         '--repo',
-        // Inferred from remote URL; gh CLI also accepts the workspace cwd,
-        // but the --repo flag makes the target explicit in logs.
-        remote
-          .replace(/^git@github\.com:/, '')
-          .replace(/^https:\/\/github\.com\//, '')
-          .replace(/\.git$/, ''),
+        target.repo,
         '--head',
-        branch,
+        target.head,
         '--base',
         baseBranch,
         '--title',
