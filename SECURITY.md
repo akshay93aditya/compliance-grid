@@ -10,14 +10,13 @@ We aim to acknowledge reports within 72 hours.
 
 In scope:
 
-- The engine, recipes, CLI, and Source Index in this repo.
-- Default crypto choices (AES-256-GCM for the Org Vault, scrypt for password hashing).
+- The engine, recipes, CLI, and Source Index.
+- The Next.js app, auth (scrypt + HttpOnly session cookie), and Org Vault (AES-256-GCM with AAD-bound key).
 - Federation primitives (`cg publish`, `cg pull`) and their on-disk JSONL handling.
 
 Out of scope (by design, not necessarily safe to assume):
 
-- The Next.js app, auth, and vault — those live in the *private* companion repo and have their own disclosure channel.
-- Vulnerabilities in upstream dependencies that we cannot mitigate without breaking the build. We track these via `npm audit` and document accepted risks in [`SECURITY-ADVISORIES.md`](SECURITY-ADVISORIES.md) when no upstream fix exists.
+- Vulnerabilities in upstream dependencies that we cannot mitigate without breaking the build. We track these via `npm audit` and document accepted risks under [Known accepted risks](#known-accepted-risks) below.
 
 ## Known accepted risks
 
